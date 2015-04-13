@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>HotSpot v.1.0 - Popup icon menu made simple</title>
+    <meta name="description" content="HotSpot icons Menu is a quality plugin for quick popup navigation that is built with love.With this plugin, you can create, dynamically update in seconds cool icons menu that can be attached to any container and work on any platform. easy to customize, easy to use and very reliable. The plugin includes 400 svg demo icons that are free to use (iconmonstr.com) and are already attached to the plugin and ready to use. We design it to flexible and smart. Take a look at the Cool demos we created for your admiration.">
+    <meta name="author" content="Shlomo Hassid" />
+    <meta name="copyright" content="Shlomo Hassid" />
+    <meta name="generator" content="Documenter v2.0 http://rxa.li/documenter" />
+    <meta name="date" content="2014-10-14T00:00:00+02:00" />
+    <meta http-equiv="x-ua-compatible" content="IE=10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <link href="assets/css/documenter_style.css" rel="stylesheet" />
+    <link href="../css/hotspot.1.0.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/evol.colorpicker.css" rel="stylesheet" />
+    <link href="assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+    </head>
+    
+<body class="documenter-project-hotspot-v10" data-spy="scroll" id="top">
+    <div id='hotspot_ex8'></div>
+    <!-- Documentation Navbar -->
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container"> 
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+                <a class="brand" href="#">HotSpot 1.0</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="#what_is_that" title="What is that?">What is that?</a>
+                            <ul>
+                                <li><a href="#que_what_is_that_features">Features</a>
+                                <li><a href="#que_what_is_that_technical_information">Technical info</a>
+                            </ul>
+                        </li>
+                        <li><a href="#insatallation" title="Insatallation">Insatallation</a>
+                            <ul>
+                                <li><a href="#que_insatallation_step_1">Step 1</a>
+                                <li><a href="#que_insatallation_step_2">Step 2</a>
+                                <li><a href="#que_insatallation_step_3">Step 3</a>
+                            </ul>
+                        </li>
+                        <li><a href="#hotspot_api" title="HotSpot API">HotSpot API</a>
+                            <ul>
+                                <li><a href="#que_hotspot_api_general_options">General</a>
+                                <li><a href="#que_hotspot_api_elemets_options">Elemets</a>
+                                <li><a href="#que_hotspot_api_events">Events</a>
+                                <li><a href="#que_hotspot_api_methods">Methods</a>
+                            </ul>
+                        </li>
+                        <li><a href="#creating_a_hotspot" title="Creating A HotSpot">Creating A HotSpot</a>
+                            <ul>
+                                <li><a href="#que_creating_a_hotspot_basic_facts_about_hotspot">Basic Facts</a>
+                                <li><a href="#que_creating_a_hotspot_creating_a_hotspot_menu">Creating</a>
+                                <li><a href="#que_creating_a_hotspot_styling_and_customization">Styling</a>
+                                <li><a href="#que_creating_a_hotspot_generator">Generator</a>
+                            </ul>
+                        </li>
+                        <li><a href="#icons" title="Icons">Icons</a>
+                            <ul>
+                                <li><a href="#que_icons_icons_classes">Classes</a>
+                                <li><a href="#que_icons_custom_classes">Custom</a>
+                                <li><a href="#que_icons_licen">License</a>
+                            </ul>
+                        </li>
+                        <li><a href="#events_methods" title="Events & Methods">Events & Methods</a>
+                            <ul>
+                                <li><a href="#que_events_methods_events">Events</a>
+                                <li><a href="#que_events_methods_methods">Methods</a>
+                                <li><a href="#que_events_methods_responsive_aproach">Responsive approach</a>
+                            </ul>
+                        </li>
+                        <li><a href="#examples" title="Examples">Examples</a>
+                            <ul>
+                                <li><a href="#que_examples_basic_social_menu">Basic Social Menu</a>
+                                <li><a href="#que_examples_text_display_menu">Text display Menu</a>
+                                <li><a href="#que_examples_several_menus">Several Menus</a>
+                                <li><a href="#que_examples_video_control">Video Controls</a>
+                                <li><a href="#que_examples_floatin_menu">Floating Menu</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Main Container Beginning -->			
+    <div class="container" id="documenter_content">
+        
+        <!-- Cover Begin -->	
+        <div id="documenter-cover">
+            <div class="masthead">
+                <h1>HotSpot v.1.0 - Popup icon menu made simple</h1>
+                <p>HotSpot icon Menu is a quality plugin for quick popup navigation that is built with love. With this plugin, you can create, dynamically update in seconds cool icon menus that can be attached to any container and work on any platform. easy to customize, easy to use and very reliable. The plugin includes 400 svg demo icons that are free to use (iconmonstr.com) and are already attached to the plugin and ready to use. We design it to be flexible and smart. Take a look at the Cool demos we created for your admiration.</p>
+                <ul class="marketing-byline">
+                    <li>Created: 10/12/2014</li>
+                    <li>Latest update: 10/14/2014</li>
+                    <li>By: Shlomo Hassid</li>
+                    <li><a href="http://codecanyon.net/user/shlomo1985">codecanyon.net/user/shlomo1985</a></li>
+                </ul>
+                <p class="download-info">
+                    <a href="#what_is_that" class="btn btn-primary btn-large">Good place to start</a>
+                    <a href="#que_creating_a_hotspot_generator" class="btn btn-large">HotSpot Generator</a> 
+                    <a href="#examples" class="btn btn-large">HotSpot Examples</a> 
+                    <a href="mailto:support@14tec.com" class="btn btn-large">Contact Support</a>
+                </p>
+            </div> <!-- masthead -->
+
+            <div id="intro">
+                <p class="highlight hero-unit">Thank you for purchasing my plugin. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page - contact form. Thanks so much!</p>
+            </div> <!-- intro -->
+        </div>   
+        <!-- End Cover -->	
+        
+        <!-- What is That Begin -->	
+        <section id="what_is_that">
+            <div class="page-header"><h3>What is that?</h3><hr class="notop"></div>
+            <div class="alert alert-info text-primary"><strong>HotSpot</strong> icon menus is a quality plugin for quick popup navigation that is built with love. With this plugin, you can create, dynamically update in seconds cool icons menu that can be attached to any container and work on any platform. Easy to customize, easy to use and very reliable. The plugin includes 400 svg demo icons that are free to use (iconmonstr.com) and are already attached to the plugin and ready to use. We design it to be flexible and smart. Take a look at the Cool demos we created for your admiration.</div>
+            <p id='que_what_is_that_features' class="que_anchor">&nbsp;</p>
+            <h4 id="what_is_that_features">Features:</h4>
+            <ol style="margin-left: 40px;">
+                <li>Quick and smart.</li>
+                <li>Support different placement and directions.</li>
+                <li>Animated.</li>
+                <li>Easy to customize ( no CSS required ~ optional )</li>
+                <li>Create as many as you want.</li>
+                <li>400+ already included icons.</li>
+                <li>Very flexible - Shapes,Colors, position,shadows.</li>
+                <li>Easy to attach callbacks functions.</li>
+                <li>Can be dynamically rebuild and redesign.</li>
+            </ol>
+            <p id='que_what_is_that_technical_information' class="que_anchor">&nbsp;</p>
+            <h4 id="what_is_that_technical_information">Technical Information:</h4>
+            <ol style="margin-left: 40px;">
+                <li>Tested with jQuery 1.9+.</li>
+                <li>Tested on major browsers.</li>
+                <li>Required Files &amp; Folders (all are within the plugin folder):
+                    <ul>
+                        <li>Latest jQuery</li>
+                        <li>Easing.1.3.js</li>
+                        <li>Hotspot.1.0.min.js</li>
+                        <li>Hotspot.1.0.css</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <!-- End What is that -->	
+        
+        <!-- Installation Begin -->	
+        <section id="insatallation">
+            <div class="page-header"><h3>Insatallation</h3><hr class="notop"></div>
+            <div class="alert alert-info text-primary">
+                To install this plugin just follow these easy three steps. Once finished, it is all about setting a few options when creating a <strong>HotSpot</strong> icon menu in your page.
+            </div>
+            <p id='que_insatallation_step_1' class="que_anchor">&nbsp;</p>
+            <h4 id="insatallation_step_1">Step 1:</h4>
+            <div class="alert" style="margin-left: 40px;">
+                Extract the purchased hotspot.v.1.0.zip to your main web-site folder. This archive contain 4 folders (doc,js,css,icons). If you already have these folders merge their content.
+            </div>
+            <p id='que_insatallation_step_2' class="que_anchor">&nbsp;</p>
+            <h4 id="insatallation_step_2">Step 2:</h4>
+            <div class="alert" style="margin-left: 40px;">
+                Include the latest jQuery lib, easing.1.3.js, hotspot.v.1.0.min.js and hotspot.v.1.0.css&nbsp;in the HEAD section of your web-page. Just copy paste next lines:
+            </div>
+<pre class="prettyprint lang-html linenums max_full" style="margin-left: 40px;">
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;hotspot/js/jquery-1.11.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;hotspot/js/easing.1.3.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;hotspot/js/hotspot.1.0.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;hotspot/css/hotspot.1.0.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;/head&gt;
+</pre>
+            <p id='que_insatallation_step_3' class="que_anchor">&nbsp;</p>
+            <h4 id="insatallation_step_3">Step 3:</h4>
+            <div class="alert" style="margin-left: 40px;">
+                You are done! <strong>HotSpot</strong> is ready for use. If your source files are imported correctly this Demo code should work on any page that has&nbsp;<strong>HotSpot&nbsp;</strong>included correctly. Just Copy Past this demo code to the BODY of the HTML page you are building:
+            </div>
+<pre class="prettyprint lang-html linenums max_full" style="margin-left: 40px;">
+&lt;div id=&quot;HotSpot&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+$(&quot;#HotSpot&quot;).hotspot({
+&nbsp; &nbsp;margin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: { t:20, l:&#39;20%&#39;, b:20, r:&#39;auto&#39; },
+&nbsp; &nbsp;mainSize &nbsp; &nbsp; &nbsp; &nbsp;: 80,
+&nbsp; &nbsp;pagePos &nbsp; &nbsp; &nbsp; &nbsp; : &quot;nw&quot;,
+&nbsp; &nbsp;radius &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: { tl:10, tr:50 ,br:50 ,bl:50 },
+&nbsp; &nbsp;open &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &quot;hor&quot;,
+&nbsp; &nbsp;easing &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &quot;easeInOutExpo&quot;,
+&nbsp; &nbsp;delayBetween &nbsp; &nbsp;: 200,
+&nbsp; &nbsp;animDuration &nbsp; &nbsp;: 600,
+&nbsp; &nbsp;smoothTransition: false,
+&nbsp; &nbsp;addShadow &nbsp; &nbsp; &nbsp; : &quot;se&quot;,
+&nbsp; &nbsp;customClass &nbsp; &nbsp; : false,
+&nbsp; &nbsp;closeOutClick &nbsp; : true,
+&nbsp; &nbsp;openCallback &nbsp; &nbsp;: function() { &nbsp;},
+&nbsp; &nbsp;closeCallback &nbsp; : function() { &nbsp;},
+&nbsp; &nbsp;created &nbsp; &nbsp; &nbsp; &nbsp; : function() { &nbsp;},
+&nbsp; &nbsp;elements &nbsp; &nbsp; &nbsp; &nbsp;: [
+&nbsp; &nbsp; &nbsp; &nbsp;   { title:&quot;&quot;, icon:&quot;500px_w&quot;, sizeReduce:20, bg:&quot;navy&quot;, hoverBg:&quot;#819FF7&quot; },
+&nbsp; &nbsp; &nbsp; &nbsp;   { pad:40, title:&quot;walla&quot;, icon:&quot;anchor_d&quot;, sizeReduce:12, bg:&quot;blue&quot;, hoverBg:&quot;black&quot;, href:&quot;http://www.walla.co.il&quot;, newTab:true, func:function(){} },
+&nbsp; &nbsp; &nbsp; &nbsp;   { pad:40, title:&quot;walla&quot;, icon:&quot;anchor_d&quot;, sizeReduce:14, bg:&quot;yellow&quot;, hoverBg:&quot;orange&quot;, href:&quot;http://www.walla.co.il&quot;, newTab:true, func:function(){} },
+&nbsp; &nbsp; &nbsp; &nbsp;   { pad:40, title:&quot;walla&quot;, icon:&quot;anchor_w&quot;, sizeReduce:16, bg:&quot;green&quot;, hoverBg:false, href:&quot;http://www.walla.co.il&quot;, newTab:true, func:function(){} },
+&nbsp; &nbsp; &nbsp; &nbsp;   { pad:40, title:&quot;walla&quot;, icon:&quot;anchor_d&quot;, sizeReduce:18, bg:&quot;#819FF7&quot;, hoverBg:false, href:&quot;&quot;, newTab:true, func:function(){ alert(); } } &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp;]
+}); 
+&lt;/script&gt;
+</pre>
+        </section>
+        <!-- End Installation -->	
+        
+        <!-- API Begin -->	
+        <section id="hotspot_api">
+            <div class="page-header"><h3>HotSpot API</h3><hr class="notop"></div>
+            <div class="alert alert-info">
+                All available Options, Methods, Events that are available for each <strong>HotSpot</strong> Menu you create.
+            </div>
+            <p id='que_hotspot_api_general_options' class="que_anchor">&nbsp;</p>
+            <h4 id="hotspot_api_general_options">General options:</h4>
+            <div class="alert">
+                Those options are global to all elements (icon elements) in the menu. They can be set directly when creating the menu with an object or as attributes in the UL tag (see <a href="#creating_a_hotspot">`creating a hotspot`</a>).
+            </div>
+            <table align="left" border="1" cellpadding="1" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th scope="col">Option name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Default</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">&nbsp;Syntax Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>debug</strong></td>
+                        <td>Boolean</td>
+                        <td>True / False</td>
+                        <td>False</td>
+                        <td><span style="color: rgb(35, 33, 33); font-family: Georgia; font-size: 13px;">Output to console log errors and suggestions</span></td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+debug: true,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>margin</strong></td>
+                        <td>
+                            <ul>
+                                <li>Number</li>
+                                <li>String</li>
+                                <li>Object</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Valid CSS</li>
+                                <li>Number &gt;= 0</li>
+                                <li>Object</li>
+                            </ul>
+                        </td>
+                        <td>10</td>
+                        <td>Margin of the Menu relative to the parent container.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+margin : 10,
+//OR
+margin : &quot;10px&quot;,
+//OR
+margin : { t:10,l:10,b:10,r:10 },
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>pagePos</strong></td>
+                        <td>String</td>
+                        <td>nw / sw / se / ne</td>
+                        <td>nw</td>
+                        <td>Set the placement of the menu.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+pagePos : &quot;nw&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>radius</strong></td>
+                        <td>
+                            <ul>
+                                <li>Number</li>
+                                <li>String</li>
+                                <li>Object</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Valid CSS</li>
+                                <li>Number &gt;= 0</li>
+                                <li>Object</li>
+                            </ul>
+                        </td>
+                        <td>0</td>
+                        <td>Corners radius of the elements.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+radius : 5, 
+//OR
+radius : &quot;5px&quot;,
+//OR
+radius : { tl:5,tr:5,br:5,bl:5 },
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>open</strong></td>
+                        <td>
+                            <p>String</p>
+                        </td>
+                        <td>ver / hor</td>
+                        <td>hor</td>
+                        <td>Direction of the menu.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+open : &quot;hor&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>easing</strong></td>
+                        <td>String</td>
+                        <td>any effect name</td>
+                        <td>swing</td>
+                        <td>Effect to use when opening and closing.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+easing : &quot;swing&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>delayBetween</strong></td>
+                        <td>Number</td>
+                        <td>Number &gt;= 0</td>
+                        <td>100</td>
+                        <td>Set the delay between elements easing effect.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+delayBetween : 200,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>animDuration</strong></td>
+                        <td>Number</td>
+                        <td>Number&gt;=0</td>
+                        <td>800</td>
+                        <td>Total animation Duration for single element.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+animDuration : 1000,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>smoothTransition</strong></td>
+                        <td>Boolean</td>
+                        <td>True / False</td>
+                        <td>true</td>
+                        <td>Hover animated&nbsp;</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+smoothTransition : false,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>addShadow</strong></td>
+                        <td>
+                            <ul>
+                                <li>String</li>
+                                <li>Boolean</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>nw / ne / sw / se</li>
+                                <li>False</li>
+                            </ul>
+                        </td>
+                        <td>false</td>
+                        <td>Add Shadow to elements.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+addShadow : &quot;se&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>customClass</strong></td>
+                        <td>
+                            <ul>
+                                <li>String</li>
+                                <li>Boolean (false)</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Class name</li>
+                                <li>False (disable)</li>
+                            </ul>
+                        </td>
+                        <td>false</td>
+                        <td>Append a custom Class to all elements</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+customClass : &quot;className&quot;,
+//OR
+customClass : false,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>closeOutClick</strong></td>
+                        <td>Boolean</td>
+                        <td>True / False</td>
+                        <td>true</td>
+                        <td>Close Menu when Document is clicked</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+closeOutClick : false,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>elements</strong></td>
+                        <td>Array</td>
+                        <td>Array of objects (see elements options)</td>
+                        <td>[]</td>
+                        <td>Contains All elements settings - first element is the main.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+elements : [
+&nbsp; &nbsp; { /* Main Element */ },
+&nbsp; &nbsp; { /* Children Element */ }
+],
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_hotspot_api_elemets_options' class="que_anchor">&nbsp;</p>
+            <h4 id="hotspot_api_elemets_options">Elemets options:</h4>
+            <table align="left" border="1" cellpadding="1" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Option Name&nbsp;</th>
+                        <th scope="col">
+                            Type</th>
+                        <th scope="col">
+                            Value</th>
+                        <th scope="col">
+                            Deafault</th>
+                        <th scope="col">
+                            &nbsp;Description</th>
+                        <th scope="col">
+                            &nbsp;Syntax Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>title</strong></td>
+                        <td>
+                            String</td>
+                        <td>
+                            Tool tip text</td>
+                        <td>
+                            none</td>
+                        <td>
+                            Title (Browser tooltip) of the element</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+title : &quot;My Element Title&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>icon</strong></td>
+                        <td>
+                            String</td>
+                        <td>
+                            icon name</td>
+                        <td>
+                            none</td>
+                        <td>
+                            Icon class to use.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+icon : &quot;soc_facebook_w&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>sizeReduce</strong></td>
+                        <td>
+                            <ul>
+                                <li>Number</li>
+                                <li>String</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Number &gt;= 0</li>
+                                <li>Valid string represent percentage </li>
+                            </ul>
+                        </td>
+                        <td>
+                            First Element (main) OR '15%'</td>
+                        <td>
+                            Icon size reduced inside the element</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+sizeReduce : 15,
+//OR
+sizeReduce : '15%',
+//OR
+sizeReduce : '20px',
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>bg</strong></td>
+                        <td>
+                            String</td>
+                        <td>
+                            Valid CSS</td>
+                        <td>
+                            First Element (main) OR black</td>
+                        <td>
+                            Element Background - Main element can&#39;t be transparent.</td>
+                        <td>
+<pre class="prettyprint lang-js  max_290">
+bg : &quot;#2E2E2E&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>hoverBg</strong></td>
+                        <td>
+                            String</td>
+                        <td>
+                            Valid CSS</td>
+                        <td>
+                            none</td>
+                        <td>
+                            Hover Background color.&nbsp;</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+hoverBg : &quot;#2E2E2E&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>pad</strong></td>
+                        <td>
+                            Number</td>
+                        <td>
+                            <p>
+                                Number &gt;= 0</p>
+                        </td>
+                        <td>
+                            20</td>
+                        <td>
+                            Distance in pixels between element and previous one.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+pad : 20,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>href</strong></td>
+                        <td>
+                            Stirng</td>
+                        <td>
+                            Valid HTML HREF value</td>
+                        <td>
+                            none</td>
+                        <td>
+                            Attached link.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+href : &quot;somepage.html&quot;,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>newTab</strong></td>
+                        <td>
+                            Boolean</td>
+                        <td>
+                            True / False</td>
+                        <td>
+                            true</td>
+                        <td>
+                            Open link in new page / tab.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+newTab : true,
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>func</strong></td>
+                        <td>
+                            Function</td>
+                        <td>
+                            function()</td>
+                        <td>
+                            none</td>
+                        <td>
+                            Callback function when clicked.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+func : function() { alert(&quot;foo&quot;); }
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_hotspot_api_events' class="que_anchor">&nbsp;</p>
+            <h4 id="hotspot_api_events">Events</h4>
+            <table border="1" cellpadding="1" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th scope="col">Event name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Execute</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Syntax Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>created</strong></td>
+                        <td>Callback function</td>
+                        <td>After creation ends</td>
+                        <td>Callback function that will fire after plugin creates the menu.</td>
+                        <td>
+<pre class="prettyprint lang-js max_qua">
+created : function() { alert(&quot;created&quot;); },
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>openCallback</strong></td>
+                        <td>Callback function</td>
+                        <td>After menu opens</td>
+                        <td>Callback function that will fire after Menu is open.</td>
+                        <td>
+<pre class="prettyprint lang-js max_qua">
+openCallback : function() { alert(&quot;opened&quot;); },
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>closeCallback</strong></td>
+                        <td>Callback function</td>
+                        <td>After menu close</td>
+                        <td>Callback function that will fire after the menu is closed.</td>
+                        <td>
+<pre class="prettyprint lang-js max_qua">
+closeCallback : function() { alert(&quot;closed&quot;); },
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>beforeOpen</strong></td>
+                        <td>Custom function</td>
+                        <td>Before menu opens</td>
+                        <td>A 'before' events that's fired before the menu is opened.</td>
+                        <td>
+<pre class="prettyprint lang-js max_qua">
+beforeOpen : function() { alert(&quot;before open&quot;); },
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>beforeClose</strong></td>
+                        <td>Custom function</td>
+                        <td>Before menu close</td>
+                        <td>A 'before' events that's fired before the menu is closed.</td>
+                        <td>
+<pre class="prettyprint lang-js max_qua">
+beforeClose : function() { alert(&quot;before close&quot;); },
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_hotspot_api_methods' class="que_anchor">&nbsp;</p>
+            <h4 id="hotspot_api_methods">Methods</h4>
+            <table border="1" cellpadding="1" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th scope="col">Method Name</th>
+                        <th scope="col">Args</th>
+                        <th scope="col">Default Args</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Syntax Example&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>.destroy_hotspot()</strong></td>
+                        <td>none</td>
+                        <td>none</td>
+                        <td>Destroy the menu and all handlers.&nbsp;</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+$(&quot;#hotspot&quot;).destroy_hotspot();
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>.rebuild_hotspot()</strong></td>
+                        <td>
+                            <ul>
+                                <li>Object of options</li>
+                            </ul>
+                        </td>
+                        <td>previous options</td>
+                        <td>Rebuild a menu and set new options - great for responsive design.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+$(&quot;hotspot&quot;).rebuild_hotspot({
+&nbsp; &nbsp; addShadow : true
+});
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>.enable_hotspot()</strong></td>
+                        <td>
+                            <ul>
+                                <li>Boolean - open menu after enabled.</li>
+                            </ul>
+                        </td>
+                        <td>False</td>
+                        <td>Enables the Menu.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+$(&quot;hotspot&quot;).enable_hotspot(true);
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>.disable_hotspot()</strong></td>
+                        <td>
+                            <ul>
+                                <li>String - cursor style to add when disabled.</li>
+                                <li>Boolean - close menu after disabled</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Default cursor.</li>
+                                <li>True</li>
+                            </ul>
+                        </td>
+                        <td>Disables the menu.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+$(&quot;hotspot&quot;).disable_hotspot(&quot;no-drop&quot;,true);
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>.open_hotspot()</strong></td>
+                        <td>
+                            <ul>
+                                <li>Boolean - trigger 'beforeOpen' event</li>
+                                <li>Boolean - trigger &#39;openCallback&#39; event</li>
+                            </ul>
+                        </td>
+                        <td>False,False</td>
+                        <td>Opens the menu programatically.</td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+$(&quot;hotspot&quot;).open_hotspot(true,true);
+</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>.close_hotspot()</strong></td>
+                        <td>
+                            <ul>
+                                <li>Boolean - trigger 'beforeClose' event</li>
+                                <li>Boolean - trigger &#39;closeCallback&#39; event</li>
+                            </ul>
+                        </td>
+                        <td>False,False</td>
+                        <td><p>Closes the menu programatically.</p></td>
+                        <td>
+<pre class="prettyprint lang-js max_290">
+$(&quot;hotspot&quot;).close_hotspot(true,true);
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            
+        </section>
+        <!-- End API -->	
+        
+        <!-- Creating Begin -->	
+        <section id="creating_a_hotspot">
+            <div class="page-header"><h3>Creating A HotSpot</h3><hr class="notop"></div>
+            <div class="alert alert-info">All <strong>HotSpot</strong> icon menu can be created in two ways: By adding an object of options or by creating an HTML list with some specific attributes. Its easy and quick and we recommend while experimenting to enable debug mode to make sure you are setting the menu with the correct options.</div>
+            
+            <p id='que_creating_a_hotspot_basic_facts_about_hotspot' class="que_anchor">&nbsp;</p>
+            <h4 id="creating_a_hotspot_basic_facts_about_hotspot">Basic Facts About HotSpot</h4>
+            <ul>
+                <li><p class="c_1">You can create as many menus as you need.</p></li>
+                <li><p class="c_1"><strong>HotSpot </strong>requires 4 files: jQuery lib (1.9+), easing.js, hotspot.js, hotspot.css.</p></li>
+                <li><p class="c_1">Menus can be attached to an HTML list or a DIV container.</p></li>
+                <li><p class="c_1"> When <strong>HotSpot</strong> intialize the menu it looks at his parent - If its the BODY the menu will be fixed and if its inside an other DOM element it will be posed insided this container.</p></li>
+            </ul>
+            
+            <p id='que_creating_a_hotspot_creating_a_hotspot_menu' class="que_anchor">&nbsp;</p>
+            <h4 id="creating_a_hotspot_creating_a_hotspot_menu">Creating a HotSpot Menu</h4>
+            <div class="alert" style="margin-left: 40px;">
+                Each Menu can be set in one of two common ways - Through a JS objects (holding the options) or inline style by adding a UL list element with some option attributes. Here is a quick example that will output the same result exactly:</div>
+            <table border="1" cellpadding="1" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th scope="col">object</th>
+                        <th scope="col">UL</th>
+                        <th scope="col">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+<pre class="prettyprint lang-html linenums max_med">
+&lt;div id=&quot;hotspot&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+$(&quot;#hotspot&quot;).hotspot({
+&nbsp; &nbsp; debug : true,
+&nbsp; &nbsp; margin : 10,
+&nbsp; &nbsp; mainSize :40,
+&nbsp; &nbsp; pagePos : &quot;nw&quot;,
+&nbsp; &nbsp; radius : 5,
+&nbsp; &nbsp; open : &quot;ver&quot;,
+&nbsp; &nbsp; easing : &quot;easeInOutExpo&quot;,
+&nbsp; &nbsp; delayBetween : 100,
+&nbsp; &nbsp; animDuration : 600,
+&nbsp; &nbsp; closeOutClick : false,
+&nbsp; &nbsp; element : [
+&nbsp; &nbsp; &nbsp; &nbsp; { title:&quot;Example 1&quot;, icon:&quot;cloud2_w&quot;, sizeReduce:5, bg:&quot;#585858&quot;, hoverBg:&quot;#6E6E6E&quot; },
+&nbsp; &nbsp; &nbsp; &nbsp; { title:&quot;Element 1&quot;, icon:&quot;cloudminus_w&quot;, pad:10 },
+&nbsp; &nbsp; &nbsp; &nbsp; { title:&quot;Element 2&quot;, icon:&quot;cloudplus_w&quot;, pad:10 },
+&nbsp; &nbsp; &nbsp; &nbsp; { title:&quot;Element 3&quot;, icon:&quot;cloudx_w&quot;, pad:10 }
+&nbsp; &nbsp; ]
+});
+&lt;/script&gt;
+</pre>
+                        </td>
+                        <td>
+<pre class="prettyprint lang-html linenums max_med">
+&lt;ul id=&quot;HotSpot&quot;
+&nbsp; &nbsp; &nbsp; &nbsp; H-margin=&#39;10&#39;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; H-mainSize=&#39;40&#39;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; H-pagePos=&#39;nw&#39;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; H-radius=&#39;5&#39;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; H-open=&#39;ver&#39;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; H-easing=&#39;easeInOutExpo&#39;
+&nbsp; &nbsp; &nbsp; &nbsp; H-delayBetween=&#39;100&#39;
+&nbsp; &nbsp; &nbsp; &nbsp; H-animDuration=&#39;600&#39;&gt;
+&nbsp; &nbsp; &lt;li H-icon=&#39;cloud2_w&#39; H-title=&#39;Example 1&#39; H-sizeReduce=&#39;5&#39; H-bg=&#39;#585858&#39; H-hoverBg=&#39;#6E6E6E&#39;&gt;&lt;/li&gt;
+&nbsp; &nbsp; &lt;li H-icon=&#39;cloudminus_w&#39; H-title=&#39;Element 1&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+&nbsp; &nbsp; &lt;li H-icon=&#39;cloudplus_w&#39; H-title=&#39;Element 2&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+&nbsp; &nbsp; &lt;li H-icon=&#39;cloudx_w&#39; H-title=&#39;Element 3&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+&lt;/ul&gt;&nbsp;
+
+&lt;script&gt;
+&nbsp;&nbsp;$(&quot;#hotspot&quot;).hotspot(); 
+&lt;/script&gt;&nbsp;
+</pre>
+                        </td>
+                        <td>
+                            <div id="HotSpot_ex1"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">Basic Settings:</h5>
+            <div class="alert" style="margin-left: 40px;">To generate a <strong>HotSpot</strong> Menu you need to create a basic element with a unique <strong>ID</strong> or a <strong>CLASS</strong> name - <code>&lt;div id=&quot;hotspot&quot; &gt;&lt;/div&gt;</code> or you can use an HTML List element to define all the needed settings and structure.<br />
+                Once you added the HTML element you can now attach the <strong>HotSpot</strong> Menu plugin to this element, and if needed set its options with a JS object.<br />
+                As mentioned, The <strong>HotSpot</strong> can be set programmatically or by adding an HTML list with some specific attributes that defines the needed options. Here is a conversion table for the different settings:
+            </div>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Option Using an Object</th>
+                        <th scope="col">Option In-line attributes (UL)</th>
+                        <th scope="col">Required</th>
+                        <th scope="col">Placement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>debug</code></td><td><code>H-debug</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>margin</code></td><td><code>H-margin</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>pagePos</code></td><td><code>H-pagePos</code></td><td>Optional</td><td>Settings Object | UL attribute/td></tr>
+                    <tr><td><code>radius</code></td><td><code>H-radius</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>open</code></td><td><code>H-open</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>easing</code></td><td><code>H-easing</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>delayBetween</code></td><td><code>H-delayBetween</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>animDuration</code></td><td><code>H-animDuration</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>addShadow</code></td><td><code>H-addShadow</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>customClass</code></td><td><code>H-customClass</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>closeOutClick</code></td><td><code>H-closeOutClick</code></td><td>Optional</td><td>Settings Object | UL attribute</td></tr>
+                    <tr><td><code>elements</code></td><td><code>H-elements</code></td><td>Required</td><td>Settings Object | LI elements</td></tr>
+                    <tr><td><code>title</code></td><td><code>H-title</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>icon</code></td><td><code>H-icon</code></td><td>Required</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>sizeReduce</code></td><td><code>H-sizeReduce</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>bg</code></td><td><code>H-bg</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>hoverBg</code></td><td><code>H-hoverBg</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>pad</code></td><td><code>H-pad</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>href</code></td><td><code>H-href</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>newTab</code></td><td><code>H-newTab</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                    <tr><td><code>func</code></td><td><code>H-func</code></td><td>Optional</td><td>elements Array Of Objects | LI attribute</td></tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">Main Element & Children's:</h5>
+            <div class="alert" style="margin-left: 40px;">When setting the <code>element</code> object the first Object / LI option sets the main element. This setting is required and will set the default style for the child elements in the menu. If you wont set any element, the plugin will not create a <strong>HotSpot</strong> Menu.</div>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <thead>
+                    <tr>
+                        <th scope="col">object</th>
+                        <th scope="col">UL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+<pre class="prettyprint lang-html linenums max_med">
+&nbsp; &nbsp; element : [
+&nbsp; &nbsp; &nbsp; &nbsp; /* Main &nbsp;*/&nbsp;{ title:&quot;Main&quot;, icon:&quot;cloud2_w&quot;, sizeReduce:5, bg:&quot;#585858&quot;, hoverBg:&quot;#6E6E6E&quot; },
+&nbsp; &nbsp; &nbsp; &nbsp; /* Child */&nbsp;{ title:&quot;Child 1&quot;, icon:&quot;cloudminus_w&quot;, pad:10 },
+&nbsp; &nbsp; &nbsp; &nbsp; /* Child */&nbsp;{ title:&quot;Child 2&quot;, icon:&quot;cloudplus_w&quot;, pad:10 },
+&nbsp; &nbsp; &nbsp; &nbsp; /* Child */&nbsp;{ title:&quot;Child 3&quot;, icon:&quot;cloudx_w&quot;, pad:10 }
+&nbsp; &nbsp; ]
+</pre>
+                        </td>
+                        <td>
+<pre class="prettyprint lang-js linenums max_med">
+&nbsp; &nbsp; &lt;!-- Main --&gt;&lt;li H-icon=&#39;cloud2_w&#39; H-title=&#39;Main&#39; H-sizeReduce=&#39;5&#39; H-bg=&#39;#585858&#39; H-hoverBg=&#39;#6E6E6E&#39;&gt;&lt;/li&gt;
+&nbsp; &nbsp; &lt;!-- Child --&gt;&lt;li H-icon=&#39;cloudminus_w&#39; H-title=&#39;Child 1&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+&nbsp; &nbsp; &lt;!-- Child --&gt;&lt;li H-icon=&#39;cloudplus_w&#39; H-title=&#39;Child 2&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+&nbsp; &nbsp; &lt;!-- Child --&gt;&lt;li H-icon=&#39;cloudx_w&#39; H-title=&#39;Child 3&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert" style="margin-left: 40px;">In this Example the child elements has no <code>sizeReduce</code>, <code>bg</code> they will inherit those options from the Main element. Here is a table that describes which option is required and which can be inherited (optional):</div>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Option</th>
+                        <th scope="col">Main element</th>
+                        <th scope="col">Child element</th>
+                        <th scope="col">Default / Inherited</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>icon</code></td><td>Required</td><td>Optional</td><td>No icon</td></tr>
+                    <tr><td><code>title</code></td><td>Optional</td><td>Optional</td><td>No title</td></tr>
+                    <tr><td><code>sizeReduce</code></td><td>Optional</td><td>Optional</td><td>Def:10 - inherited from Main</td></tr>
+                    <tr><td><code>bg</code></td><td>Optional</td><td>Optional</td><td>Def:black - inherited from Main</td></tr>
+                    <tr><td><code>hoverBg</code></td><td>Optional</td><td>Optional</td><td>No hoverBg</td></tr>
+                    <tr><td><code>pad</code></td><td> X </td><td>Optional</td><td>Def:15%</td></tr>
+                    <tr><td><code>href</code></td><td> X </td><td>Optional</td><td>No href</td></tr>
+                    <tr><td><code>newTab</code></td><td> X </td><td>Optional</td><td>Def: True</td></tr>
+                    <tr><td><code>func</code></td><td> X </td><td>Optional</td><td>No callback</td></tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            
+            <p id='que_creating_a_hotspot_styling_and_customization' class="que_anchor">&nbsp;</p>
+            <h4 id="creating_a_hotspot_styling_and_customization">Styling and customization</h4>
+            <div class="alert" style="margin-left: 40px;">Basic Styling and customization is set by the options available. Here is a Table that take you through those options and the values they will accept:</div>
+            <img class="img-thumbnail" alt="styling Image1" src="assets/img/style3.png" style="margin-left:40px;"/><br />
+            <img class="img-thumbnail" alt="styling Image2" src="assets/img/style2.png" style="margin-left:40px;"/><br />
+            <img class="img-thumbnail" alt="styling Image3" src="assets/img/style1.png" style="margin-left:40px;"/>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Option</th>
+                        <th scope="col">Syntax 1</th>
+                        <th scope="col">Syntax 2</th>
+                        <th scope="col">Syntax 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>mainSize</code></td><td><pre class="prettyprint lang-html max_290"> mainSize:50 </pre></td><td></td><td></td></tr>
+                    <tr><td><code>margin</code></td><td><pre class="prettyprint lang-html max_290"> margin:5 </pre></td><td><pre class="prettyprint lang-html max_290"> margin:&quot;5px 15px 10px 5px&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> margin:{ t:&quot;10px&quot;,l:&quot;50%&quot;,b:&quot;10px&quot;,r:&quot;10px&quot;} </pre></td></tr>
+                    <tr><td><code>pagePos</code></td><td><pre class="prettyprint lang-html max_290"> pagePos:&quot;nw&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> pagePos:&quot;sw&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> pagePos:&quot;se&quot; </pre></td></tr>
+                    <tr><td><code>radius</code></td><td><pre class="prettyprint lang-html max_290"> radius:10 </pre></td><td><pre class="prettyprint lang-html max_290"> radius:&quot;10px 15px 10px 5px&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> radius:{ tl:10,tr:20,br:10,bl:10} </pre></td></tr>
+                    <tr><td><code>open</code></td><td><pre class="prettyprint lang-html max_290"> open:&quot;ver&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> open:&quot;hor&quot; </pre></td><td></td></tr>
+                    <tr><td><code>easing</code></td><td><pre class="prettyprint lang-html max_290"> easing:&quot;easeInOutExpo&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> easing:&quot;swing&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> easing:&quot;easeInQuad&quot; </pre></td></tr>
+                    <tr><td><code>delayBetween</code></td><td><pre class="prettyprint lang-html max_290"> delayBetween:200 </pre></td><td></td><td></td></tr>
+                    <tr><td><code>animDuration</code></td><td><pre class="prettyprint lang-html max_290"> animDuration:600 </pre></td><td></td><td></td></tr>
+                    <tr><td><code>addShadow</code></td><td><pre class="prettyprint lang-html max_290"> addShadow:&quot;nw&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> addShadow:&quot;se&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> addShadow:false </pre></td></tr>
+                    <tr><td><code>customClass</code></td><td><pre class="prettyprint lang-html max_290"> customClass:&quot;className1&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> customClass:&quot;className1 className2&quot; </pre></td><td></td></tr>
+                    <tr><td><code>elements -> title</code></td><td><pre class="prettyprint lang-html max_290"> title:&quot;some text&quot; </pre></td><td></td><td></td></tr>
+                    <tr><td><code>elements -> icon</code></td><td><pre class="prettyprint lang-html max_290"> icon:&quot;iconname_w&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> icon:&quot;iconname_d&quot; </pre></td><td></td></tr>
+                    <tr><td><code>elements -> sizeReduce</code></td><td><pre class="prettyprint lang-html max_290"> sizeReduce:5 </pre></td><td><pre class="prettyprint lang-html max_290"> sizeReduce:&quot;10%&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> sizeReduce:&quot;20px&quot; </pre></td></tr>
+                    <tr><td><code>elements -> bg</code></td><td><pre class="prettyprint lang-html max_290"> bg:&quot;blue&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> bg:&quot;#2E2E2E&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> bg:&quot;transparent&quot; </pre></td></tr>
+                    <tr><td><code>elements -> hoverBg</code></td><td><pre class="prettyprint lang-html max_290"> hoverBg:&quot;blue&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> hoverBg:&quot;#2E2E2E&quot; </pre></td><td><pre class="prettyprint lang-html max_290"> hoverBg:&quot;transparent&quot; </pre></td></tr>
+                    <tr><td><code>elements -> pad</code></td><td><pre class="prettyprint lang-html max_290"> pad:25 </pre></td><td></td><td></td></tr>
+                    <tr><td><code>elements -> newTab</code></td><td><pre class="prettyprint lang-html max_290"> newTab:true </pre></td><td><pre class="prettyprint lang-html max_290"> newTab:false </pre></td><td></td></tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            
+            <p id='que_creating_a_hotspot_generator' class="que_anchor">&nbsp;</p>
+            <h4 id="creating_a_hotspot_generator">HotSpot Generator:</h4>
+            <div class="alert" style="margin-left: 40px;">Play with this generator settings that represents all basic styling options to generate a <strong>HotSpot</strong> Menu Example:</div>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tbody>
+                    <tr>
+                        <td style="width:271px; padding:5px !important; vertical-align: top;">
+                            <h5 style="margin:0 0 5px 0;">Settings:</h5>
+                            <table id="gen_settings">
+                                <tr><td><code>mainSize</code></td><td class="input_gen_style"><input type="text" id="gen_mainSize" value="80" style="width:30px" /></td></tr>
+                                <tr><td><code>margin</code></td>
+                                    <td>
+                                        <table class="remove_table_style">
+                                            <tr><td>Top:</td><td><input type="text" id="gen_margin_t" value="20px" style="width:30px"/></td></tr>
+                                            <tr><td>Left:</td><td><input type="text" id="gen_margin_l" value="20px" style="width:30px"/></td></tr>
+                                            <tr><td>Bottom:</td><td><input type="text" id="gen_margin_b"  value="20px" style="width:30px"/></td></tr>
+                                            <tr><td>Right:</td><td><input type="text" id="gen_margin_r" value="20px" style="width:30px"/></td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr><td><code>pagePos</code></td><td class="input_gen_style"><select id="gen_pagepos" style="width:140px"><option value="nw">nw</option><option value="ne">ne</option><option value="se">se</option><option value="sw">sw</option></select></td></tr>
+                                <tr><td><code>radius</code></td>
+                                    <td>
+                                        <table class="remove_table_style">
+                                            <tr><td>Top Left:</td><td><input type="text" id="gen_radius_tl" value="15px" style="width:30px" /></td></tr>
+                                            <tr><td>Top Right:</td><td><input type="text" id="gen_radius_tr" value="15px" style="width:30px" /></td></tr>
+                                            <tr><td>Bottom Left:</td><td><input type="text" id="gen_radius_bl"  value="15px" style="width:30px" /></td></tr>
+                                            <tr><td>Bottom Right:</td><td><input type="text" id="gen_radius_br" value="15px" style="width:30px"/></td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr><td><code>open</code></td><td class="input_gen_style"><select id="gen_open"  style="width:140px"><option value="ver">vertical</option><option value="hor">horizontal</option></select></td></tr>
+                                <tr>
+                                    <td><code>easing</code></td>
+                                    <td class="input_gen_style">
+                                        <select id="gen_easing"  style="width:140px">
+                                            <option value="swing">swing</option>
+                                            <option value="easeInQuad">easeInQuad</option>
+                                            <option value="easeOutQuad">easeOutQuad</option>
+                                            <option value="easeInOutQuad">easeInOutQuad</option>
+                                            <option value="easeInCubic">easeInCubic</option>
+                                            <option value="easeOutCubic">easeOutCubic</option>
+                                            <option value="easeInOutCubic">easeInOutCubic</option>
+                                            <option value="easeInQuart">easeInQuart</option>
+                                            <option value="easeOutQuart">easeOutQuart</option>
+                                            <option value="easeInOutQuart">easeInOutQuart</option>
+                                            <option value="easeInQuint">easeInQuint</option>
+                                            <option value="easeOutQuint">easeOutQuint</option>
+                                            <option value="easeInOutQuint">easeInOutQuint</option>
+                                            <option value="easeInSine">easeInSine</option>
+                                            <option value="easeOutSine">easeOutSine</option>
+                                            <option value="easeInOutSine">easeInOutSine</option>
+                                            <option value="easeInExpo">easeInExpo</option>
+                                            <option value="easeOutExpo">easeOutExpo</option>
+                                            <option value="easeInOutExpo">easeInOutExpo</option>
+                                            <option value="easeInCirc">easeInCirc</option>
+                                            <option value="easeOutCirc">easeOutCirc</option>
+                                            <option value="easeInOutCirc">easeInOutCirc</option>
+                                            <option value="easeInElastic">easeInElastic</option>
+                                            <option value="easeOutElastic">easeOutElastic</option>
+                                            <option value="easeInOutElastic">easeInOutElastic</option>
+                                            <option value="easeInBack">easeInBack</option>
+                                            <option value="easeOutBack">easeOutBack</option>
+                                            <option value="easeInOutBack">easeInOutBack</option>
+                                            <option value="easeInBounce">easeInBounce</option>
+                                            <option value="easeOutBounce">easeOutBounce</option>
+                                            <option value="easeInOutBounce">easeInOutBounce</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td><code>delayBetween</code></td><td class="input_gen_style"><input type="text" id="gen_delayBetween" value="150" style="width:30px" /></td></tr>
+                                <tr><td><code>animDuration</code></td><td class="input_gen_style"><input type="text" id="gen_animDuration" value="600" style="width:30px" /></td></tr>
+                                <tr><td><code>addShadow</code></td>
+                                    <td class="input_gen_style">
+                                        <select id="gen_addShadow"  style="width:140px">
+                                            <option value="0">False</option>
+                                            <option value="nw">NW</option>
+                                            <option value="ne">NE</option>
+                                            <option value="sw">SW</option>
+                                            <option value="se" selected>SE</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>Main -> icon:</code></td>
+                                    <td class="input_gen_style">
+                                        <select class="gen_icon_select" id="gen_M_icon" style="width:140px"></select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>Main -> title</code></td>
+                                    <td class="input_gen_style"><input type="text" id="gen_M_title" value="Main Element" style="width:130px" /></td>
+                                </tr>
+                                <tr>
+                                    <td><code>Main -> bg</code></td>
+                                    <td class="input_gen_style"><input type="text" id="gen_M_bg" value="#000080" style="width:95px" /></td>
+                                </tr>
+                                <tr>
+                                    <td><code>Main -> hoverBg</code></td>
+                                    <td class="input_gen_style"><input type="text" id="gen_M_hoverBg" value="#1B3C82" style="width:95px" /></td>
+                                </tr>
+                                <tr>
+                                    <td><code>Main -> sizeReduce</code></td>
+                                    <td class="input_gen_style"><input type="text" id="gen_M_sizeReduce" value="15" style="width:30px" /></td>
+                                </tr>                                
+                            </table>
+                        </td>
+                        <td style="vertical-align:top; padding:1px; width:502px; height:502px;">
+                            <a href="" class="btn btn-primary gen_rebuild" style="width:80%; margin:5px auto; text-align: center; display: block;">Generate</a>
+                            <div style="width:500px; height:500px;">
+                                <div id="HotSpot_gen"></div>
+                            </div>
+                        </td>
+                        <td style="padding:5px !important; vertical-align: top;">
+                            <h5 style="margin:0 0 5px 0;">Elements: <span class="add_ele" style="width:50px; font-size:12px; font-weight:normal; float:right; cursor:pointer;"><i class="icon-plus-sign "></i>&nbsp;Add</span></h5>
+                           
+                            <div style="max-height: 660px; overflow-y: scroll; overflow-x: hidden; width: 368px; min-height: 660px;">
+                            <table id="gen_settings2">
+                                
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> title:</code></td><td class="input_gen_style"><input type="text" value="Child Element" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> icon:</code></td><td class="input_gen_style"><select class="gen_icon_select" style="width:110px"></select></td></tr>
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> pad:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> href:</code></td><td class="input_gen_style"><input type="text" value="#" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> sizeReduce:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> bg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_bg_1" value="#1B3C82" style="width:95px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="1"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 1 -> hoverBg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_hoverBg_1" value="" style="width:95px" /></td></tr>
+                                
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> title:</code></td><td class="input_gen_style"><input type="text" value="Child Element" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> icon:</code></td><td class="input_gen_style"><select class="gen_icon_select" style="width:110px"></select></td></tr>
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> pad:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> href:</code></td><td class="input_gen_style"><input type="text" value="#" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> sizeReduce:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> bg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_bg_2" value="#1B3C82" style="width:95px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="2"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 2 -> hoverBg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_hoverBg_2" value="" style="width:95px" /></td></tr>
+                                
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> title:</code></td><td class="input_gen_style"><input type="text" value="Child Element" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> icon:</code></td><td class="input_gen_style"><select class="gen_icon_select" style="width:110px"></select></td></tr>
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> pad:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> href:</code></td><td class="input_gen_style"><input type="text" value="#" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> sizeReduce:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> bg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_bg_3" value="#1B3C82" style="width:95px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="3"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 3 -> hoverBg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_hoverBg_3" value="" style="width:95px" /></td></tr>
+                                
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> title:</code></td><td class="input_gen_style"><input type="text" value="Child Element" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> icon:</code></td><td class="input_gen_style"><select class="gen_icon_select" style="width:110px"></select></td></tr>
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> pad:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> href:</code></td><td class="input_gen_style"><input type="text" value="#" style="width:100px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> sizeReduce:</code></td><td class="input_gen_style"><input type="text" value="15" style="width:30px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> bg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_bg_4" value="#1B3C82" style="width:95px" /></td></tr>
+                                <tr class="gen_ele_row" data-who="4"><td><i class="icon-minus-sign remove_ele" style="cursor:pointer;"></i>&nbsp;<code>Ele 4 -> hoverBg:</code></td><td class="input_gen_style"><input type="text" id="gen_ele_hoverBg_4" value="" style="width:95px" /></td></tr>
+                            </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea id="gen_code_area" style ="width:1120px; height:330px; "></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- Creating End -->	
+        
+        <!-- Icons Begin -->	
+        <section id="icons">
+            <div class="page-header"><h3>Icons</h3><hr class="notop"></div>
+            <div class="alert alert-info">
+                <strong>HotSpot</strong> menus are based on Icons - Those icons are bound to the plugin using a specific CSS class that allows 
+                you to declare the icons to be used easily and make sure that they will be properly displayed on any platform / web-browser. <br />
+                All icons that are supplied with this plugin are "free to use" and are SVG formatted to make sure they are displayed at the best resolution there is. You can create your own icons or select whatever you need from the already declared icons.
+            </div>
+            
+            <p id='que_icons_icons_classes' class="que_anchor">&nbsp;</p>
+            <h4 id="icons_icons_classes">Icons classes</h4>
+            <div class="alert" style="margin-left: 40px;">
+                Each Icon to be used with this plugin should be declared with CSS - Basically we declare a class name that will be bound to the requested icon. All icons class name when declared need to have those prefix and suffix:
+                <ul>
+                    <li><strong>.hsi_</strong> - The plugin prefix</li>
+                    <li><strong>icon unique name</strong> - Your icon unique name</li>
+                    <li><strong>_d</strong> or <strong>_w</strong> - Suffix that indicates lightness of the icon (d for dark, w for white)</li>
+                </ul>
+                When setting the icon to be used you don't have to use the <strong>hsi_</strong> prefix, just the icons name and the lightness suffix. If you don't add the suffix a dark suffix will be assumed by the plugin, example: <br />
+                <code>icon:'addfile'</code>&nbsp;&nbsp;equal to&nbsp;&nbsp;<code>icon:'hsi_addfile'</code>&nbsp;&nbsp;equal to&nbsp;&nbsp;<code>icon:'addfile_d'</code><br />
+                "icon" setting is required when declaring the main element ( the first object in the <code>elements</code> array). In the child elements its optional.<br />
+                The following table is all the icons already included with <strong>HotSpot</strong> plugin.
+            </div>
+            <table class="icons_gal center_all"></table>
+            
+            <p>&nbsp;</p>
+            <p id='que_icons_custom_classes' class="que_anchor">&nbsp;</p>
+            <h4 id="icons_custom_classes">Custom Icons</h4>
+            <div class="alert" style="margin-left: 40px;">
+                If you want to add your own icons to be used with the plugin you should add a CSS rule as followed:
+            </div>
+<pre class="prettyprint lang-css linenums max_med" style="margin-left:40px;">
+/*Dark icon using the _d suffix */
+.hsi_yourIconName_d {
+&nbsp;&nbsp;&nbsp;&nbsp;background-image: url( /* path to your icon */ );
+&nbsp;&nbsp;&nbsp;&nbsp;background-position: center center;
+&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;
+}
+.hsi_yourIconName_d:hover { 
+&nbsp;&nbsp;&nbsp;&nbsp;/* whatever you want to happen when mouse enter */
+}
+</pre>
+            <div class="alert" style="margin-left: 40px;">
+                We recommend using SVG images for your icons just for the sake of resolution. <br />
+                You can find more great icons here: <a href='http://iconmonstr.com/' target="_blank">http://iconmonstr.com/</a>
+                
+            </div>
+
+            <p id='que_icons_licen' class="que_anchor">&nbsp;</p>            
+            <h4 id="icons_licen">Icon license</h4>
+            <div class="alert alert-info">
+                <strong>HotSpot</strong> plugin by default includes 400+ icons that are predefined in the <strong>HotSpot</strong> style-sheet. Those 
+                icons are taken from the amazing icon gallery of <a href='http://iconmonstr.com/' target="_blank"><strong>iconmonstr.com</strong></a>. They 
+                are free to use under this license: <a href='assets/iconmonstr-license-agreement.pdf' target="_blank"><strong> iconmonstr-license-agreement.</strong></a>
+            </div>            
+        </section>
+        <!-- End Icons -->	
+        
+        <!-- Events & Methods Begin -->	
+        <section id="events_methods">
+            <div class="page-header"><h3>Events & Methods</h3><hr class="notop"></div>
+            <div class="alert alert-info">
+                <strong>HotSpot</strong> jQuery plugin has Some basic events and methods that allow you to easily integrate and set its behavior, interact with your 
+                page and programmatically interact with each <strong>HotSpot</strong> instance you created. those methods and events makes <strong>HotsSpot</strong> a great flexible tool that can be 
+                 any menu you need: Image tool box, Gallery controls, Media player controls and many more.
+            </div>
+            
+            <p id='que_events_methods_events' class="que_anchor">&nbsp;</p>
+            <h4 id="events_methods_events">Events</h4>
+            <div class="alert" style="margin-left: 40px;">
+                Each instance has 5 optional Events: <code>created</code>, <code>openCallback</code>, <code>closeCallback</code>, <code>beforeOpen</code>, <code>beforeClose</code><br />
+                Those events are set by the option object when creating the menu, they are expecting a function that will be fired by the plugin any time they occurred<br />
+                Here are some basic examples:
+            </div>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Event</th><th>Behavior</th><th>Example Syntax</th><th>Example</th></tr>
+                <tr>
+                    <td><code>created</code></td>
+                    <td>Will execute a function after the plugin finishes the menu creation</td>
+                    <td>
+<pre class="prettyprint lang-js linenums max_290">
+created:function(){ alert(&quot;created a hotspot&quot;); }
+</pre>
+                    </td>
+                    <td style="width:330px;">Will pop-up a message after hotspot is created.</td>
+                </tr>
+                <tr>
+                    <td><code>openCallback</code></td>
+                    <td>will trigger a callback function when the menu was opened</td>
+                    <td>
+<pre class="prettyprint lang-js linenums max_290">
+openCallback:function(){ alert(&quot;you opened me&quot;); }
+</pre>
+                    </td>
+                    <td style="width:330px;"><div id="hotspot_openCallback"></div></td>
+                </tr>
+                <tr>
+                    <td><code>openCallback</code></td>
+                    <td>will trigger a callback function when the menu was closed</td>
+                    <td>
+<pre class="prettyprint lang-js linenums max_290">
+closeCallback:function(){ alert(&quot;you closed me&quot;); }
+</pre>
+                    </td>
+                    <td style="width:330px;"><div id="hotspot_closeCallback"></div></td>
+                </tr>
+                <tr>
+                    <td><code>beforeOpen</code></td>
+                    <td>will trigger a custom function before menu opens</td>
+                    <td>
+<pre class="prettyprint lang-js linenums max_290">
+beforeOpen:function(){ alert(&quot;you are about to open me&quot;); }
+</pre>
+                    </td>
+                    <td style="width:330px;"><div id="hotspot_beforeOpen"></div></td>
+                </tr>
+                <tr>
+                    <td><code>beforeClose</code></td>
+                    <td>will trigger a custom function before menu closes</td>
+                    <td>
+<pre class="prettyprint lang-js linenums max_290">
+beforeClose:function(){ alert(&quot;you are about to close me&quot;); }
+</pre>
+                    </td>
+                    <td style="width:330px;"><div id="hotspot_beforeClose"></div></td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <div class="alert" style="margin-left: 40px;">
+                To target the current <strong>hotspot</strong> menu inside the callback function you should use <code>&nbsp; $(this) &nbsp;</code>. <br />
+                Those events can't be defined directly when using a "inline" declaration of the menu (using a List) in this case you still need 
+                to declare those events through an object.
+            </div>
+            
+            <p>&nbsp;</p>
+            <p id='que_events_methods_methods' class="que_anchor">&nbsp;</p>
+            <h4 id="events_methods_methods">Methods</h4>
+            <div class="alert" style="margin-left: 40px;">
+                Each instance created has 6 methods: <code>.destroy_hotspot()</code>, <code>.rebuild_hotspot()</code>, <code>.enable_hotspot()</code>, <code>.disable_hotspot()</code>, <code>.open_hotspot()</code>, <code>.close_hotspot()</code> <br />
+                Those methods can be triggered from any <strong>HotSpot</strong> element that was created, they enable you to control the menu behavior and rebuild it dynamically.<br />
+            </div>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">.destroy_hotspot() :</h5>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Syntax</th><th>Args</th><th>What it does</th></tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_med" >
+   var hotspot = $('#hotspot').hotspot({ /* your settings */ });
+   $(hotspot).destroy_hotspot();
+</pre> 
+                    </td>
+                    <td>
+                        No Args
+                    </td>
+                    <td>
+                        Destroys the Menu and detach all events.
+                    </td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">.rebuild_hotspot() :</h5>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Syntax</th><th>Args</th><th>What it does</th></tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_med" >
+   var hotspot = $('#hotspot').hotspot({ /* your settings */ });
+   $(hotspot).rebuild_hotspot({ mainSize:40 } /* Optional Settings*/ );
+</pre> 
+                    </td>
+                    <td>
+                        Optional settings object - settings that will be passed will overwrite previous ones.
+                    </td>
+                    <td>
+                        Dynamically Rebuild the menu by passing an object of settings to overwrite the previous ones.
+                        If you don't pass any settings the rebuild function will use your previous ones.
+                    </td>
+                </tr>
+            </table>
+            <div class="alert" style="margin-left: 40px;">
+                If you rebuild the <code>elements</code> option you will need to redefine all the elements - Changing just one element 
+                is not supported. A good example of use is the generator we created in this page.
+            </div>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">.disable_hotspot() :</h5>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Syntax</th><th>Args</th><th>What it does</th></tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_med" >
+   var hotspot = $('#hotspot').hotspot({ /* your settings */ });
+   $(hotspot).disable_hotspot('no-drop',true);
+</pre> 
+                    </td>
+                    <td>
+                        Arg1 {String} - is the cursor (css cursor) to use. <br />
+                        Arg2 {Boolean} - Should the menu close or not.
+                    </td>
+                    <td>
+                        Dynamically Disables the menu instance - you can assign a cursor to use when disabled and should the menu close before disabled.
+                    </td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">.enable_hotspot() :</h5>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Syntax</th><th>Args</th><th>What it does</th></tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_med" >
+   var hotspot = $('#hotspot').hotspot({ /* your settings */ });
+   $(hotspot).enable_hotspot(true);
+</pre> 
+                    </td>
+                    <td>
+                        Arg1 {Boolean /Optional} - Should the menu open or not. By default `False`.<br />
+                    </td>
+                    <td>
+                        Dynamically Enable the menu instance - you can set the menu to open after enabled, cursor will become 'pointer' again.
+                    </td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">.open_hotspot() :</h5>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Syntax</th><th>Args</th><th>What it does</th></tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_med" >
+   var hotspot = $('#hotspot').hotspot({ /* your settings */ });
+   $(hotspot).open_hotspot(true,true);
+</pre> 
+                    </td>
+                    <td>
+                        Arg1 {Boolean /Optional} - Trigger beforeOpen func.
+                        Arg2 {Boolean /Optional} - Trigger openCallback func.
+                        By default `False`<br />
+                    </td>
+                    <td>
+                        Dynamically Open the menu instance.
+                    </td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <h5 style="margin-left: 40px;">.close_hotspot() :</h5>
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left: 40px;">
+                <tr><th>Syntax</th><th>Args</th><th>What it does</th></tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_med" >
+   var hotspot = $('#hotspot').hotspot({ /* your settings */ });
+   $(hotspot).close_hotspot(true,true);
+</pre> 
+                    </td>
+                    <td>
+                        Arg1 {Boolean /Optional} - Trigger beforeClose func. <br />
+                        Arg2 {Boolean /Optional} - Trigger closeCallback func. <br />
+                        By default `False`
+                    </td>
+                    <td>
+                        Dynamically Close the menu instance.
+                    </td>
+                </tr>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_events_methods_responsive_aproach' class="que_anchor">&nbsp;</p>
+            <h4 id="events_methods_responsive_aproach">Responsive approach</h4>
+            <div class="alert" style="margin-left: 40px;">
+                The <strong>HotSpot</strong> menu can be easily responsive by rebuilding it any time the window size changed.
+                Basically we change the <code>mainSize</code> option when the page is resized - Its good practice to fire a timer 
+                That will be reset while the user keeps resizing until he is done, consider this:
+            </div>
+<pre class="prettyprint lang-js linenums max_full"  style="margin-left:40px">
+&lt;body&gt;
+&lt;div id=&quot;hotspot&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;var myHotspot = $(&quot;#hotspot&quot;).hotspot({/* options with default main size */});
+&nbsp;&nbsp;&nbsp;&nbsp;var timerResizeHotSpot; /* using a timer to prevent tons of call */
+&nbsp;&nbsp;&nbsp;&nbsp;$(window).resize(function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.clearTimeout(timerResizeHotSpot);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerResizeHotSpot = window.setTimeout(function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var current_width = $(window).width();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var hotSpotWidth = 80; /* Max Width */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (current_width &lt;= 480) hotSpotWidth = 35;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (current_width &lt;= 768) hotSpotWidth = 55;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (current_width &lt;= 960) hotSpotWidth = 65;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(myHotspot).rebuild_hotspot({ mainSize:hotSpotWidth });
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},250);
+&nbsp;&nbsp;&nbsp;&nbsp;});
+&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+            <div class="alert" style="margin-left: 40px;">
+                Another thing that can help you positioning your menu relatively to the its parent 
+                is using CSS margin with percentage margins <code> margin: { t:"20px" l:"0" r:"40%" b:"0" } </code> &nbsp;as you can see the margin-right is set to 40%
+                If the hotspot position is set to <code> pagePos:"nw" </code> it will be placed at 40% from the right of the parent width.
+            </div>         
+        </section>
+        <!-- End Events & Methods -->	
+        
+        <!-- Examples Begin -->	
+        <section id="examples">
+            <div class="page-header"><h3>Examples</h3><hr class="notop"></div>
+            
+            <p id='que_examples_basic_social_menu' class="que_anchor">&nbsp;</p>
+            <h4 id="examples_basic_social_menu">Basic Social Menu</h4>
+            <table>
+                <tr>
+                    <td>
+                    <div style="position:relative; width:1130px; height:350px; background-image: url(assets/images/1.jpg); ">
+                        <div id="hotspot_ex1"></div>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_full" >
+&lt;div id='hotspot'&gt;&lt;/div&gt;
+&lt;script&gt;
+$('#hotspot').hotspot({
+&nbsp;&nbsp;&nbsp;&nbsp;mainSize :50,
+&nbsp;&nbsp;&nbsp;&nbsp;pagePos :'nw',
+&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+&nbsp;&nbsp;&nbsp;&nbsp;radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px'},
+&nbsp;&nbsp;&nbsp;&nbsp;open :'hor',
+&nbsp;&nbsp;&nbsp;&nbsp;easing :'easeInExpo',
+&nbsp;&nbsp;&nbsp;&nbsp;delayBetween :150,
+&nbsp;&nbsp;&nbsp;&nbsp;animDuration :600,
+&nbsp;&nbsp;&nbsp;&nbsp;addShadow :false,
+&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'share_d', sizeReduce:15, title:'Share', bg:'#f5f5f5' }, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_facebook_d', sizeReduce:15, title:'FaceBook', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_twitter_d', sizeReduce:15, title:'Twitter', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_googleplus_d', sizeReduce:15, title:'Google+', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_pinterest_d', sizeReduce:15, title:'Pintrest', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_myspace_d', sizeReduce:15, title:'MySpace', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' }
+&nbsp;&nbsp;&nbsp;&nbsp;]
+});
+&lt;/script&gt;
+</pre>  
+                    </td>
+                </tr>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_examples_text_display_menu' class="que_anchor">&nbsp;</p>
+            <h4 id="examples_text_display_menu">Text display Menu</h4>
+            <table>
+                <tr>
+                    <td>
+                    <div style="position:relative; width:1130px; height:350px; background-image: url(assets/images/2.jpg); text-shadow:1px 1px black;">
+                        <p id='text_par' style="color:white; width:70%; margin:25px; float:left;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.
+                        </p>
+                        <div id="hotspot_ex2"></div>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_full" >
+&lt;div id='hotspot'&gt;&lt;/div&gt;
+&lt;script&gt;
+$('#hotSpot').hotspot({
+&nbsp;&nbsp;&nbsp;&nbsp;mainSize :50,
+&nbsp;&nbsp;&nbsp;&nbsp;pagePos :'ne',
+&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'20px', b:'20px', l:'20px', r:'20px'},
+&nbsp;&nbsp;&nbsp;&nbsp;radius :{ tl:'4px', bl:'4px', tr:'4px', br:'4px'},
+&nbsp;&nbsp;&nbsp;&nbsp;open :'ver',
+&nbsp;&nbsp;&nbsp;&nbsp;easing :'easeOutElastic',
+&nbsp;&nbsp;&nbsp;&nbsp;delayBetween :100,
+&nbsp;&nbsp;&nbsp;&nbsp;animDuration :1000,
+&nbsp;&nbsp;&nbsp;&nbsp;addShadow :false,
+&nbsp;&nbsp;&nbsp;&nbsp;smoothTransition :false,
+&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'tools_d', sizeReduce:5, title:'Main Element', bg:'#0066cc', hoverBg:'#0066cc' }, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'textbold_d', sizeReduce:12, title:'Bold', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;p#text_par&quot;).css(&quot;font-weight&quot;,($(&quot;p#text_par&quot;).css(&quot;font-weight&quot;) == 'bold'?'normal':'bold')); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'italic_d', sizeReduce:12, title:'Italic', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;p#text_par&quot;).css(&quot;font-style&quot;,($(&quot;p#text_par&quot;).css(&quot;font-style&quot;) == 'italic'?'normal':'italic')); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'font_d', sizeReduce:12, title:'UperCase All', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;p#text_par&quot;).css(&quot;text-transform&quot;,($(&quot;p#text_par&quot;).css(&quot;text-transform&quot;) == 'uppercase'?'lowercase':'uppercase')); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'fontsize_d', sizeReduce:12, title:'Size', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cur = parseInt($(&quot;p#text_par&quot;).css(&quot;font-size&quot;));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cur = ( cur+2 &gt; 22 ? 12 : cur+2 );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;p#text_par&quot;).css(&quot;font-size&quot;,cur+'px'); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;]
+});
+&lt;/script&gt;
+</pre>  
+                    </td>
+                </tr>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_examples_several_menus' class="que_anchor">&nbsp;</p>
+            <h4 id="examples_several_menus">Several Menus interacting:</h4>
+            <table>
+                <tr>
+                    <td>
+                    <div style="position:relative; width:1130px; height:350px; background-image: url(assets/images/3.jpg); ">
+                        <div id="hotspot_ex3"></div>
+                        <div id="hotspot_ex4"></div>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_full" >
+&lt;div id='hotspot'&gt;&lt;/div&gt;
+&lt;script&gt;
+$('#hotspot').hotspot({
+&nbsp;&nbsp;&nbsp;&nbsp;mainSize :50,
+&nbsp;&nbsp;&nbsp;&nbsp;pagePos :'nw',
+&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+&nbsp;&nbsp;&nbsp;&nbsp;radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px'},
+&nbsp;&nbsp;&nbsp;&nbsp;open :'hor',
+&nbsp;&nbsp;&nbsp;&nbsp;easing :'easeInExpo',
+&nbsp;&nbsp;&nbsp;&nbsp;delayBetween :150,
+&nbsp;&nbsp;&nbsp;&nbsp;animDuration :600,
+&nbsp;&nbsp;&nbsp;&nbsp;addShadow :false,
+&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'share_d', sizeReduce:15, title:'Share', bg:'#f5f5f5' }, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_facebook_d', sizeReduce:15, title:'FaceBook', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_twitter_d', sizeReduce:15, title:'Twitter', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_googleplus_d', sizeReduce:15, title:'Google+', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_pinterest_d', sizeReduce:15, title:'Pintrest', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_myspace_d', sizeReduce:15, title:'MySpace', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' }
+&nbsp;&nbsp;&nbsp;&nbsp;]
+});
+&lt;/script&gt;
+</pre>  
+                    </td>
+                </tr>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_examples_video_control' class="que_anchor">&nbsp;</p>
+            <h4 id="examples_video_control">Video Controls</h4>
+            <table>
+                <tr>
+                    <td>
+                        <div style="position:relative; width:1130px; height:350px; background-image: url(assets/images/4.jpg); ">
+                            <div id="hotspot_ex5"></div>
+                            <div id="hotspot_ex6"></div>
+                            <div id="hotspot_ex7"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_full" >
+&lt;div id=&quot;hotspot1&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;hotspot2&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;hotspot3&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var settings_ex123 = {
+&nbsp;&nbsp;&nbsp;&nbsp;mainSize :40,
+&nbsp;&nbsp;&nbsp;&nbsp;pagePos :'se',
+&nbsp;&nbsp;&nbsp;&nbsp;radius :{ tl:'5px', bl:'5px', tr:'5px', br:'1px'},
+&nbsp;&nbsp;&nbsp;&nbsp;open :'hor',
+&nbsp;&nbsp;&nbsp;&nbsp;easing :'easeInOutExpo',
+&nbsp;&nbsp;&nbsp;&nbsp;delayBetween :150,
+&nbsp;&nbsp;&nbsp;&nbsp;animDuration :600,
+&nbsp;&nbsp;&nbsp;&nbsp;addShadow :'nw'
+};
+$('#hotspot1').hotspot(
+&nbsp;&nbsp;&nbsp;&nbsp;$.extend(settings_ex567,{
+&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'volume_d', sizeReduce:15, title:'Actions', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'volumeminus_d', sizeReduce:15, title:'-', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player volume dec */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'volumeplus_d', sizeReduce:15, title:'+', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player volume inc */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'loud_d', sizeReduce:15, title:'Loud / Mute', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).toggleClass(&quot;hsi_mute_d&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player mute */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;]})
+);
+$('#hotspot2').hotspot(
+&nbsp;&nbsp;&nbsp;&nbsp;$.extend(settings_ex123,{
+&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'15px', b:'70px', l:'15px', r:'15px'},
+&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'control_d', sizeReduce:15, title:'Controls', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'fullscreen_d', sizeReduce:15, title:'Full screen', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player full screen toggle */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'hd_d', sizeReduce:15, title:'HD', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player resulution toggle */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'time3_d', sizeReduce:15, title:'Whatch Later', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to users add to whatch list event&nbsp;&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'repeat_d', sizeReduce:15, title:'Whatch Later', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func:function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player repeat toggle */
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;]})
+);
+$('#hotspot3').hotspot(
+&nbsp;&nbsp;&nbsp;&nbsp;$.extend(settings_ex567,{
+&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'15px', b:'125px', l:'15px', r:'15px'},
+&nbsp;&nbsp;&nbsp;&nbsp;beforeOpen: function(){ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass(&quot;hsi_pause_d&quot;).attr(&quot;title&quot;,&quot;Pause&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player Pause */
+&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;beforeClose: function(){ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).removeClass(&quot;hsi_pause_d&quot;).attr(&quot;title&quot;,&quot;Play&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Attach to player Play */
+&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'arrright2_d', sizeReduce:15, title:'Play', bg:'#f5f5f5', hoverBg:'#f5f5f5' }
+&nbsp;&nbsp;&nbsp;&nbsp;]})
+);
+&lt;/script&gt;
+</pre>  
+                    </td>
+                </tr>
+            </table>
+            
+            <p>&nbsp;</p>
+            <p id='que_examples_floatin_menu' class="que_anchor">&nbsp;</p>
+            <h4 id="examples_floatin_menu">Floating Menu</h4>
+            <div class="alert alert-info">
+                <strong>HotSpot</strong> menus, as mentioned are positioned relatively to their parent container, it can be any html element that holds the 
+                the menu. If you want to set a <strong>HotSpot</strong> menu that is fixed to the page place the the element in the BODY of the HTML document - in this case the plugin will
+                Set the menu to be Fixed to the page. <br />
+                Click the button to load a fixed menu menu ( will appear on the right side under the navigation bar)<br />
+                <a id='load_fixed_ex' href="#" class="btn btn-large">Load Fixed Example</a>
+            </div>
+            <table>
+                <tr>
+                    <td>
+<pre class="prettyprint lang-js linenums max_full" >
+&lt;body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;hotspot&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#hotspot').hotspot({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mainSize :70,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pagePos :'ne',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin :{ t:'65px', b:'15px', l:'15px', r:'30px' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px' },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open :'ver',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;easing :'easeInOutExpo',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delayBetween :150,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animDuration :600,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addShadow :false,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;closeOutClick : true,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elements : [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'menudots_w', sizeReduce:15, title:'Actions', bg:'#424242', hoverBg:'#424242' }, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'favorite_w', sizeReduce:15, title:'Add to Favorite', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'link_w', sizeReduce:15, title:'Share Link', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_facebooklike_w', sizeReduce:15, title:'Like it', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'soc_retweet_w', sizeReduce:15, title:'Retweet', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ icon:'speechbubble_w', sizeReduce:15, title:'Comment', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/boby&gt;
+</pre>  
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <!-- End Examples -->	
+        
+        <hr />
+        <!-- Footer Begin -->	
+        <footer><p>Copyright Shlomo Hassid 2014 made with the <a href="http://rxa.li/documenter">Documenter v2.0</a></p></footer>
+        <!-- End Footer -->	
+    </div>
+    <!-- End container --> 
+    
+<!-- Le javascript --> 
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="../js/easing.1.3.js"></script>
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/codemirror/lib/codemirror.js"></script> 
+<script src="assets/js/codemirror/mode/css/css.js"></script> 
+<script src="assets/js/codemirror/mode/javascript/javascript.js"></script> 
+<script src="assets/js/codemirror/mode/xml/xml.js"></script> 
+<script src="assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script> 
+<script src="assets/js/bootstrap-min.js"></script> 
+<script src="assets/js/tinycolor-0.9.15.min.js"></script>
+<script src="assets/js/evol.colorpicker.js"></script>
+<script type="text/javascript" src="../js/hotspot.1.0.js"></script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+    //Scrolls:
+    document.createElement('section'); 
+    var duration='500',easing='swing';
+    
+    $("#HotSpot_ex1").hotspot({
+        debug           : true,
+        margin          : 10,
+        mainSize        : 40,
+        pagePos         : "nw",
+        radius          : 5,
+        open            : "ver",
+        easing          : "easeInOutExpo",
+        delayBetween    : 100,
+        animDuration    : 600,
+        closeOutClick   : false,
+        elements        : [
+                                { title:"Example 1", icon:"cloud2_w", sizeReduce:15, bg:"#585858", hoverBg:"#6E6E6E" },
+                                { title:"Element 1", icon:"cloudminus_w", pad:10 },
+                                { title:"Element 2", icon:"cloudplus_w", pad:10 },
+                                { title:"Element 3", icon:"cloudx_w", pad:10 }
+                        ]
+    });
+    
+    $("#HotSpot_gen").hotspot({
+        margin          : "20px",
+        mainSize        : 80,
+        pagePos         : "nw",
+        radius          : "15px 15px 15px 15px",
+        open            : "ver",
+        easing          : "easeInOutCirc",
+        delayBetween    : 150,
+        animDuration    : 600,
+        smoothTransition: true,
+        addShadow       : "se",
+        elements        : [
+                            { title:"", icon:"share_w", sizeReduce:15, bg:"navy", hoverBg:"#1B3C82" },
+                            { pad:15, title:"facebook",    icon: "soc_facebook_w", bg:"#1B3C82" },
+                            { pad:15, title:"google plus", icon: "soc_googleplus_w", bg:"#1B3C82" },
+                            { pad:15, title:"twitter",     icon: "soc_twitter_w", bg:"#1B3C82" },
+                            { pad:15, title:"youtube",     icon: "soc_youtube_w", bg:"#1B3C82" }
+                        ]
+
+    });
+    $("#hotspot_openCallback").hotspot({
+        margin          : {t:"10px",r:"0",b:"0",l:"10px"},
+        mainSize        : 50,
+        pagePos         : "nw",
+        radius          : "35px 35px 35px 35px",
+        open            : "hor",
+        easing          : "easeInOutCirc",
+        delayBetween    : 150,
+        animDuration    : 500,
+        smoothTransition: true,
+        openCallback    : function(){ alert("you opened me"); },
+        elements        : [
+                            { title:"Example openCallback", icon:"share_w", sizeReduce:15, bg:"#3f3f3f", hoverBg:"#595959" },
+                            { pad:15, title:"facebook",    icon: "soc_facebook_w", bg:"#595959" },
+                            { pad:10, title:"google plus", icon: "soc_googleplus_w", bg:"#595959" },
+                            { pad:10, title:"twitter",     icon: "soc_twitter_w", bg:"#595959" },
+                            { pad:10, title:"youtube",     icon: "soc_youtube_w", bg:"#595959" }
+                        ]
+    });
+    $("#hotspot_closeCallback").hotspot({
+        margin          : {t:"10px",r:"0",b:"0",l:"10px"},
+        mainSize        : 50,
+        pagePos         : "nw",
+        radius          : "35px 35px 35px 35px",
+        open            : "hor",
+        easing          : "easeInOutCirc",
+        delayBetween    : 150,
+        animDuration    : 500,
+        smoothTransition: true,
+        closeCallback    : function(){ alert("you closed me"); },
+        elements        : [
+                            { title:"Example openCallback", icon:"share_w", sizeReduce:15, bg:"#3f3f3f", hoverBg:"#595959" },
+                            { pad:15, title:"facebook",    icon: "soc_facebook_w", bg:"#595959" },
+                            { pad:10, title:"google plus", icon: "soc_googleplus_w", bg:"#595959" },
+                            { pad:10, title:"twitter",     icon: "soc_twitter_w", bg:"#595959" },
+                            { pad:10, title:"youtube",     icon: "soc_youtube_w", bg:"#595959" }
+                        ]
+    });
+    $("#hotspot_beforeOpen").hotspot({
+        margin          : {t:"10px",r:"0",b:"0",l:"10px"},
+        mainSize        : 50,
+        pagePos         : "nw",
+        radius          : "35px 35px 35px 35px",
+        open            : "hor",
+        easing          : "easeInOutCirc",
+        delayBetween    : 150,
+        animDuration    : 500,
+        smoothTransition: true,
+        beforeOpen      : function(){ alert("you about to open me"); },
+        elements        : [
+                            { title:"Example openCallback", icon:"share_w", sizeReduce:15, bg:"#3f3f3f", hoverBg:"#595959" },
+                            { pad:15, title:"facebook",    icon: "soc_facebook_w", bg:"#595959" },
+                            { pad:10, title:"google plus", icon: "soc_googleplus_w", bg:"#595959" },
+                            { pad:10, title:"twitter",     icon: "soc_twitter_w", bg:"#595959" },
+                            { pad:10, title:"youtube",     icon: "soc_youtube_w", bg:"#595959" }
+                        ]
+    });
+    $("#hotspot_beforeClose").hotspot({
+        margin          : {t:"10px",r:"0",b:"0",l:"10px"},
+        mainSize        : 50,
+        pagePos         : "nw",
+        radius          : "35px 35px 35px 35px",
+        open            : "hor",
+        easing          : "easeInOutCirc",
+        delayBetween    : 150,
+        animDuration    : 500,
+        smoothTransition: true,
+        beforeClose     : function(){ alert("you are about to close me"); },
+        elements        : [
+                            { title:"Example openCallback", icon:"share_w", sizeReduce:15, bg:"#3f3f3f", hoverBg:"#595959" },
+                            { pad:15, title:"facebook",    icon: "soc_facebook_w", bg:"#595959" },
+                            { pad:10, title:"google plus", icon: "soc_googleplus_w", bg:"#595959" },
+                            { pad:10, title:"twitter",     icon: "soc_twitter_w", bg:"#595959" },
+                            { pad:10, title:"youtube",     icon: "soc_youtube_w", bg:"#595959" }
+                        ]
+    });
+    $('#hotspot_ex1').hotspot({
+        debug:true,
+        mainSize :50,
+        pagePos :'nw',
+        margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+        radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px'},
+        open :'hor',
+        easing :'easeInExpo',
+        delayBetween :150,
+        animDuration :600,
+        addShadow :'se',
+        elements : [
+            { icon:'share_d', sizeReduce:15, title:'Share', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+            { icon:'soc_facebook_d', sizeReduce:15, title:'FaceBook', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+            { icon:'soc_twitter_d', sizeReduce:15, title:'Twitter', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+            { icon:'soc_googleplus_d', sizeReduce:15, title:'Google+', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+            { icon:'soc_pinterest_d', sizeReduce:15, title:'Pintrest', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' },
+            { icon:'soc_myspace_d', sizeReduce:15, title:'MySpace', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, href:'#' }
+        ]
+    });
+$('#hotspot_ex2').hotspot({
+    mainSize :50,
+    pagePos :'ne',
+    margin :{ t:'20px', b:'20px', l:'20px', r:'20px'},
+    radius :{ tl:'4px', bl:'4px', tr:'4px', br:'4px'},
+    open :'ver',
+    easing :'easeOutElastic',
+    delayBetween :150,
+    animDuration :1100,
+    addShadow :false,
+    smoothTransition :true,
+    elements : [
+        { icon:'tools_w', sizeReduce:5, title:'Main Element', bg:'#0066cc', hoverBg:'#0066cc' }, 
+        { icon:'textbold_w', sizeReduce:12, title:'Bold', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+          func:function(){ 
+              $("p#text_par").css("font-weight",($("p#text_par").css("font-weight") === 'bold'?'normal':'bold')); 
+          }
+        },
+        { icon:'italic_w', sizeReduce:12, title:'Italic', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+          func:function(){ 
+              $("p#text_par").css("font-style",($("p#text_par").css("font-style") === 'italic'?'normal':'italic')); 
+          }
+        },
+        { icon:'font_w', sizeReduce:12, title:'UperCase All', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+          func:function(){ 
+              $("p#text_par").css("text-transform",($("p#text_par").css("text-transform") === 'uppercase'?'lowercase':'uppercase')); 
+          }
+        },
+        { icon:'fontsize_w', sizeReduce:12, title:'Size', bg:'rgba(0, 102, 204, 0.6)', hoverBg:'rgba(0, 102, 204, 0.9)', pad:10,
+          func:function(){ 
+              cur = parseInt($("p#text_par").css("font-size"));
+              cur = ( cur+2 > 22 ? 12 : cur+2 );
+              $("p#text_par").css("font-size",cur+'px'); 
+          }
+        }
+    ]
+});
+var hotspot_ex3,hotspot_ex4 = null; 
+hotspot_ex3 = $('#hotspot_ex3').hotspot({
+    debug:true,
+    mainSize :50,
+    pagePos :'nw',
+    margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+    radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px'},
+    open :'hor',
+    easing :'easeInOutExpo',
+    delayBetween :150,
+    animDuration :600,
+    addShadow :'se',
+    closeOutClick   : false,
+    beforeOpen :function(){ $(hotspot_ex4).open_hotspot(false,false); },
+    beforeClose :function(){ $(hotspot_ex4).close_hotspot(false,false); },
+    elements : [
+        { icon:'share_d', sizeReduce:15, title:'Share', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+        { icon:'soc_facebook_d', sizeReduce:15, title:'FaceBook', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'soc_twitter_d', sizeReduce:15, title:'Twitter', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'soc_googleplus_d', sizeReduce:15, title:'Google+', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'soc_pinterest_d', sizeReduce:15, title:'Pintrest', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'soc_myspace_d', sizeReduce:15, title:'MySpace', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 }
+    ]
+});
+hotspot_ex4 = $('#hotspot_ex4').hotspot({
+    debug:true,
+    mainSize :50,
+    pagePos :'se',
+    margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+    radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px'},
+    open :'hor',
+    easing :'easeInOutExpo',
+    delayBetween :150,
+    animDuration :600,
+    addShadow :'nw',
+    closeOutClick : false,
+    beforeOpen :function(){ $(hotspot_ex3).open_hotspot(false,false); },
+    beforeClose :function(){ $(hotspot_ex3).close_hotspot(false,false); },
+    elements : [
+        { icon:'menudots_d', sizeReduce:15, title:'Actions', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+        { icon:'favorite_d', sizeReduce:15, title:'Add to Favorite', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'link_d', sizeReduce:15, title:'Share Link', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'soc_facebooklike_d', sizeReduce:15, title:'Like it', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'soc_retweet_d', sizeReduce:15, title:'Retweet', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 },
+        { icon:'speechbubble_d', sizeReduce:15, title:'Comment', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10 }
+    ]
+});
+var settings_ex567 = {
+    debug:true,
+    mainSize :40,
+    pagePos :'se',
+    radius :{ tl:'5px', bl:'5px', tr:'5px', br:'1px'},
+    open :'hor',
+    easing :'easeInOutExpo',
+    delayBetween :150,
+    animDuration :600,
+    smoothTransition :true,
+    addShadow :'nw'
+};
+$('#hotspot_ex5').hotspot(
+    $.extend(settings_ex567,{
+    margin :{ t:'15px', b:'15px', l:'15px', r:'15px'},
+    elements : [
+        { icon:'volume_d', sizeReduce:15, title:'Actions', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+        { icon:'volumeminus_d', sizeReduce:15, title:'-', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+            func:function(){
+                // Attach to player volume dec
+            }
+        },
+        { icon:'volumeplus_d', sizeReduce:15, title:'+', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+            func:function(){
+                // Attach to player volume inc
+            }
+        },
+        { icon:'loud_d', sizeReduce:15, title:'Loud / Mute', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, 
+            func:function(){
+                $(this).toggleClass("hsi_mute_d");
+                // Attach to player mute
+            }
+        }
+    ]})
+);
+$('#hotspot_ex6').hotspot(
+    $.extend(settings_ex567,{
+    margin :{ t:'15px', b:'70px', l:'15px', r:'15px'},
+    elements : [
+        { icon:'control_d', sizeReduce:15, title:'Controls', bg:'#f5f5f5', hoverBg:'#f5f5f5' }, 
+        { icon:'fullscreen_d', sizeReduce:15, title:'Full screen', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+            func:function(){
+                // Attach to player full screen toggle
+            }
+        },
+        { icon:'hd_d', sizeReduce:15, title:'HD', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10,
+            func:function(){
+                // Attach to player resulution toggle 
+            }
+        },
+        { icon:'time3_d', sizeReduce:15, title:'Whatch Later', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, 
+            func:function(){
+                // Attach to users add to whatch list event
+            }
+        },
+        { icon:'repeat_d', sizeReduce:15, title:'Whatch Later', bg:'rgba(255,255,255,0.6)', hoverBg:'rgba(255,255,255,0.8)', pad:10, 
+            func:function(){
+                // Attach to player repeat toggle
+            }
+        }
+    ]})
+);
+$('#hotspot_ex7').hotspot(
+    $.extend(settings_ex567,{
+    margin :{ t:'15px', b:'125px', l:'15px', r:'15px'},
+    beforeOpen: function(){ $(this).addClass("hsi_pause_d").attr("title","Pause"); },
+    beforeClose: function(){ $(this).removeClass("hsi_pause_d").attr("title","Play"); },
+    elements : [
+        { icon:'arrright2_d', sizeReduce:15, title:'Play', bg:'#f5f5f5', hoverBg:'#f5f5f5' }
+    ]})
+);
+
+$('#load_fixed_ex').click(function(event){
+    event.preventDefault();
+    if (!$('#hotspot_ex8').hasClass('main_hotspot')) {
+        $('#hotspot_ex8').hotspot({
+            debug:true,
+            mainSize :70,
+            pagePos :'ne',
+            margin :{ t:'65px', b:'15px', l:'15px', r:'30px'},
+            radius :{ tl:'5px', bl:'5px', tr:'5px', br:'5px'},
+            open :'ver',
+            easing :'easeInOutExpo',
+            delayBetween :150,
+            animDuration :600,
+            addShadow :false,
+            closeOutClick : true,
+            elements : [
+                { icon:'menudots_w', sizeReduce:15, title:'Actions', bg:'#424242', hoverBg:'#424242' }, 
+                { icon:'favorite_w', sizeReduce:15, title:'Add to Favorite', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+                { icon:'link_w', sizeReduce:15, title:'Share Link', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+                { icon:'soc_facebooklike_w', sizeReduce:15, title:'Like it', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+                { icon:'soc_retweet_w', sizeReduce:15, title:'Retweet', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 },
+                { icon:'speechbubble_w', sizeReduce:15, title:'Comment', bg:'rgba(66,66,66,0.7)', hoverBg:'rgba(66,66,66,0.9)', pad:10 }
+            ]
+        });
+    }
+    
+    return false;
+});
+</script>
+    <pre id="gen_codebox" style="display: none;">
+    &nbsp; &nbsp; &lt;!-- Main --&gt;&lt;li H-icon=&#39;cloud2_w&#39; H-title=&#39;Main&#39; H-sizeReduce=&#39;5&#39; H-bg=&#39;#585858&#39; H-hoverBg=&#39;#6E6E6E&#39;&gt;&lt;/li&gt;
+    &nbsp; &nbsp; &lt;!-- Child --&gt;&lt;li H-icon=&#39;cloudminus_w&#39; H-title=&#39;Child 1&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+    &nbsp; &nbsp; &lt;!-- Child --&gt;&lt;li H-icon=&#39;cloudplus_w&#39; H-title=&#39;Child 2&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+    &nbsp; &nbsp; &lt;!-- Child --&gt;&lt;li H-icon=&#39;cloudx_w&#39; H-title=&#39;Child 3&#39; H-pad=&#39;10&#39;&gt;&lt;/li&gt;
+    </pre>
+    <div id="all_icons_name" style="display: none;">
+            .hsi_500px_w,.hsi_500px_d,.hsi_addfile_w,.hsi_addfile_d,.hsi_addfolder_w,.hsi_addfolder_d,.hsi_aligncenter_w,.hsi_aligncenter_d,.hsi_alignjustify_w,.hsi_alignjustify_d,.hsi_alignleft_w,.hsi_alignleft_d,.hsi_alignright_w,.hsi_alignright_d,.hsi_anchor_w,.hsi_anchor_d,.hsi_androidos_w,.hsi_androidos_d,.hsi_antenna_w,.hsi_antenna_d,.hsi_appleos_w, 
+            .hsi_appleos_d,.hsi_archive_w,.hsi_archive_d,.hsi_archive2_w,.hsi_archive2_d,.hsi_archive3_w,.hsi_archive3_d,.hsi_arrleft2_w,.hsi_arrleft2_d,.hsi_arrleft3_w,.hsi_arrleft3_d,.hsi_arrleft4_w,.hsi_arrleft4_d, 
+            .hsi_arrright_w,.hsi_arrright_d,.hsi_arrright2_w,.hsi_arrright2_d,.hsi_arrright3_w,.hsi_arrright3_d,.hsi_arrright4_w,.hsi_arrright4_d,.hsi_award_w,.hsi_award_d,.hsi_award2_w,.hsi_award2_d,.hsi_bag_w, 
+            .hsi_bag_d,.hsi_banknote_w,.hsi_banknote_d,.hsi_barchart_w,.hsi_barchart_d,.hsi_barcode_w,.hsi_barcode_d,.hsi_basket_w,.hsi_basket_d,.hsi_basketminus_w,.hsi_basketminus_d,.hsi_basketplus_w,.hsi_basketplus_d,.hsi_beer_w,.hsi_beer_d,.hsi_behance_w,.hsi_behance_d,.hsi_bell_w,.hsi_bell_d, 
+            .hsi_bellmute_w,.hsi_bellmute_d,.hsi_bellring_w,.hsi_bellring_d,.hsi_blankfile_w,.hsi_blankfile_d,.hsi_book_w,.hsi_book_d,.hsi_bookemail_w,.hsi_bookemail_d,.hsi_bookmark_w,.hsi_bookmark_d,.hsi_bookquest_w, 
+            .hsi_bookquest_d,.hsi_briefcase_w,.hsi_briefcase_d,.hsi_briefcase2_w,.hsi_briefcase2_d,.hsi_briefcase3_w,.hsi_briefcase3_d,.hsi_brightness_w,.hsi_brightness_d,.hsi_bug_w,.hsi_bug_d, 
+            .hsi_bulllist_w,.hsi_bulllist_d,.hsi_calc_w,.hsi_calc_d,.hsi_calendar_w,.hsi_calendar_d,.hsi_calendar31_w,.hsi_calendar31_d,.hsi_camera_w,.hsi_camera_d,.hsi_cart_w,.hsi_cart_d, 
+            .hsi_cartminus_w,.hsi_cartminus_d,.hsi_cartplus_w,.hsi_cartplus_d,.hsi_chart_w,.hsi_chart_d,.hsi_chartdown_w,.hsi_chartdown_d,.hsi_chartup_w,.hsi_chartup_d,.hsi_checkbox_w,.hsi_checkbox_d,.hsi_checkbox2_w, 
+            .hsi_checkbox2_d,.hsi_checkmark_w,.hsi_checkmark_d,.hsi_checkmark2_w,.hsi_checkmark2_d,.hsi_checkmark3_w,.hsi_checkmark3_d,.hsi_checkout_w,.hsi_checkout_d,.hsi_christmastree_w,.hsi_christmastree_d,.hsi_chrome_w,.hsi_chrome_d, 
+            .hsi_circledashed_w,.hsi_circledashed_d,.hsi_clipboard_w,.hsi_clipboard_d,.hsi_cloud_w,.hsi_cloud_d,.hsi_cloud2_w,.hsi_cloud2_d,.hsi_cloud3_w,.hsi_cloud3_d,.hsi_cloud4_w,.hsi_cloud4_d,.hsi_cloudminus_w, 
+            .hsi_cloudminus_d,.hsi_cloudplus_w,.hsi_cloudplus_d,.hsi_cloudsave_w,.hsi_cloudsave_d,.hsi_cloudx_w,.hsi_cloudx_d,.hsi_code_w,.hsi_code_d,.hsi_codefork_w,.hsi_codefork_d,.hsi_codefork2_w,.hsi_codefork2_d, 
+            .hsi_coffee_w,.hsi_coffee_d,.hsi_coffee2_w,.hsi_coffee2_d,.hsi_coin_w,.hsi_coin_d,.hsi_coins_w,.hsi_coins_d,.hsi_command_w,.hsi_command_d,.hsi_compass_w,.hsi_compass_d,.hsi_compass2_w,.hsi_compass2_d, 
+            .hsi_computer_w,.hsi_computer_d,.hsi_contrast_w,.hsi_contrast_d,.hsi_control_w,.hsi_control_d,.hsi_copyright_w,.hsi_copyright_d,.hsi_coroflot_w,.hsi_coroflot_d,.hsi_cpu_w,.hsi_cpu_d,.hsi_creditcard_w, 
+            .hsi_creditcard_d,.hsi_csscode_w,.hsi_csscode_d,.hsi_android_w,.hsi_android_d,.hsi_cube_w,.hsi_cube_d,.hsi_cube2_w,.hsi_cube2_d,.hsi_cur_cent_w,.hsi_cur_cent_d,.hsi_cur_dollar_w, 
+            .hsi_cur_dollar_d,.hsi_cur_euro_w,.hsi_cur_euro_d,.hsi_cur_franc_w,.hsi_cur_franc_d,.hsi_cur_generic_w,.hsi_cur_generic_d,.hsi_cur_lira_w,.hsi_cur_lira_d,.hsi_cur_peso_w,.hsi_cur_peso_d, 
+            .hsi_cur_pound_w,.hsi_cur_pound_d,.hsi_cur_ruble_w,.hsi_cur_ruble_d,.hsi_cur_rupee_w,.hsi_cur_rupee_d,.hsi_cur_shekel_w,.hsi_cur_shekel_d,.hsi_cur_won_w,.hsi_cur_won_d,.hsi_cur_yen_w,.hsi_cur_yen_d,.hsi_cursor_w,.hsi_cursor_d,.hsi_cursordiagonal_w, 
+            .hsi_cursordiagonal_d,.hsi_cursordiagonal2_w,.hsi_cursordiagonal2_d,.hsi_cursorhorizontal_w,.hsi_cursorhorizontal_d,.hsi_cursormove_w,.hsi_cursormove_d,.hsi_cursorpointer_w,.hsi_cursorpointer_d,.hsi_cursorprecision_w, 
+            .hsi_cursorprecision_d,.hsi_cursorvertical_w,.hsi_cursorvertical_d,.hsi_cut_w,.hsi_cut_d,.hsi_danger_w,.hsi_danger_d,.hsi_danger2_w,.hsi_danger2_d,.hsi_dashboard_w,.hsi_dashboard_d,.hsi_database_w,.hsi_database_d, 
+            .hsi_databaseminus_w,.hsi_databaseminus_d,.hsi_databaseplus_w,.hsi_databaseplus_d,.hsi_databaseok_w,.hsi_databaseok_d,.hsi_dedent_w,.hsi_dedent_d,.hsi_direction_w,.hsi_direction_d,.hsi_direction2_w, 
+            .hsi_direction2_d,.hsi_directions_w,.hsi_directions_d,.hsi_directions2_w,.hsi_directions2_d,.hsi_disc_w,.hsi_disc_d,.hsi_disc2_w,.hsi_disc2_d,.hsi_downloadcloud_w,.hsi_downloadcloud_d, 
+            .hsi_download_w,.hsi_download_d,.hsi_drop_w,.hsi_drop_d,.hsi_drop2_w,.hsi_drop2_d,.hsi_eject_w,.hsi_eject_d,.hsi_email_w,.hsi_email_d,.hsi_email2_w,.hsi_email2_d,.hsi_email3_w,.hsi_email3_d, 
+            .hsi_equalizer_w,.hsi_equalizer_d,.hsi_equalizer2_w,.hsi_equalizer2_d,.hsi_error_w,.hsi_error_d,.hsi_error2_w,.hsi_error2_d,.hsi_eye_w,.hsi_eye_d,.hsi_favorite_w,.hsi_favorite_d, 
+            .hsi_fax_w,.hsi_fax_d,.hsi_female_w,.hsi_female_d,.hsi_fileremove_w,.hsi_fileremove_d,.hsi_filter_w,.hsi_filter_d,.hsi_fingerprint_w,.hsi_fingerprint_d,.hsi_fingerprint2_w,.hsi_fingerprint2_d, 
+            .hsi_firefox_w,.hsi_firefox_d,.hsi_firewall_w,.hsi_firewall_d,.hsi_flag_w,.hsi_flag_d,.hsi_flask_w,.hsi_flask_d,.hsi_flask2_w,.hsi_flask2_d,.hsi_folder_w,.hsi_folder_d,.hsi_folderremove_w,.hsi_folderremove_d, 
+            .hsi_font_w,.hsi_font_d,.hsi_fontsize_w,.hsi_fontsize_d,.hsi_forbidden_w,.hsi_forbidden_d,.hsi_forward_w,.hsi_forward_d,.hsi_forward30_w,.hsi_forward30_d,.hsi_fullscreen_w,.hsi_fullscreen_d,.hsi_fullscreen2_w, 
+            .hsi_fullscreen2_d,.hsi_fullscreen3_w,.hsi_fullscreen3_d,.hsi_gamepad_w,.hsi_gamepad_d,.hsi_gamepad2_w,.hsi_gamepad2_d,.hsi_gamepad3_w,.hsi_gamepad3_d,.hsi_gear_w,.hsi_gear_d, 
+            .hsi_gear2_w,.hsi_gear2_d,.hsi_gift_w,.hsi_gift_d,.hsi_globe_w,.hsi_globe_d,.hsi_globe2_w,.hsi_globe2_d,.hsi_grid_w,.hsi_grid_d,.hsi_hd_w,.hsi_hd_d,.hsi_headphones_w,.hsi_headphones_d, 
+            .hsi_headphones2_w,.hsi_headphones2_d,.hsi_help_w,.hsi_help_d,.hsi_help2_w,.hsi_help2_d,.hsi_help3_w,.hsi_help3_d,.hsi_hetero_w,.hsi_hetero_d,.hsi_home_w,.hsi_home_d,.hsi_home2_w, 
+            .hsi_home2_d,.hsi_idcard_w,.hsi_idcard_d,.hsi_idcard2_w,.hsi_idcard2_d,.hsi_ie_w,.hsi_ie_d,.hsi_inbox_w,.hsi_inbox_d,.hsi_indent_w,.hsi_indent_d,.hsi_infinity_w,.hsi_infinity_d,.hsi_info_w, 
+            .hsi_info_d,.hsi_info2_w,.hsi_info2_d,.hsi_italic_w,.hsi_italic_d,.hsi_jumpend_w,.hsi_jumpend_d,.hsi_key_w,.hsi_key_d,.hsi_keyboard_w,.hsi_keyboard_d,.hsi_laptop_w,.hsi_laptop_d, 
+            .hsi_laptop2_w,.hsi_laptop2_d, .hsi_layer_w,.hsi_layer_d,.hsi_lifebuoy_w,.hsi_lifebuoy_d,.hsi_lightbulb_w,.hsi_lightbulb_d,.hsi_lightbulb2_w,.hsi_lightbulb2_d,.hsi_lightbulb3_w,.hsi_lightbulb3_d, 
+            .hsi_link_w,.hsi_link_d,.hsi_link2_w,.hsi_link2_d,.hsi_linux_w,.hsi_linux_d,.hsi_list_w,.hsi_list_d,.hsi_location_w,.hsi_location_d,.hsi_location2_w,.hsi_location2_d,.hsi_lock_w, 
+            .hsi_lock_d,.hsi_lockopen_w,.hsi_lockopen_d,.hsi_login_w,.hsi_login_d,.hsi_logout_w,.hsi_logout_d,.hsi_loud_w,.hsi_loud_d,.hsi_magic_w,.hsi_magic_d,.hsi_magnet_w,.hsi_magnet_d,.hsi_magnifier_w, 
+            .hsi_magnifier_d,.hsi_magnifierminus_w,.hsi_magnifierminus_d,.hsi_magnifierplus_w,.hsi_magnifierplus_d,.hsi_male_w,.hsi_male_d,.hsi_map_w,.hsi_map_d,.hsi_mapcross_w,.hsi_mapcross_d,.hsi_mapplace_w,.hsi_mapplace_d, 
+            .hsi_megaphone_w,.hsi_megaphone_d,.hsi_menubars_w,.hsi_menubars_d,.hsi_menudots_w,.hsi_menudots_d,.hsi_menudown_w,.hsi_menudown_d,.hsi_mic_w,.hsi_mic_d,.hsi_minus_w,.hsi_minus_d,.hsi_mobile_w,.hsi_mobile_d,.hsi_mobile2_w, 
+            .hsi_mobile2_d,.hsi_mobile3_w,.hsi_mobile3_d,.hsi_mobile4_w,.hsi_mobile4_d,.hsi_monitoring_w,.hsi_monitoring_d,.hsi_mouse_w,.hsi_mouse_d,.hsi_mute_w,.hsi_mute_d,.hsi_nav_w,.hsi_nav_d, 
+            .hsi_network_w,.hsi_network_d,.hsi_newspaper_w,.hsi_newspaper_d,.hsi_nexttrak_w,.hsi_nexttrak_d,.hsi_note_w,.hsi_note_d,.hsi_notesign_w,.hsi_notesign_d,.hsi_notesign2_w,.hsi_notesign2_d, 
+            .hsi_numberedlist_w,.hsi_numberedlist_d,.hsi_opera_w,.hsi_opera_d,.hsi_outbox_w,.hsi_outbox_d,.hsi_paintbrush_w,.hsi_paintbrush_d,.hsi_paintbrush2_w,.hsi_paintbrush2_d,.hsi_paintbrush3_w, 
+            .hsi_paintbrush3_d,.hsi_paperclip_w,.hsi_paperclip_d,.hsi_paperclip2_w,.hsi_paperclip2_d,.hsi_paperclip3_w,.hsi_paperclip3_d,.hsi_paperclip4_w,.hsi_paperclip4_d,.hsi_paperclip5_w, 
+            .hsi_paperclip5_d,.hsi_paperplane_w,.hsi_paperplane_d,.hsi_password_w,.hsi_password_d,.hsi_pause_w,.hsi_pause_d,.hsi_paypal_w,.hsi_paypal_d,.hsi_pen_w,.hsi_pen_d,.hsi_pencil_w,.hsi_pencil_d,.hsi_phone_w, 
+            .hsi_phone_d,.hsi_phone2_w,.hsi_phone2_d,.hsi_photocam_w,.hsi_photocam_d,.hsi_picture_w,.hsi_picture_d,.hsi_picture2_w,.hsi_picture2_d,.hsi_pictureadd_w,.hsi_pictureadd_d,.hsi_pictureattachment_w, 
+            .hsi_pictureattachment_d,.hsi_pictureedit_w,.hsi_pictureedit_d,.hsi_picturemulti_w,.hsi_picturemulti_d,.hsi_pictureremove_w,.hsi_pictureremove_d,.hsi_piechart_w,.hsi_piechart_d, 
+            .hsi_pilcrow_w,.hsi_pilcrow_d,.hsi_pin_w,.hsi_pin_d,.hsi_pin2_w,.hsi_pin2_d,.hsi_pinmap_w,.hsi_pinmap_d,.hsi_plus_w,.hsi_plus_d,.hsi_power_w,.hsi_power_d,.hsi_printer_w,.hsi_printer_d,.hsi_qr_w,.hsi_qr_d,.hsi_quote_w, 
+            .hsi_quote_d,.hsi_quote2_w,.hsi_quote2_d,.hsi_radiotower_w,.hsi_radiotower_d,.hsi_redo_w,.hsi_redo_d,.hsi_refresh_w,.hsi_refresh_d,.hsi_refresh2_w,.hsi_refresh2_d,.hsi_repeat_w,.hsi_repeat_d, 
+            .hsi_rewind30_w,.hsi_rewind30_d,.hsi_safari_w,.hsi_safari_d,.hsi_safe_w,.hsi_safe_d,.hsi_save_w,.hsi_save_d,.hsi_script_w,.hsi_script_d,.hsi_share_w,.hsi_share_d,.hsi_shield_w,.hsi_shield_d, 
+            .hsi_shield2_w,.hsi_shield2_d,.hsi_shippingbox_w,.hsi_shippingbox_d,.hsi_shop_w,.hsi_shop_d,.hsi_shopingbag_w,.hsi_shopingbag_d,.hsi_sitemap_w,.hsi_sitemap_d,.hsi_smartphone_w,.hsi_smartphone_d, 
+            .hsi_smartphone2_w,.hsi_smartphone2_d,.hsi_smartphone3_w,.hsi_smartphone3_d,.hsi_smiley_w,.hsi_smiley_d,.hsi_smiley2_w,.hsi_smiley2_d,.hsi_smileysad_w,.hsi_smileysad_d,.hsi_smileysad2_w,.hsi_smileysad2_d, 
+            .hsi_sms_w,.hsi_sms_d,.hsi_snowflake_w,.hsi_snowflake_d,.hsi_soc_blogger_w,.hsi_soc_blogger_d,.hsi_soc_cargo_w,.hsi_soc_cargo_d,.hsi_soc_delicious_w,.hsi_soc_delicious_d,.hsi_soc_deviantart_w, 
+            .hsi_soc_deviantart_d,.hsi_soc_dribble_w,.hsi_soc_dribble_d,.hsi_soc_facebook_w,.hsi_soc_facebook_d,.hsi_soc_facebooklike_w,.hsi_soc_facebooklike_d,.hsi_soc_feedburner_w,.hsi_soc_feedburner_d, 
+            .hsi_soc_flickr_w,.hsi_soc_flickr_d,.hsi_soc_forrst_w,.hsi_soc_forrst_d,.hsi_soc_github_w,.hsi_soc_github_d,.hsi_soc_googleplus_w,.hsi_soc_googleplus_d,.hsi_soc_icq_w,.hsi_soc_icq_d, 
+            .hsi_soc_in_w,.hsi_soc_in_d,.hsi_soc_insta_w,.hsi_soc_insta_d,.hsi_soc_lastfm_w,.hsi_soc_lastfm_d,.hsi_soc_livejournal_w,.hsi_soc_livejournal_d,.hsi_soc_myspace_w,.hsi_soc_myspace_d, 
+            .hsi_soc_pinterest_w,.hsi_soc_pinterest_d,.hsi_soc_retweet_w,.hsi_soc_retweet_d,.hsi_soc_rss_w,.hsi_soc_rss_d,.hsi_soc_skype_w,.hsi_soc_skype_d,.hsi_soc_soundcloud_w,.hsi_soc_soundcloud_d,.hsi_soc_stackoverflow_w,.hsi_soc_stackoverflow_d,.hsi_soc_steam_w,.hsi_soc_steam_d,.hsi_soc_stumbleupon_w,.hsi_soc_stumbleupon_d,.hsi_soc_tumblr_w,.hsi_soc_tumblr_d, 
+            .hsi_soc_twitter_w,.hsi_soc_twitter_d,.hsi_soc_vimeo_w,.hsi_soc_vimeo_d,.hsi_soc_vk_w,.hsi_soc_vk_d,.hsi_soc_wp_w,.hsi_soc_wp_d,.hsi_soc_xing_w,.hsi_soc_xing_d,.hsi_soc_youtube_w,.hsi_soc_youtube_d,.hsi_soc_youtube2_w, 
+            .hsi_soc_youtube2_d,.hsi_sort_w,.hsi_sort_d,.hsi_sort2_w,.hsi_sort2_d,.hsi_sort3_w,.hsi_sort3_d,.hsi_sort4_w,.hsi_sort4_d,.hsi_sort5_w,.hsi_sort5_d,.hsi_sort6_w,.hsi_sort6_d,.hsi_sort7_w,.hsi_sort7_d,.hsi_sort8_w,.hsi_sort8_d, 
+            .hsi_sort9_w,.hsi_sort9_d,.hsi_sort10_w,.hsi_sort10_d,.hsi_sort11_w,.hsi_sort11_d,.hsi_sort12_w,.hsi_sort12_d,.hsi_sort13_w,.hsi_sort13_d,.hsi_soundwave_w,.hsi_soundwave_d,.hsi_soundwave2_w,.hsi_soundwave2_d,.hsi_soundwave3_w,.hsi_soundwave3_d,.hsi_speaker_w,.hsi_speaker_d,.hsi_speakerminus_w, 
+            .hsi_speakerminus_d,.hsi_speakerplus_w,.hsi_speakerplus_d,.hsi_speechbubble_w,.hsi_speechbubble_d,.hsi_speechbubble2_w,.hsi_speechbubble2_d,.hsi_squaredashed_w,.hsi_squaredashed_d,.hsi_star_w,.hsi_star_d,.hsi_stop_w,.hsi_stop_d,.hsi_stop2_w,.hsi_stop2_d,.hsi_stopplay_w,.hsi_stopplay_d,.hsi_strikethrough_w,.hsi_strikethrough_d,.hsi_switch_w,.hsi_switch_d,.hsi_table_w,.hsi_table_d, 
+            .hsi_tablet_w,.hsi_tablet_d,.hsi_tablet2_w,.hsi_tablet2_d,.hsi_tablet3_w,.hsi_tablet3_d,.hsi_tag_w,.hsi_tag_d,.hsi_tagbarcode_w,.hsi_tagbarcode_d,.hsi_target_w,.hsi_target_d,.hsi_target2_w,.hsi_target2_d,.hsi_target3_w,.hsi_target3_d,.hsi_target4_w,.hsi_target4_d,
+            .hsi_textbold_w,.hsi_textbold_d,.hsi_thumb_w,.hsi_thumb_d,.hsi_thumb2_w,.hsi_thumb2_d,.hsi_time_w,.hsi_time_d,.hsi_time2_w,.hsi_time2_d,.hsi_time3_w,.hsi_time3_d,.hsi_timer_w,.hsi_timer_d,
+            .hsi_tools_w,.hsi_tools_d,.hsi_tools2_w,.hsi_tools2_d,.hsi_trademark_w,.hsi_trademark_d,.hsi_trademark2_w,.hsi_trademark2_d,.hsi_trash_w,.hsi_trash_d,.hsi_trashx_w,.hsi_trashx_d,
+            .hsi_trophy_w,.hsi_trophy_d,.hsi_trophy2_w,.hsi_trophy2_d,.hsi_tv_w,.hsi_tv_d,.hsi_umbrella_w,.hsi_umbrella_d,.hsi_umbrella2_w,.hsi_umbrella2_d,.hsi_underline_w,.hsi_underline_d,.hsi_undo_w,.hsi_undo_d,.hsi_upload_w,
+            .hsi_upload_d,.hsi_uploadcloud_w,.hsi_uploadcloud_d,.hsi_video_w,.hsi_video_d,.hsi_videoadd_w,.hsi_videoadd_d,.hsi_videoremove_w,.hsi_videoremove_d,.hsi_virus_w,.hsi_virus_d,.hsi_volume_w,.hsi_volume_d,.hsi_volumeminus_w,
+            .hsi_volumeminus_d,.hsi_volumeplus_w,.hsi_volumeplus_d,.hsi_warning_w,.hsi_warning_d,.hsi_webcam_w,.hsi_webcam_d,.hsi_window_w,.hsi_window_d,.hsi_window2_w,.hsi_window2_d,
+            .hsi_windowsos_w,.hsi_windowsos_d,.hsi_wireless_w,.hsi_wireless_d,.hsi_wireless2_w,.hsi_wireless2_d,.hsi_wrench_w,.hsi_wrench_d,.hsi_xmark_w,.hsi_xmark_d,.hsi_zip_w,.hsi_zip_d
+    </div>
+<script>
+
+    //Code Mirror:
+    var codeMirror;
+    window.onload = function() {
+      codeMirror = CodeMirror.fromTextArea(document.getElementById("gen_code_area"), { lineNumbers: true, mode: "htmlmixed" });
+      codeMirror.setSize(1120,330);
+    };
+    
+    //Basic Code structure:
+    var code_struct = [];
+    code_struct[0] = "<div id='hotspot'><\/div>";
+    code_struct[1] = "<script>";
+    code_struct[2] = "$('#hotSpot').hotspot({";
+    code_struct[3] = "    mainSize :";
+    code_struct[4] = "    pagePos :";
+    code_struct[5] = "    margin :";
+    code_struct[6] = "    radius :";
+    code_struct[7] = "    open :";
+    code_struct[8] = "    easing :";
+    code_struct[9] = "    delayBetween :";
+    code_struct[10] = "    animDuration :";
+    code_struct[11] = "    addShadow :";
+
+    
+    //Generate hotSpot:
+    $('.gen_rebuild').click(function(e){
+        e.preventDefault();
+        settings = {};
+        settings['margin'] = {};
+        settings['radius'] = {};
+        settings['elements'] = [];
+        settings['mainSize'] = $('#gen_mainSize').val();
+        settings['margin']['t'] = $('#gen_margin_t').val();
+        settings['margin']['b'] = $('#gen_margin_b').val();
+        settings['margin']['l'] = $('#gen_margin_l').val();
+        settings['margin']['r'] = $('#gen_margin_r').val();
+        settings['pagePos'] = $('#gen_pagepos').val();
+        settings['radius']['tl'] = $('#gen_radius_tl').val();
+        settings['radius']['tr'] = $('#gen_radius_tr').val();
+        settings['radius']['bl'] = $('#gen_radius_bl').val();
+        settings['radius']['br'] = $('#gen_radius_bl').val();   
+        settings['open'] = $('#gen_open').val();
+        settings['easing'] = $('#gen_easing').val();
+        settings['delayBetween'] = $('#gen_delayBetween').val();
+        settings['animDuration'] = $('#gen_animDuration').val();
+        settings['addShadow'] = ($('#gen_addShadow').val() === "0"?false:$('#gen_addShadow').val());
+        settings['elements'][0] = {
+            icon:$('#gen_M_icon').val() + "_w",
+            sizeReduce:$('#gen_M_sizeReduce').val(),
+            title:$('#gen_M_title').val(),
+            bg:$('#gen_M_bg').val(),
+            hoverBg:$('#gen_M_hoverBg').val()
+        };
+        var temper = {};
+        var count = 1;
+        $('#gen_settings2 tr.gen_ele_row').each(function(){
+            
+            switch (count) {
+                case 1:temper["title"] = $(this).find("input").eq(0).val(); break;
+                case 2:temper["icon"] =  $(this).find("select").eq(0).val() + "_w"; break;
+                case 3:temper["pad"] = $(this).find("input").eq(0).val();  break;
+                case 4:temper["href"] = $(this).find("input").eq(0).val();  break;
+                case 5:temper["sizeReduce"] = $(this).find("input").eq(0).val(); break;
+                case 6:temper["bg"] = $(this).find("input").eq(0).val();  break;
+                case 7:temper["hoverBg"] = $(this).find("input").eq(0).val(); break;
+                default: break;
+            }
+            if ( count === 7 ) {
+                settings['elements'].push(temper);
+                temper = {};
+                count = 1;
+            } else {
+                count++;
+            }
+        });
+        $("#HotSpot_gen").rebuild_hotspot(settings);
+        
+        var code_struct2;
+        code_struct2 = code_struct.slice(0);
+        code_struct2[3] += settings['mainSize'] + ",";
+        code_struct2[4] += "'" + settings['pagePos'] + "',";
+        code_struct2[5] += "{ t:'" + settings['margin']['t'] + "', b:'" + settings['margin']['b'] + "', l:'" + settings['margin']['l'] + "', r:'" + settings['margin']['r'] + "'}" +",";
+        code_struct2[6] += "{ tl:'" + settings['radius']['tl'] + "', bl:'" + settings['radius']['bl'] + "', tr:'" + settings['radius']['tr'] + "', br:'" + settings['radius']['br'] + "'}" +",";
+        code_struct2[7] += "'" + settings['open'] + "',";
+        code_struct2[8] += "'" + settings['easing'] + "',";
+        code_struct2[9] += settings['delayBetween'] + ",";
+        code_struct2[10] += settings['animDuration'] + ",";
+        code_struct2[11] += (settings['addShadow'] ? "'" + settings['addShadow'] + "'":"false") + ",";
+        code_struct2.push("    elements : [");
+        
+        var elementsCode = [];
+        for (var i=0; i<settings['elements'].length; i++) {
+            elementsCode.push("        { ");
+            if ( typeof settings['elements'][i].icon !== 'undefined' )
+                elementsCode.push("icon:'" + settings['elements'][i].icon + "', ");  
+            if ( typeof settings['elements'][i].sizeReduce !== 'undefined' )
+                elementsCode.push("sizeReduce:" + settings['elements'][i].sizeReduce + ", ");
+            if ( typeof settings['elements'][i].title !== 'undefined' )
+                elementsCode.push("title:'" + settings['elements'][i].title + "', ");
+            if ( typeof settings['elements'][i].bg !== 'undefined' )
+                elementsCode.push("bg:" + (settings['elements'][i].bg?"'"+settings['elements'][i].bg+"'":settings['elements'][i].bg) + ", ");
+            if ( typeof settings['elements'][i].hoverBg !== 'undefined' )
+                if (i === 0)
+                    elementsCode.push("hoverBg:" + (settings['elements'][i].hoverBg?"'"+settings['elements'][i].hoverBg+"'":settings['elements'][i].hoverBg));
+                else
+                    elementsCode.push("hoverBg:" + (settings['elements'][i].hoverBg?"'"+settings['elements'][i].hoverBg+"'":settings['elements'][i].hoverBg) + ", ");
+            if ( typeof settings['elements'][i].pad !== 'undefined' )
+                elementsCode.push("pad:" + settings['elements'][i].pad + ", ");
+            
+                if (i > 0) {
+                    if ( typeof settings['elements'][i].href !== 'undefined' ) {
+                        if ( i===settings['elements'].length-1 ) 
+                            elementsCode.push("href:'" + settings['elements'][i].href + "' }");
+                        else
+                            elementsCode.push("href:'" + settings['elements'][i].href + "' },");
+                    } else {
+                        if ( i===settings['elements'].length-1 ) 
+                             elementsCode.push(" }");
+                        else
+                             elementsCode.push(" },");
+                       
+                    }
+                } else {
+                    elementsCode.push(" }, ");
+                }
+            code_struct2.push(elementsCode.join(""));
+            elementsCode = [];
+        }
+        
+        code_struct2.push("    ]");
+        code_struct2.push("});");
+        code_struct2.push("<\/script>");
+        codeMirror.setValue(code_struct2.join("\n"));
+        return false;
+    });
+    
+    //Add Element to generator:
+    $(document).on('click','.add_ele',function(){
+        baseHtml =
+            "<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> title:</code></td><td class='input_gen_style'><input type='text' value='Child Element' style='width:100px' /></td></tr>"
+            +"<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> icon:</code></td><td class='input_gen_style'><select class='gen_icon_select' style='width:110px'></select></td></tr>"
+            +"<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> pad:</code></td><td class='input_gen_style'><input type='text' value='15' style='width:30px' /></td></tr>"
+            +"<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> href:</code></td><td class='input_gen_style'><input type='text' value='#' style='width:100px' /></td></tr>"
+            +"<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> sizeReduce:</code></td><td class='input_gen_style'><input type='text' value='15' style='width:30px' /></td></tr>"
+            +"<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> bg:</code></td><td class='input_gen_style'><input type='text' id='gen_ele_bg_@@@' value='#1B3C82' style='width:95px' /></td></tr>"
+            +"<tr class='gen_ele_row' data-who='@@@'><td><i class='icon-minus-sign remove_ele' style='cursor:pointer;'></i>&nbsp;<code>Ele @@@ -> hoverBg:</code></td><td class='input_gen_style'><input type='text' id='gen_ele_hoverBg_@@@' value='' style='width:95px' /></td></tr>";
+        pos = Math.round($('#gen_settings2 tr.gen_ele_row').length / 7);
+        pos = (pos?pos+1:1);
+        baseHtml = baseHtml.replace(/@@@/g, pos + "");
+        $('#gen_settings2').append(baseHtml);
+        $('#gen_ele_bg_' + pos).colorpicker();
+        $('#gen_ele_hoverBg_' + pos).colorpicker();
+        $('.gen_icon_select').each(function(){
+            if (!$(this).find("option").length) {
+                $(this).append(html_append);
+            }
+        });
+    });
+    
+    //Remove Element to generator:
+    $(document).on('click','.remove_ele',function(){
+        ele_num = $(this).closest('tr').attr('data-who');
+        $('#gen_settings2 tr.gen_ele_row').each(function(){
+            if ($(this).attr("data-who") === ele_num) {
+                if ($(this).find('.colorPicker').length) {
+                    $(this).find('.colorPicker').eq(0).colorpicker("destroy");
+                }
+                $(this).remove();
+            }
+        });
+        index = 1;
+        count = 1;
+        $('#gen_settings2 tr.gen_ele_row').each(function(){
+            if (count === 8) {
+                index++;
+                count = 1;
+            }
+            $(this).attr("data-who",index);
+            if ($(this).find('code').length) {
+                textNow = $(this).find('code').eq(0).text();
+                $(this).find('code').eq(0).text(textNow.replace(/(\d+)/g, index + ""));
+            }
+            if ($(this).find('.colorPicker').length) {
+                curId = $(this).find('.colorPicker').eq(0).attr("id");
+                $(this).find('.colorPicker').eq(0).attr("id",curId.replace(/(\d+)/g, index + ""));
+            }
+            count++;
+        });
+    });
+    
+    //Parse icons:
+    var icons_conn = $('#all_icons_name');
+    var str = $(icons_conn).text();
+    var html_append = [];
+    str = str.split(',');
+    $.each(str,function(){
+        current = this.trim();
+        if (current.substr(current.length - 1) === "d") {
+            current = current.replace(/^\.hsi_/gi,"").replace(/_d$/gi,"");
+            html_append.push("<option value='" + current + "'>" + current + "</option>");
+        }
+    });
+    $(".gen_icon_select").append(html_append.join());
+    
+$(function(){
+    //Color pickers:
+    $('#gen_M_bg').colorpicker();
+    $('#gen_M_hoverBg').colorpicker();
+    $('#gen_ele_bg_1').colorpicker();
+    $('#gen_ele_hoverBg_1').colorpicker();
+    
+    
+    //Parse icons gallery:
+    var icons_table_gall = $('#all_icons_name');
+    var str2 = $(icons_table_gall).text();
+    str2 = str2.split(',');
+    if (str2.length > 0) {
+        var counter = 0;
+        var htmlappend2 = "<tr>";
+        $.each(str2,function(){
+            current = this.trim();
+            if (current.substr(current.length - 1) === "d") {
+                counter++;
+                htmlappend2 += "<td><div class=\"icon_header\">" + current.substring(5) + "</div><div class=\"basic_display " + current.substring(1) + "\" style='background-size: 30px 30px;'></div></td>";
+                if ( counter === 10 ) {
+                    htmlappend2 += "</tr><tr>";
+                    counter = 0;
+                }
+            }
+        });
+        htmlappend2 += "</tr>";
+        $('.icons_gal').html(htmlappend2);
+    }
+});
+</script>
+
+</body>
+</html>

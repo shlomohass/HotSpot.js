@@ -1,0 +1,985 @@
+/*******************************************************************************
+ * Created by: shlomo hassid.
+ * Release Version : 1.0
+ * Creation Date: 10/12/2014
+ * Author E-mail: Shlomohassid@gmail.com
+ * Suppot: support@14tec.com
+ * require: jQuery latest, jQuery easing, hotspot.1.0.js | hotspot.min.1.0.js	
+ * Copyright 2014, shlomo hassid.
+*******************************************************************************/
+/*** Reset ***/
+.reset_hotspot,
+.ele_hotspot,
+.main_hotspot {
+    background: transparent; 
+    border: none; 
+    font-size: 100%; 
+    margin: 0; 
+    outline: 0; 
+    padding: 0; 
+    vertical-align: baseline; 
+    text-decoration:none;
+}
+
+/* Set more properties */
+.main_hotspot {
+    cursor:pointer;
+}
+.ele_hotspot {
+    cursor:pointer;
+}
+.smooth_transition_hotspot {
+    -ms-transition: box-shadow, background, background-image .20s linear;
+    -moz-transition: box-shadow, background, background-image .20s linear;
+    -webkit-transition: box-shadow, background, background-image .20s linear;
+    -o-transition: box-shadow, background, background-image .20s linear;
+    transition: box-shadow, background, background-image .20s linear;
+}
+.shadow_ne_hotspot {
+    -webkit-box-shadow: 2px -2px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow:    2px -2px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow:         2px -2px 5px 0px rgba(0, 0, 0, 0.45);    
+}
+.shadow_nw_hotspot {
+    -webkit-box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow:    -2px -2px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow:         -2px -2px 5px 0px rgba(0, 0, 0, 0.45);    
+}
+.shadow_sw_hotspot {
+    -webkit-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow:    -2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow:         -2px 2px 5px 0px rgba(0, 0, 0, 0.45);  
+}
+.shadow_se_hotspot {
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow:    2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow:         2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.shadow_ne_hotspot:hover {
+    -webkit-box-shadow: 1px -1px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    1px -1px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         1px -1px 4px 0px rgba(0, 0, 0, 0.75);    
+}
+.shadow_nw_hotspot:hover {
+    -webkit-box-shadow: -1px -1px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    -1px -1px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         -1px -1px 4px 0px rgba(0, 0, 0, 0.75);    
+}
+.shadow_sw_hotspot:hover {
+    -webkit-box-shadow: -1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    -1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         -1px 1px 4px 0px rgba(0, 0, 0, 0.75);  
+}
+.shadow_se_hotspot:hover {
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* icons */
+.hsi_500px_w,.hsi_500px_d,.hsi_addfile_w,.hsi_addfile_d,.hsi_addfolder_w,.hsi_addfolder_d,.hsi_aligncenter_w,.hsi_aligncenter_d,.hsi_alignjustify_w,.hsi_alignjustify_d,.hsi_alignleft_w,.hsi_alignleft_d,.hsi_alignright_w,.hsi_alignright_d,.hsi_anchor_w,.hsi_anchor_d,.hsi_androidos_w,.hsi_androidos_d,.hsi_antenna_w,.hsi_antenna_d,.hsi_appleos_w, 
+.hsi_appleos_d,.hsi_archive_w,.hsi_archive_d,.hsi_archive2_w,.hsi_archive2_d,.hsi_archive3_w,.hsi_archive3_d,.hsi_arrleft2_w,.hsi_arrleft2_d,.hsi_arrleft3_w,.hsi_arrleft3_d,.hsi_arrleft4_w,.hsi_arrleft4_d, 
+.hsi_arrright_w,.hsi_arrright_d,.hsi_arrright2_w,.hsi_arrright2_d,.hsi_arrright3_w,.hsi_arrright3_d,.hsi_arrright4_w,.hsi_arrright4_d,.hsi_award_w,.hsi_award_d,.hsi_award2_w,.hsi_award2_d,.hsi_bag_w, 
+.hsi_bag_d,.hsi_banknote_w,.hsi_banknote_d,.hsi_barchart_w,.hsi_barchart_d,.hsi_barcode_w,.hsi_barcode_d,.hsi_basket_w,.hsi_basket_d,.hsi_basketminus_w,.hsi_basketminus_d,.hsi_basketplus_w,.hsi_basketplus_d,.hsi_beer_w,.hsi_beer_d,.hsi_behance_w,.hsi_behance_d,.hsi_bell_w,.hsi_bell_d, 
+.hsi_bellmute_w,.hsi_bellmute_d,.hsi_bellring_w,.hsi_bellring_d,.hsi_blankfile_w,.hsi_blankfile_d,.hsi_book_w,.hsi_book_d,.hsi_bookemail_w,.hsi_bookemail_d,.hsi_bookmark_w,.hsi_bookmark_d,.hsi_bookquest_w, 
+.hsi_bookquest_d,.hsi_briefcase_w,.hsi_briefcase_d,.hsi_briefcase2_w,.hsi_briefcase2_d,.hsi_briefcase3_w,.hsi_briefcase3_d,.hsi_brightness_w,.hsi_brightness_d,.hsi_bug_w,.hsi_bug_d, 
+.hsi_bulllist_w,.hsi_bulllist_d,.hsi_calc_w,.hsi_calc_d,.hsi_calendar_w,.hsi_calendar_d,.hsi_calendar31_w,.hsi_calendar31_d,.hsi_camera_w,.hsi_camera_d,.hsi_cart_w,.hsi_cart_d, 
+.hsi_cartminus_w,.hsi_cartminus_d,.hsi_cartplus_w,.hsi_cartplus_d,.hsi_chart_w,.hsi_chart_d,.hsi_chartdown_w,.hsi_chartdown_d,.hsi_chartup_w,.hsi_chartup_d,.hsi_checkbox_w,.hsi_checkbox_d,.hsi_checkbox2_w, 
+.hsi_checkbox2_d,.hsi_checkmark_w,.hsi_checkmark_d,.hsi_checkmark2_w,.hsi_checkmark2_d,.hsi_checkmark3_w,.hsi_checkmark3_d,.hsi_checkout_w,.hsi_checkout_d,.hsi_christmastree_w,.hsi_christmastree_d,.hsi_chrome_w,.hsi_chrome_d, 
+.hsi_circledashed_w,.hsi_circledashed_d,.hsi_clipboard_w,.hsi_clipboard_d,.hsi_cloud_w,.hsi_cloud_d,.hsi_cloud2_w,.hsi_cloud2_d,.hsi_cloud3_w,.hsi_cloud3_d,.hsi_cloud4_w,.hsi_cloud4_d,.hsi_cloudminus_w, 
+.hsi_cloudminus_d,.hsi_cloudplus_w,.hsi_cloudplus_d,.hsi_cloudsave_w,.hsi_cloudsave_d,.hsi_cloudx_w,.hsi_cloudx_d,.hsi_code_w,.hsi_code_d,.hsi_codefork_w,.hsi_codefork_d,.hsi_codefork2_w,.hsi_codefork2_d, 
+.hsi_coffee_w,.hsi_coffee_d,.hsi_coffee2_w,.hsi_coffee2_d,.hsi_coin_w,.hsi_coin_d,.hsi_coins_w,.hsi_coins_d,.hsi_command_w,.hsi_command_d,.hsi_compass_w,.hsi_compass_d,.hsi_compass2_w,.hsi_compass2_d, 
+.hsi_computer_w,.hsi_computer_d,.hsi_contrast_w,.hsi_contrast_d,.hsi_control_w,.hsi_control_d,.hsi_copyright_w,.hsi_copyright_d,.hsi_coroflot_w,.hsi_coroflot_d,.hsi_cpu_w,.hsi_cpu_d,.hsi_creditcard_w, 
+.hsi_creditcard_d,.hsi_csscode_w,.hsi_csscode_d,.hsi_android_w,.hsi_android_d,.hsi_cube_w,.hsi_cube_d,.hsi_cube2_w,.hsi_cube2_d,.hsi_cur_cent_w,.hsi_cur_cent_d,.hsi_cur_dollar_w, 
+.hsi_cur_dollar_d,.hsi_cur_euro_w,.hsi_cur_euro_d,.hsi_cur_franc_w,.hsi_cur_franc_d,.hsi_cur_generic_w,.hsi_cur_generic_d,.hsi_cur_lira_w,.hsi_cur_lira_d,.hsi_cur_peso_w,.hsi_cur_peso_d, 
+.hsi_cur_pound_w,.hsi_cur_pound_d,.hsi_cur_ruble_w,.hsi_cur_ruble_d,.hsi_cur_rupee_w,.hsi_cur_rupee_d,.hsi_cur_shekel_w,.hsi_cur_shekel_d,.hsi_cur_won_w,.hsi_cur_won_d,.hsi_cur_yen_w,.hsi_cur_yen_d,.hsi_cursor_w,.hsi_cursor_d,.hsi_cursordiagonal_w, 
+.hsi_cursordiagonal_d,.hsi_cursordiagonal2_w,.hsi_cursordiagonal2_d,.hsi_cursorhorizontal_w,.hsi_cursorhorizontal_d,.hsi_cursormove_w,.hsi_cursormove_d,.hsi_cursorpointer_w,.hsi_cursorpointer_d,.hsi_cursorprecision_w, 
+.hsi_cursorprecision_d,.hsi_cursorvertical_w,.hsi_cursorvertical_d,.hsi_cut_w,.hsi_cut_d,.hsi_danger_w,.hsi_danger_d,.hsi_danger2_w,.hsi_danger2_d,.hsi_dashboard_w,.hsi_dashboard_d,.hsi_database_w,.hsi_database_d, 
+.hsi_databaseminus_w,.hsi_databaseminus_d,.hsi_databaseplus_w,.hsi_databaseplus_d,.hsi_databaseok_w,.hsi_databaseok_d,.hsi_dedent_w,.hsi_dedent_d,.hsi_direction_w,.hsi_direction_d,.hsi_direction2_w, 
+.hsi_direction2_d,.hsi_directions_w,.hsi_directions_d,.hsi_directions2_w,.hsi_directions2_d,.hsi_disc_w,.hsi_disc_d,.hsi_disc2_w,.hsi_disc2_d,.hsi_downloadcloud_w,.hsi_downloadcloud_d, 
+.hsi_download_w,.hsi_download_d,.hsi_drop_w,.hsi_drop_d,.hsi_drop2_w,.hsi_drop2_d,.hsi_eject_w,.hsi_eject_d,.hsi_email_w,.hsi_email_d,.hsi_email2_w,.hsi_email2_d,.hsi_email3_w,.hsi_email3_d, 
+.hsi_equalizer_w,.hsi_equalizer_d,.hsi_equalizer2_w,.hsi_equalizer2_d,.hsi_error_w,.hsi_error_d,.hsi_error2_w,.hsi_error2_d,.hsi_eye_w,.hsi_eye_d,.hsi_favorite_w,.hsi_favorite_d, 
+.hsi_fax_w,.hsi_fax_d,.hsi_female_w,.hsi_female_d,.hsi_fileremove_w,.hsi_fileremove_d,.hsi_filter_w,.hsi_filter_d,.hsi_fingerprint_w,.hsi_fingerprint_d,.hsi_fingerprint2_w,.hsi_fingerprint2_d, 
+.hsi_firefox_w,.hsi_firefox_d,.hsi_firewall_w,.hsi_firewall_d,.hsi_flag_w,.hsi_flag_d,.hsi_flask_w,.hsi_flask_d,.hsi_flask2_w,.hsi_flask2_d,.hsi_folder_w,.hsi_folder_d,.hsi_folderremove_w,.hsi_folderremove_d, 
+.hsi_font_w,.hsi_font_d,.hsi_fontsize_w,.hsi_fontsize_d,.hsi_forbidden_w,.hsi_forbidden_d,.hsi_forward_w,.hsi_forward_d,.hsi_forward30_w,.hsi_forward30_d,.hsi_fullscreen_w,.hsi_fullscreen_d,.hsi_fullscreen2_w, 
+.hsi_fullscreen2_d,.hsi_fullscreen3_w,.hsi_fullscreen3_d,.hsi_gamepad_w,.hsi_gamepad_d,.hsi_gamepad2_w,.hsi_gamepad2_d,.hsi_gamepad3_w,.hsi_gamepad3_d,.hsi_gear_w,.hsi_gear_d, 
+.hsi_gear2_w,.hsi_gear2_d,.hsi_gift_w,.hsi_gift_d,.hsi_globe_w,.hsi_globe_d,.hsi_globe2_w,.hsi_globe2_d,.hsi_grid_w,.hsi_grid_d,.hsi_hd_w,.hsi_hd_d,.hsi_headphones_w,.hsi_headphones_d, 
+.hsi_headphones2_w,.hsi_headphones2_d,.hsi_help_w,.hsi_help_d,.hsi_help2_w,.hsi_help2_d,.hsi_help3_w,.hsi_help3_d,.hsi_hetero_w,.hsi_hetero_d,.hsi_home_w,.hsi_home_d,.hsi_home2_w, 
+.hsi_home2_d,.hsi_idcard_w,.hsi_idcard_d,.hsi_idcard2_w,.hsi_idcard2_d,.hsi_ie_w,.hsi_ie_d,.hsi_inbox_w,.hsi_inbox_d,.hsi_indent_w,.hsi_indent_d,.hsi_infinity_w,.hsi_infinity_d,.hsi_info_w, 
+.hsi_info_d,.hsi_info2_w,.hsi_info2_d,.hsi_italic_w,.hsi_italic_d,.hsi_jumpend_w,.hsi_jumpend_d,.hsi_key_w,.hsi_key_d,.hsi_keyboard_w,.hsi_keyboard_d,.hsi_laptop_w,.hsi_laptop_d, 
+.hsi_laptop2_w,.hsi_laptop2_d, .hsi_layer_w,.hsi_layer_d,.hsi_lifebuoy_w,.hsi_lifebuoy_d,.hsi_lightbulb_w,.hsi_lightbulb_d,.hsi_lightbulb2_w,.hsi_lightbulb2_d,.hsi_lightbulb3_w,.hsi_lightbulb3_d, 
+.hsi_link_w,.hsi_link_d,.hsi_link2_w,.hsi_link2_d,.hsi_linux_w,.hsi_linux_d,.hsi_list_w,.hsi_list_d,.hsi_location_w,.hsi_location_d,.hsi_location2_w,.hsi_location2_d,.hsi_lock_w, 
+.hsi_lock_d,.hsi_lockopen_w,.hsi_lockopen_d,.hsi_login_w,.hsi_login_d,.hsi_logout_w,.hsi_logout_d,.hsi_loud_w,.hsi_loud_d,.hsi_magic_w,.hsi_magic_d,.hsi_magnet_w,.hsi_magnet_d,.hsi_magnifier_w, 
+.hsi_magnifier_d,.hsi_magnifierminus_w,.hsi_magnifierminus_d,.hsi_magnifierplus_w,.hsi_magnifierplus_d,.hsi_male_w,.hsi_male_d,.hsi_map_w,.hsi_map_d,.hsi_mapcross_w,.hsi_mapcross_d,.hsi_mapplace_w,.hsi_mapplace_d, 
+.hsi_megaphone_w,.hsi_megaphone_d,.hsi_menubars_w,.hsi_menubars_d,.hsi_menudots_w,.hsi_menudots_d,.hsi_menudown_w,.hsi_menudown_d,.hsi_mic_w,.hsi_mic_d,.hsi_minus_w,.hsi_minus_d,.hsi_mobile_w,.hsi_mobile_d,.hsi_mobile2_w, 
+.hsi_mobile2_d,.hsi_mobile3_w,.hsi_mobile3_d,.hsi_mobile4_w,.hsi_mobile4_d,.hsi_monitoring_w,.hsi_monitoring_d,.hsi_mouse_w,.hsi_mouse_d,.hsi_mute_w,.hsi_mute_d,.hsi_nav_w,.hsi_nav_d, 
+.hsi_network_w,.hsi_network_d,.hsi_newspaper_w,.hsi_newspaper_d,.hsi_nexttrak_w,.hsi_nexttrak_d,.hsi_note_w,.hsi_note_d,.hsi_notesign_w,.hsi_notesign_d,.hsi_notesign2_w,.hsi_notesign2_d, 
+.hsi_numberedlist_w,.hsi_numberedlist_d,.hsi_opera_w,.hsi_opera_d,.hsi_outbox_w,.hsi_outbox_d,.hsi_paintbrush_w,.hsi_paintbrush_d,.hsi_paintbrush2_w,.hsi_paintbrush2_d,.hsi_paintbrush3_w, 
+.hsi_paintbrush3_d,.hsi_paperclip_w,.hsi_paperclip_d,.hsi_paperclip2_w,.hsi_paperclip2_d,.hsi_paperclip3_w,.hsi_paperclip3_d,.hsi_paperclip4_w,.hsi_paperclip4_d,.hsi_paperclip5_w, 
+.hsi_paperclip5_d,.hsi_paperplane_w,.hsi_paperplane_d,.hsi_password_w,.hsi_password_d,.hsi_pause_w,.hsi_pause_d,.hsi_paypal_w,.hsi_paypal_d,.hsi_pen_w,.hsi_pen_d,.hsi_pencil_w,.hsi_pencil_d,.hsi_phone_w, 
+.hsi_phone_d,.hsi_phone2_w,.hsi_phone2_d,.hsi_photocam_w,.hsi_photocam_d,.hsi_picture_w,.hsi_picture_d,.hsi_picture2_w,.hsi_picture2_d,.hsi_pictureadd_w,.hsi_pictureadd_d,.hsi_pictureattachment_w, 
+.hsi_pictureattachment_d,.hsi_pictureedit_w,.hsi_pictureedit_d,.hsi_picturemulti_w,.hsi_picturemulti_d,.hsi_pictureremove_w,.hsi_pictureremove_d,.hsi_piechart_w,.hsi_piechart_d, 
+.hsi_pilcrow_w,.hsi_pilcrow_d,.hsi_pin_w,.hsi_pin_d,.hsi_pin2_w,.hsi_pin2_d,.hsi_pinmap_w,.hsi_pinmap_d,.hsi_plus_w,.hsi_plus_d,.hsi_power_w,.hsi_power_d,.hsi_printer_w,.hsi_printer_d,.hsi_qr_w,.hsi_qr_d,.hsi_quote_w, 
+.hsi_quote_d,.hsi_quote2_w,.hsi_quote2_d,.hsi_radiotower_w,.hsi_radiotower_d,.hsi_redo_w,.hsi_redo_d,.hsi_refresh_w,.hsi_refresh_d,.hsi_refresh2_w,.hsi_refresh2_d,.hsi_repeat_w,.hsi_repeat_d, 
+.hsi_rewind30_w,.hsi_rewind30_d,.hsi_safari_w,.hsi_safari_d,.hsi_safe_w,.hsi_safe_d,.hsi_save_w,.hsi_save_d,.hsi_script_w,.hsi_script_d,.hsi_share_w,.hsi_share_d,.hsi_shield_w,.hsi_shield_d, 
+.hsi_shield2_w,.hsi_shield2_d,.hsi_shippingbox_w,.hsi_shippingbox_d,.hsi_shop_w,.hsi_shop_d,.hsi_shopingbag_w,.hsi_shopingbag_d,.hsi_sitemap_w,.hsi_sitemap_d,.hsi_smartphone_w,.hsi_smartphone_d, 
+.hsi_smartphone2_w,.hsi_smartphone2_d,.hsi_smartphone3_w,.hsi_smartphone3_d,.hsi_smiley_w,.hsi_smiley_d,.hsi_smiley2_w,.hsi_smiley2_d,.hsi_smileysad_w,.hsi_smileysad_d,.hsi_smileysad2_w,.hsi_smileysad2_d, 
+.hsi_sms_w,.hsi_sms_d,.hsi_snowflake_w,.hsi_snowflake_d,.hsi_soc_blogger_w,.hsi_soc_blogger_d,.hsi_soc_cargo_w,.hsi_soc_cargo_d,.hsi_soc_delicious_w,.hsi_soc_delicious_d,.hsi_soc_deviantart_w, 
+.hsi_soc_deviantart_d,.hsi_soc_dribble_w,.hsi_soc_dribble_d,.hsi_soc_facebook_w,.hsi_soc_facebook_d,.hsi_soc_facebooklike_w,.hsi_soc_facebooklike_d,.hsi_soc_feedburner_w,.hsi_soc_feedburner_d, 
+.hsi_soc_flickr_w,.hsi_soc_flickr_d,.hsi_soc_forrst_w,.hsi_soc_forrst_d,.hsi_soc_github_w,.hsi_soc_github_d,.hsi_soc_googleplus_w,.hsi_soc_googleplus_d,.hsi_soc_icq_w,.hsi_soc_icq_d, 
+.hsi_soc_in_w,.hsi_soc_in_d,.hsi_soc_insta_w,.hsi_soc_insta_d,.hsi_soc_lastfm_w,.hsi_soc_lastfm_d,.hsi_soc_livejournal_w,.hsi_soc_livejournal_d,.hsi_soc_myspace_w,.hsi_soc_myspace_d, 
+.hsi_soc_pinterest_w,.hsi_soc_pinterest_d,.hsi_soc_retweet_w,.hsi_soc_retweet_d,.hsi_soc_rss_w,.hsi_soc_rss_d,.hsi_soc_skype_w,.hsi_soc_skype_d,.hsi_soc_soundcloud_w,.hsi_soc_soundcloud_d,.hsi_soc_stackoverflow_w,.hsi_soc_stackoverflow_d,.hsi_soc_steam_w,.hsi_soc_steam_d,.hsi_soc_stumbleupon_w,.hsi_soc_stumbleupon_d,.hsi_soc_tumblr_w,.hsi_soc_tumblr_d, 
+.hsi_soc_twitter_w,.hsi_soc_twitter_d,.hsi_soc_vimeo_w,.hsi_soc_vimeo_d,.hsi_soc_vk_w,.hsi_soc_vk_d,.hsi_soc_wp_w,.hsi_soc_wp_d,.hsi_soc_xing_w,.hsi_soc_xing_d,.hsi_soc_youtube_w,.hsi_soc_youtube_d,.hsi_soc_youtube2_w, 
+.hsi_soc_youtube2_d,.hsi_sort_w,.hsi_sort_d,.hsi_sort2_w,.hsi_sort2_d,.hsi_sort3_w,.hsi_sort3_d,.hsi_sort4_w,.hsi_sort4_d,.hsi_sort5_w,.hsi_sort5_d,.hsi_sort6_w,.hsi_sort6_d,.hsi_sort7_w,.hsi_sort7_d,.hsi_sort8_w,.hsi_sort8_d, 
+.hsi_sort9_w,.hsi_sort9_d,.hsi_sort10_w,.hsi_sort10_d,.hsi_sort11_w,.hsi_sort11_d,.hsi_sort12_w,.hsi_sort12_d,.hsi_sort13_w,.hsi_sort13_d,.hsi_soundwave_w,.hsi_soundwave_d,.hsi_soundwave2_w,.hsi_soundwave2_d,.hsi_soundwave3_w,.hsi_soundwave3_d,.hsi_speaker_w,.hsi_speaker_d,.hsi_speakerminus_w, 
+.hsi_speakerminus_d,.hsi_speakerplus_w,.hsi_speakerplus_d,.hsi_speechbubble_w,.hsi_speechbubble_d,.hsi_speechbubble2_w,.hsi_speechbubble2_d,.hsi_squaredashed_w,.hsi_squaredashed_d,.hsi_star_w,.hsi_star_d,.hsi_stop_w,.hsi_stop_d,.hsi_stop2_w,.hsi_stop2_d,.hsi_stopplay_w,.hsi_stopplay_d,.hsi_strikethrough_w,.hsi_strikethrough_d,.hsi_switch_w,.hsi_switch_d,.hsi_table_w,.hsi_table_d, 
+.hsi_tablet_w,.hsi_tablet_d,.hsi_tablet2_w,.hsi_tablet2_d,.hsi_tablet3_w,.hsi_tablet3_d,.hsi_tag_w,.hsi_tag_d,.hsi_tagbarcode_w,.hsi_tagbarcode_d,.hsi_target_w,.hsi_target_d,.hsi_target2_w,.hsi_target2_d,.hsi_target3_w,.hsi_target3_d,.hsi_target4_w,.hsi_target4_d,
+.hsi_textbold_w,.hsi_textbold_d,.hsi_thumb_w,.hsi_thumb_d,.hsi_thumb2_w,.hsi_thumb2_d,.hsi_time_w,.hsi_time_d,.hsi_time2_w,.hsi_time2_d,.hsi_time3_w,.hsi_time3_d,.hsi_timer_w,.hsi_timer_d,
+.hsi_tools_w,.hsi_tools_d,.hsi_tools2_w,.hsi_tools2_d,.hsi_trademark_w,.hsi_trademark_d,.hsi_trademark2_w,.hsi_trademark2_d,.hsi_trash_w,.hsi_trash_d,.hsi_trashx_w,.hsi_trashx_d,
+.hsi_trophy_w,.hsi_trophy_d,.hsi_trophy2_w,.hsi_trophy2_d,.hsi_tv_w,.hsi_tv_d,.hsi_umbrella_w,.hsi_umbrella_d,.hsi_umbrella2_w,.hsi_umbrella2_d,.hsi_underline_w,.hsi_underline_d,.hsi_undo_w,.hsi_undo_d,.hsi_upload_w,
+.hsi_upload_d,.hsi_uploadcloud_w,.hsi_uploadcloud_d,.hsi_video_w,.hsi_video_d,.hsi_videoadd_w,.hsi_videoadd_d,.hsi_videoremove_w,.hsi_videoremove_d,.hsi_virus_w,.hsi_virus_d,.hsi_volume_w,.hsi_volume_d,.hsi_volumeminus_w,
+.hsi_volumeminus_d,.hsi_volumeplus_w,.hsi_volumeplus_d,.hsi_warning_w,.hsi_warning_d,.hsi_webcam_w,.hsi_webcam_d,.hsi_window_w,.hsi_window_d,.hsi_window2_w,.hsi_window2_d,
+.hsi_windowsos_w,.hsi_windowsos_d,.hsi_wireless_w,.hsi_wireless_d,.hsi_wireless2_w,.hsi_wireless2_d,.hsi_wrench_w,.hsi_wrench_d,.hsi_xmark_w,.hsi_xmark_d,.hsi_zip_w,.hsi_zip_d {
+    -ms-interpolation-mode: bicubic;
+    image-rendering: -moz-crisp-edges;
+    background:transparent;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.hsi_500px_w { background-image: url(../icons/500px_w.svg); } .hsi_500px_w:hover { background-image: url(../icons/500px_w.svg), url(../icons/500px_w.svg); }
+.hsi_500px_d { background-image: url(../icons/500px_d.svg); } .hsi_500px_d:hover { background-image: url(../icons/500px_d.svg), url(../icons/500px_d.svg); }
+.hsi_addfile_w { background-image: url(../icons/addfile_w.svg); } .hsi_addfile_w:hover { background-image: url(../icons/addfile_w.svg), url(../icons/addfile_w.svg); }
+.hsi_addfile_d { background-image: url(../icons/addfile_d.svg); } .hsi_addfile_d:hover { background-image: url(../icons/addfile_d.svg), url(../icons/addfile_d.svg); }
+.hsi_addfolder_w { background-image: url(../icons/addfolder_w.svg); } .hsi_addfolder_w:hover { background-image: url(../icons/addfolder_w.svg), url(../icons/addfolder_w.svg); }
+.hsi_addfolder_d { background-image: url(../icons/addfolder_d.svg); } .hsi_addfolder_d:hover { background-image: url(../icons/addfolder_d.svg), url(../icons/addfolder_d.svg); }
+.hsi_aligncenter_w { background-image: url(../icons/aligncenter_w.svg); } .hsi_aligncenter_w:hover { background-image: url(../icons/aligncenter_w.svg), url(../icons/aligncenter_w.svg); }
+.hsi_aligncenter_d { background-image: url(../icons/aligncenter_d.svg); } .hsi_aligncenter_d:hover { background-image: url(../icons/aligncenter_d.svg), url(../icons/aligncenter_d.svg); }
+.hsi_alignjustify_w { background-image: url(../icons/alignjustify_w.svg); } .hsi_alignjustify_w:hover { background-image: url(../icons/alignjustify_w.svg), url(../icons/alignjustify_w.svg); }
+.hsi_alignjustify_d { background-image: url(../icons/alignjustify_d.svg); } .hsi_alignjustify_d:hover { background-image: url(../icons/alignjustify_d.svg), url(../icons/alignjustify_d.svg); }
+.hsi_alignleft_w { background-image: url(../icons/alignleft_w.svg); } .hsi_alignleft_w:hover { background-image: url(../icons/alignleft_w.svg), url(../icons/alignleft_w.svg); }
+.hsi_alignleft_d { background-image: url(../icons/alignleft_d.svg); } .hsi_alignleft_d:hover { background-image: url(../icons/alignleft_d.svg), url(../icons/alignleft_d.svg); }
+.hsi_alignright_w { background-image: url(../icons/alignright_w.svg); } .hsi_alignright_w:hover { background-image: url(../icons/alignright_w.svg), url(../icons/alignright_w.svg); }
+.hsi_alignright_d { background-image: url(../icons/alignright_d.svg); } .hsi_alignright_d:hover { background-image: url(../icons/alignright_d.svg), url(../icons/alignright_d.svg); }
+.hsi_anchor_w { background-image: url(../icons/anchor_w.svg); } .hsi_anchor_w:hover { background-image: url(../icons/anchor_w.svg), url(../icons/anchor_w.svg); }
+.hsi_anchor_d { background-image: url(../icons/anchor_d.svg); } .hsi_anchor_d:hover { background-image: url(../icons/anchor_d.svg), url(../icons/anchor_d.svg); }
+.hsi_androidos_w { background-image: url(../icons/androidos_w.svg); } .hsi_androidos_w:hover { background-image: url(../icons/androidos_w.svg), url(../icons/androidos_w.svg); }
+.hsi_androidos_d { background-image: url(../icons/androidos_d.svg); } .hsi_androidos_d:hover { background-image: url(../icons/androidos_d.svg), url(../icons/androidos_d.svg); }
+.hsi_antenna_w { background-image: url(../icons/antenna_w.svg); } .hsi_antenna_w:hover { background-image: url(../icons/antenna_w.svg), url(../icons/antenna_w.svg); }
+.hsi_antenna_d { background-image: url(../icons/antenna_d.svg); } .hsi_antenna_d:hover { background-image: url(../icons/antenna_d.svg), url(../icons/antenna_d.svg); }
+.hsi_appleos_w { background-image: url(../icons/appleos_w.svg); } .hsi_appleos_w:hover { background-image: url(../icons/appleos_w.svg), url(../icons/appleos_w.svg); }
+.hsi_appleos_d { background-image: url(../icons/appleos_d.svg); } .hsi_appleos_d:hover { background-image: url(../icons/appleos_d.svg), url(../icons/appleos_d.svg); }
+.hsi_archive_w { background-image: url(../icons/archive_w.svg); } .hsi_archive_w:hover { background-image: url(../icons/archive_w.svg), url(../icons/archive_w.svg); }
+.hsi_archive_d { background-image: url(../icons/archive_d.svg); } .hsi_archive_d:hover { background-image: url(../icons/archive_d.svg), url(../icons/archive_d.svg); }
+.hsi_archive2_w { background-image: url(../icons/archive2_w.svg); } .hsi_archive2_w:hover { background-image: url(../icons/archive2_w.svg), url(../icons/archive2_w.svg); }
+.hsi_archive2_d { background-image: url(../icons/archive2_d.svg); } .hsi_archive2_d:hover { background-image: url(../icons/archive2_d.svg), url(../icons/archive2_d.svg); }
+.hsi_archive3_w { background-image: url(../icons/archive3_w.svg); } .hsi_archive3_w:hover { background-image: url(../icons/archive3_w.svg), url(../icons/archive3_w.svg); }
+.hsi_archive3_d { background-image: url(../icons/archive3_d.svg); } .hsi_archive3_d:hover { background-image: url(../icons/archive3_d.svg), url(../icons/archive3_d.svg); }
+.hsi_arrleft2_w { background-image: url(../icons/arrleft2_w.svg); } .hsi_arrleft2_w:hover { background-image: url(../icons/arrleft2_w.svg), url(../icons/arrleft2_w.svg); }
+.hsi_arrleft2_d { background-image: url(../icons/arrleft2_d.svg); } .hsi_arrleft2_d:hover { background-image: url(../icons/arrleft2_d.svg), url(../icons/arrleft2_d.svg); }
+.hsi_arrleft3_w { background-image: url(../icons/arrleft3_w.svg); } .hsi_arrleft3_w:hover { background-image: url(../icons/arrleft3_w.svg), url(../icons/arrleft3_w.svg); }
+.hsi_arrleft3_d { background-image: url(../icons/arrleft3_d.svg); } .hsi_arrleft3_d:hover { background-image: url(../icons/arrleft3_d.svg), url(../icons/arrleft3_d.svg); }
+.hsi_arrleft4_w { background-image: url(../icons/arrleft4_w.svg); } .hsi_arrleft4_w:hover { background-image: url(../icons/arrleft4_w.svg), url(../icons/arrleft4_w.svg); }
+.hsi_arrleft4_d { background-image: url(../icons/arrleft4_d.svg); } .hsi_arrleft4_d:hover { background-image: url(../icons/arrleft4_d.svg), url(../icons/arrleft4_d.svg); }
+.hsi_arrright_w { background-image: url(../icons/arrright_w.svg); } .hsi_arrright_w:hover { background-image: url(../icons/arrright_w.svg), url(../icons/arrright_w.svg); }
+.hsi_arrright_d { background-image: url(../icons/arrright_d.svg); } .hsi_arrright_d:hover { background-image: url(../icons/arrright_d.svg), url(../icons/arrright_d.svg); }
+.hsi_arrright2_w { background-image: url(../icons/arrright2_w.svg); } .hsi_arrright2_w:hover { background-image: url(../icons/arrright2_w.svg), url(../icons/arrright2_w.svg); }
+.hsi_arrright2_d { background-image: url(../icons/arrright2_d.svg); } .hsi_arrright2_d:hover { background-image: url(../icons/arrright2_d.svg), url(../icons/arrright2_d.svg); }
+.hsi_arrright3_w { background-image: url(../icons/arrright3_w.svg); } .hsi_arrright3_w:hover { background-image: url(../icons/arrright3_w.svg), url(../icons/arrright3_w.svg); }
+.hsi_arrright3_d { background-image: url(../icons/arrright3_d.svg); } .hsi_arrright3_d:hover { background-image: url(../icons/arrright3_d.svg), url(../icons/arrright3_d.svg); }
+.hsi_arrright4_w { background-image: url(../icons/arrright4_w.svg); } .hsi_arrright4_w:hover { background-image: url(../icons/arrright4_w.svg), url(../icons/arrright4_w.svg); }
+.hsi_arrright4_d { background-image: url(../icons/arrright4_d.svg); } .hsi_arrright4_d:hover { background-image: url(../icons/arrright4_d.svg), url(../icons/arrright4_d.svg); }
+.hsi_award_w { background-image: url(../icons/award_w.svg); } .hsi_award_w:hover { background-image: url(../icons/award_w.svg), url(../icons/award_w.svg); }
+.hsi_award_d { background-image: url(../icons/award_d.svg); } .hsi_award_d:hover { background-image: url(../icons/award_d.svg), url(../icons/award_d.svg); }
+.hsi_award2_w { background-image: url(../icons/award2_w.svg); } .hsi_award2_w:hover { background-image: url(../icons/award2_w.svg), url(../icons/award2_w.svg); }
+.hsi_award2_d { background-image: url(../icons/award2_d.svg); } .hsi_award2_d:hover { background-image: url(../icons/award2_d.svg), url(../icons/award2_d.svg); }
+.hsi_bag_w { background-image: url(../icons/bag_w.svg); } .hsi_bag_w:hover { background-image: url(../icons/bag_w.svg), url(../icons/bag_w.svg); }
+.hsi_bag_d { background-image: url(../icons/bag_d.svg); } .hsi_bag_d:hover { background-image: url(../icons/bag_d.svg), url(../icons/bag_d.svg); }
+.hsi_banknote_w { background-image: url(../icons/banknote_w.svg); } .hsi_banknote_w:hover { background-image: url(../icons/banknote_w.svg), url(../icons/banknote_w.svg); }
+.hsi_banknote_d { background-image: url(../icons/banknote_d.svg); } .hsi_banknote_d:hover { background-image: url(../icons/banknote_d.svg), url(../icons/banknote_d.svg); }
+.hsi_barchart_w { background-image: url(../icons/barchart_w.svg); } .hsi_barchart_w:hover { background-image: url(../icons/barchart_w.svg), url(../icons/barchart_w.svg); }
+.hsi_barchart_d { background-image: url(../icons/barchart_d.svg); } .hsi_barchart_d:hover { background-image: url(../icons/barchart_d.svg), url(../icons/barchart_d.svg); }
+.hsi_barcode_w { background-image: url(../icons/barcode_w.svg); } .hsi_barcode_w:hover { background-image: url(../icons/barcode_w.svg), url(../icons/barcode_w.svg); }
+.hsi_barcode_d { background-image: url(../icons/barcode_d.svg); } .hsi_barcode_d:hover { background-image: url(../icons/barcode_d.svg), url(../icons/barcode_d.svg); }
+.hsi_basket_w { background-image: url(../icons/basket_w.svg); } .hsi_basket_w:hover { background-image: url(../icons/basket_w.svg), url(../icons/basket_w.svg); }
+.hsi_basket_d { background-image: url(../icons/basket_d.svg); } .hsi_basket_d:hover { background-image: url(../icons/basket_d.svg), url(../icons/basket_d.svg); }
+.hsi_basketminus_w { background-image: url(../icons/basketminus_w.svg); } .hsi_basketminus_w:hover { background-image: url(../icons/basketminus_w.svg), url(../icons/basketminus_w.svg); }
+.hsi_basketminus_d { background-image: url(../icons/basketminus_d.svg); } .hsi_basketminus_d:hover { background-image: url(../icons/basketminus_d.svg), url(../icons/basketminus_d.svg); }
+.hsi_basketplus_w { background-image: url(../icons/basketplus_w.svg); } .hsi_basketplus_w:hover { background-image: url(../icons/basketplus_w.svg), url(../icons/basketplus_w.svg); }
+.hsi_basketplus_d { background-image: url(../icons/basketplus_d.svg); } .hsi_basketplus_d:hover { background-image: url(../icons/basketplus_d.svg), url(../icons/basketplus_d.svg); }
+.hsi_beer_w { background-image: url(../icons/beer_w.svg); } .hsi_beer_w:hover { background-image: url(../icons/beer_w.svg), url(../icons/beer_w.svg); }
+.hsi_beer_d { background-image: url(../icons/beer_d.svg); } .hsi_beer_d:hover { background-image: url(../icons/beer_d.svg), url(../icons/beer_d.svg); }
+.hsi_behance_w { background-image: url(../icons/behance_w.svg); } .hsi_behance_w:hover { background-image: url(../icons/behance_w.svg), url(../icons/behance_w.svg); }
+.hsi_behance_d { background-image: url(../icons/behance_d.svg); } .hsi_behance_d:hover { background-image: url(../icons/behance_d.svg), url(../icons/behance_d.svg); }
+.hsi_bell_w { background-image: url(../icons/bell_w.svg); } .hsi_bell_w:hover { background-image: url(../icons/bell_w.svg), url(../icons/bell_w.svg); }
+.hsi_bell_d { background-image: url(../icons/bell_d.svg); } .hsi_bell_d:hover { background-image: url(../icons/bell_d.svg), url(../icons/bell_d.svg); }
+.hsi_bellmute_w { background-image: url(../icons/bellmute_w.svg); } .hsi_bellmute_w:hover { background-image: url(../icons/bellmute_w.svg), url(../icons/bellmute_w.svg); }
+.hsi_bellmute_d { background-image: url(../icons/bellmute_d.svg); } .hsi_bellmute_d:hover { background-image: url(../icons/bellmute_d.svg), url(../icons/bellmute_d.svg); }
+.hsi_bellring_w { background-image: url(../icons/bellring_w.svg); } .hsi_bellring_w:hover { background-image: url(../icons/bellring_w.svg), url(../icons/bellring_w.svg); }
+.hsi_bellring_d { background-image: url(../icons/bellring_d.svg); } .hsi_bellring_d:hover { background-image: url(../icons/bellring_d.svg), url(../icons/bellring_d.svg); }
+.hsi_blankfile_w { background-image: url(../icons/blankfile_w.svg); } .hsi_blankfile_w:hover { background-image: url(../icons/blankfile_w.svg), url(../icons/blankfile_w.svg); }
+.hsi_blankfile_d { background-image: url(../icons/blankfile_d.svg); } .hsi_blankfile_d:hover { background-image: url(../icons/blankfile_d.svg), url(../icons/blankfile_d.svg); }
+.hsi_book_w { background-image: url(../icons/book_w.svg); } .hsi_book_w:hover { background-image: url(../icons/book_w.svg), url(../icons/book_w.svg); }
+.hsi_book_d { background-image: url(../icons/book_d.svg); } .hsi_book_d:hover { background-image: url(../icons/book_d.svg), url(../icons/book_d.svg); }
+.hsi_bookemail_w { background-image: url(../icons/bookemail_w.svg); } .hsi_bookemail_w:hover { background-image: url(../icons/bookemail_w.svg), url(../icons/bookemail_w.svg); }
+.hsi_bookemail_d { background-image: url(../icons/bookemail_d.svg); } .hsi_bookemail_d:hover { background-image: url(../icons/bookemail_d.svg), url(../icons/bookemail_d.svg); }
+.hsi_bookmark_w { background-image: url(../icons/bookmark_w.svg); } .hsi_bookmark_w:hover { background-image: url(../icons/bookmark_w.svg), url(../icons/bookmark_w.svg); }
+.hsi_bookmark_d { background-image: url(../icons/bookmark_d.svg); } .hsi_bookmark_d:hover { background-image: url(../icons/bookmark_d.svg), url(../icons/bookmark_d.svg); }
+.hsi_bookquest_w { background-image: url(../icons/bookquest_w.svg); } .hsi_bookquest_w:hover { background-image: url(../icons/bookquest_w.svg), url(../icons/bookquest_w.svg); }
+.hsi_bookquest_d { background-image: url(../icons/bookquest_d.svg); } .hsi_bookquest_d:hover { background-image: url(../icons/bookquest_d.svg), url(../icons/bookquest_d.svg); }
+.hsi_briefcase_w { background-image: url(../icons/briefcase_w.svg); } .hsi_briefcase_w:hover { background-image: url(../icons/briefcase_w.svg), url(../icons/briefcase_w.svg); }
+.hsi_briefcase_d { background-image: url(../icons/briefcase_d.svg); } .hsi_briefcase_d:hover { background-image: url(../icons/briefcase_d.svg), url(../icons/briefcase_d.svg); }
+.hsi_briefcase2_w { background-image: url(../icons/briefcase2_w.svg); } .hsi_briefcase2_w:hover { background-image: url(../icons/briefcase2_w.svg), url(../icons/briefcase2_w.svg); }
+.hsi_briefcase2_d { background-image: url(../icons/briefcase2_d.svg); } .hsi_briefcase2_d:hover { background-image: url(../icons/briefcase2_d.svg), url(../icons/briefcase2_d.svg); }
+.hsi_briefcase3_w { background-image: url(../icons/briefcase3_w.svg); } .hsi_briefcase3_w:hover { background-image: url(../icons/briefcase3_w.svg), url(../icons/briefcase3_w.svg); }
+.hsi_briefcase3_d { background-image: url(../icons/briefcase3_d.svg); } .hsi_briefcase3_d:hover { background-image: url(../icons/briefcase3_d.svg), url(../icons/briefcase3_d.svg); }
+.hsi_brightness_w { background-image: url(../icons/brightness_w.svg); } .hsi_brightness_w:hover { background-image: url(../icons/brightness_w.svg), url(../icons/brightness_w.svg); }
+.hsi_brightness_d { background-image: url(../icons/brightness_d.svg); } .hsi_brightness_d:hover { background-image: url(../icons/brightness_d.svg), url(../icons/brightness_d.svg); }
+.hsi_bug_w { background-image: url(../icons/bug_w.svg); } .hsi_bug_w:hover { background-image: url(../icons/bug_w.svg), url(../icons/bug_w.svg); }
+.hsi_bug_d { background-image: url(../icons/bug_d.svg); } .hsi_bug_d:hover { background-image: url(../icons/bug_d.svg), url(../icons/bug_d.svg); }
+.hsi_bulllist_w { background-image: url(../icons/bulllist_w.svg); } .hsi_bulllist_w:hover { background-image: url(../icons/bulllist_w.svg), url(../icons/bulllist_w.svg); }
+.hsi_bulllist_d { background-image: url(../icons/bulllist_d.svg); } .hsi_bulllist_d:hover { background-image: url(../icons/bulllist_d.svg), url(../icons/bulllist_d.svg); }
+.hsi_calc_w { background-image: url(../icons/calc_w.svg); } .hsi_calc_w:hover { background-image: url(../icons/calc_w.svg), url(../icons/calc_w.svg); }
+.hsi_calc_d { background-image: url(../icons/calc_d.svg); } .hsi_calc_d:hover { background-image: url(../icons/calc_d.svg), url(../icons/calc_d.svg); }
+.hsi_calendar_w { background-image: url(../icons/calendar_w.svg); } .hsi_calendar_w:hover { background-image: url(../icons/calendar_w.svg), url(../icons/calendar_w.svg); }
+.hsi_calendar_d { background-image: url(../icons/calendar_d.svg); } .hsi_calendar_d:hover { background-image: url(../icons/calendar_d.svg), url(../icons/calendar_d.svg); }
+.hsi_calendar31_w { background-image: url(../icons/calendar31_w.svg); } .hsi_calendar31_w:hover { background-image: url(../icons/calendar31_w.svg), url(../icons/calendar31_w.svg); }
+.hsi_calendar31_d { background-image: url(../icons/calendar31_d.svg); } .hsi_calendar31_d:hover { background-image: url(../icons/calendar31_d.svg), url(../icons/calendar31_d.svg); }
+.hsi_camera_w { background-image: url(../icons/camera_w.svg); } .hsi_camera_w:hover { background-image: url(../icons/camera_w.svg), url(../icons/camera_w.svg); }
+.hsi_camera_d { background-image: url(../icons/camera_d.svg); } .hsi_camera_d:hover { background-image: url(../icons/camera_d.svg), url(../icons/camera_d.svg); }
+.hsi_cart_w { background-image: url(../icons/cart_w.svg); } .hsi_cart_w:hover { background-image: url(../icons/cart_w.svg), url(../icons/cart_w.svg); }
+.hsi_cart_d { background-image: url(../icons/cart_d.svg); } .hsi_cart_d:hover { background-image: url(../icons/cart_d.svg), url(../icons/cart_d.svg); }
+.hsi_cartminus_w { background-image: url(../icons/cartminus_w.svg); } .hsi_cartminus_w:hover { background-image: url(../icons/cartminus_w.svg), url(../icons/cartminus_w.svg); }
+.hsi_cartminus_d { background-image: url(../icons/cartminus_d.svg); } .hsi_cartminus_d:hover { background-image: url(../icons/cartminus_d.svg), url(../icons/cartminus_d.svg); }
+.hsi_cartplus_w { background-image: url(../icons/cartplus_w.svg); } .hsi_cartplus_w:hover { background-image: url(../icons/cartplus_w.svg), url(../icons/cartplus_w.svg); }
+.hsi_cartplus_d { background-image: url(../icons/cartplus_d.svg); } .hsi_cartplus_d:hover { background-image: url(../icons/cartplus_d.svg), url(../icons/cartplus_d.svg); }
+.hsi_chart_w { background-image: url(../icons/chart_w.svg); } .hsi_chart_w:hover { background-image: url(../icons/chart_w.svg), url(../icons/chart_w.svg); }
+.hsi_chart_d { background-image: url(../icons/chart_d.svg); } .hsi_chart_d:hover { background-image: url(../icons/chart_d.svg), url(../icons/chart_d.svg); }
+.hsi_chartdown_w { background-image: url(../icons/chartdown_w.svg); } .hsi_chartdown_w:hover { background-image: url(../icons/chartdown_w.svg), url(../icons/chartdown_w.svg); }
+.hsi_chartdown_d { background-image: url(../icons/chartdown_d.svg); } .hsi_chartdown_d:hover { background-image: url(../icons/chartdown_d.svg), url(../icons/chartdown_d.svg); }
+.hsi_chartup_w { background-image: url(../icons/chartup_w.svg); } .hsi_chartup_w:hover { background-image: url(../icons/chartup_w.svg), url(../icons/chartup_w.svg); }
+.hsi_chartup_d { background-image: url(../icons/chartup_d.svg); } .hsi_chartup_d:hover { background-image: url(../icons/chartup_d.svg), url(../icons/chartup_d.svg); }
+.hsi_checkbox_w { background-image: url(../icons/checkbox_w.svg); } .hsi_checkbox_w:hover { background-image: url(../icons/checkbox_w.svg), url(../icons/checkbox_w.svg); }
+.hsi_checkbox_d { background-image: url(../icons/checkbox_d.svg); } .hsi_checkbox_d:hover { background-image: url(../icons/checkbox_d.svg), url(../icons/checkbox_d.svg); }
+.hsi_checkbox2_w { background-image: url(../icons/checkbox2_w.svg); } .hsi_checkbox2_w:hover { background-image: url(../icons/checkbox2_w.svg), url(../icons/checkbox2_w.svg); }
+.hsi_checkbox2_d { background-image: url(../icons/checkbox2_d.svg); } .hsi_checkbox2_d:hover { background-image: url(../icons/checkbox2_d.svg), url(../icons/checkbox2_d.svg); }
+.hsi_checkmark_w { background-image: url(../icons/checkmark_w.svg); } .hsi_checkmark_w:hover { background-image: url(../icons/checkmark_w.svg), url(../icons/checkmark_w.svg); }
+.hsi_checkmark_d { background-image: url(../icons/checkmark_d.svg); } .hsi_checkmark_d:hover { background-image: url(../icons/checkmark_d.svg), url(../icons/checkmark_d.svg); }
+.hsi_checkmark2_w { background-image: url(../icons/checkmark2_w.svg); } .hsi_checkmark2_w:hover { background-image: url(../icons/checkmark2_w.svg), url(../icons/checkmark2_w.svg); }
+.hsi_checkmark2_d { background-image: url(../icons/checkmark2_d.svg); } .hsi_checkmark2_d:hover { background-image: url(../icons/checkmark2_d.svg), url(../icons/checkmark2_d.svg); }
+.hsi_checkmark3_w { background-image: url(../icons/checkmark3_w.svg); } .hsi_checkmark3_w:hover { background-image: url(../icons/checkmark3_w.svg), url(../icons/checkmark3_w.svg); }
+.hsi_checkmark3_d { background-image: url(../icons/checkmark3_d.svg); } .hsi_checkmark3_d:hover { background-image: url(../icons/checkmark3_d.svg), url(../icons/checkmark3_d.svg); }
+.hsi_checkout_w { background-image: url(../icons/checkout_w.svg); } .hsi_checkout_w:hover { background-image: url(../icons/checkout_w.svg), url(../icons/checkout_w.svg); }
+.hsi_checkout_d { background-image: url(../icons/checkout_d.svg); } .hsi_checkout_d:hover { background-image: url(../icons/checkout_d.svg), url(../icons/checkout_d.svg); }
+.hsi_christmastree_w { background-image: url(../icons/christmastree_w.svg); } .hsi_christmastree_w:hover { background-image: url(../icons/christmastree_w.svg), url(../icons/christmastree_w.svg); }
+.hsi_christmastree_d { background-image: url(../icons/christmastree_d.svg); } .hsi_christmastree_d:hover { background-image: url(../icons/christmastree_d.svg), url(../icons/christmastree_d.svg); }
+.hsi_chrome_w { background-image: url(../icons/chrome_w.svg); } .hsi_chrome_w:hover { background-image: url(../icons/chrome_w.svg), url(../icons/chrome_w.svg); }
+.hsi_chrome_d { background-image: url(../icons/chrome_d.svg); } .hsi_chrome_d:hover { background-image: url(../icons/chrome_d.svg), url(../icons/chrome_d.svg); }
+.hsi_circledashed_w { background-image: url(../icons/circledashed_w.svg); } .hsi_circledashed_w:hover { background-image: url(../icons/circledashed_w.svg), url(../icons/circledashed_w.svg); }
+.hsi_circledashed_d { background-image: url(../icons/circledashed_d.svg); } .hsi_circledashed_d:hover { background-image: url(../icons/circledashed_d.svg), url(../icons/circledashed_d.svg); }
+.hsi_clipboard_w { background-image: url(../icons/clipboard_w.svg); } .hsi_clipboard_w:hover { background-image: url(../icons/clipboard_w.svg), url(../icons/clipboard_w.svg); }
+.hsi_clipboard_d { background-image: url(../icons/clipboard_d.svg); } .hsi_clipboard_d:hover { background-image: url(../icons/clipboard_d.svg), url(../icons/clipboard_d.svg); }
+.hsi_cloud_w { background-image: url(../icons/cloud_w.svg); } .hsi_cloud_w:hover { background-image: url(../icons/cloud_w.svg), url(../icons/cloud_w.svg); }
+.hsi_cloud_d { background-image: url(../icons/cloud_d.svg); } .hsi_cloud_d:hover { background-image: url(../icons/cloud_d.svg), url(../icons/cloud_d.svg); }
+.hsi_cloud2_w { background-image: url(../icons/cloud2_w.svg); } .hsi_cloud2_w:hover { background-image: url(../icons/cloud2_w.svg), url(../icons/cloud2_w.svg); }
+.hsi_cloud2_d { background-image: url(../icons/cloud2_d.svg); } .hsi_cloud2_d:hover { background-image: url(../icons/cloud2_d.svg), url(../icons/cloud2_d.svg); }
+.hsi_cloud3_w { background-image: url(../icons/cloud3_w.svg); } .hsi_cloud3_w:hover { background-image: url(../icons/cloud3_w.svg), url(../icons/cloud3_w.svg); }
+.hsi_cloud3_d { background-image: url(../icons/cloud3_d.svg); } .hsi_cloud3_d:hover { background-image: url(../icons/cloud3_d.svg), url(../icons/cloud3_d.svg); }
+.hsi_cloud4_w { background-image: url(../icons/cloud4_w.svg); } .hsi_cloud4_w:hover { background-image: url(../icons/cloud4_w.svg), url(../icons/cloud4_w.svg); }
+.hsi_cloud4_d { background-image: url(../icons/cloud4_d.svg); } .hsi_cloud4_d:hover { background-image: url(../icons/cloud4_d.svg), url(../icons/cloud4_d.svg); }
+.hsi_cloudminus_w { background-image: url(../icons/cloudminus_w.svg); } .hsi_cloudminus_w:hover { background-image: url(../icons/cloudminus_w.svg), url(../icons/cloudminus_w.svg); }
+.hsi_cloudminus_d { background-image: url(../icons/cloudminus_d.svg); } .hsi_cloudminus_d:hover { background-image: url(../icons/cloudminus_d.svg), url(../icons/cloudminus_d.svg); }
+.hsi_cloudplus_w { background-image: url(../icons/cloudplus_w.svg); } .hsi_cloudplus_w:hover { background-image: url(../icons/cloudplus_w.svg), url(../icons/cloudplus_w.svg); }
+.hsi_cloudplus_d { background-image: url(../icons/cloudplus_d.svg); } .hsi_cloudplus_d:hover { background-image: url(../icons/cloudplus_d.svg), url(../icons/cloudplus_d.svg); }
+.hsi_cloudsave_w { background-image: url(../icons/cloudsave_w.svg); } .hsi_cloudsave_w:hover { background-image: url(../icons/cloudsave_w.svg), url(../icons/cloudsave_w.svg); }
+.hsi_cloudsave_d { background-image: url(../icons/cloudsave_d.svg); } .hsi_cloudsave_d:hover { background-image: url(../icons/cloudsave_d.svg), url(../icons/cloudsave_d.svg); }
+.hsi_cloudx_w { background-image: url(../icons/cloudx_w.svg); } .hsi_cloudx_w:hover { background-image: url(../icons/cloudx_w.svg), url(../icons/cloudx_w.svg); }
+.hsi_cloudx_d { background-image: url(../icons/cloudx_d.svg); } .hsi_cloudx_d:hover { background-image: url(../icons/cloudx_d.svg), url(../icons/cloudx_d.svg); }
+.hsi_code_w { background-image: url(../icons/code_w.svg); } .hsi_code_w:hover { background-image: url(../icons/code_w.svg), url(../icons/code_w.svg); }
+.hsi_code_d { background-image: url(../icons/code_d.svg); } .hsi_code_d:hover { background-image: url(../icons/code_d.svg), url(../icons/code_d.svg); }
+.hsi_codefork_w { background-image: url(../icons/codefork_w.svg); } .hsi_codefork_w:hover { background-image: url(../icons/codefork_w.svg), url(../icons/codefork_w.svg); }
+.hsi_codefork_d { background-image: url(../icons/codefork_d.svg); } .hsi_codefork_d:hover { background-image: url(../icons/codefork_d.svg), url(../icons/codefork_d.svg); }
+.hsi_codefork2_w { background-image: url(../icons/codefork2_w.svg); } .hsi_codefork2_w:hover { background-image: url(../icons/codefork2_w.svg), url(../icons/codefork2_w.svg); }
+.hsi_codefork2_d { background-image: url(../icons/codefork2_d.svg); } .hsi_codefork2_d:hover { background-image: url(../icons/codefork2_d.svg), url(../icons/codefork2_d.svg); }
+.hsi_coffee_w { background-image: url(../icons/coffee_w.svg); } .hsi_coffee_w:hover { background-image: url(../icons/coffee_w.svg), url(../icons/coffee_w.svg); }
+.hsi_coffee_d { background-image: url(../icons/coffee_d.svg); } .hsi_coffee_d:hover { background-image: url(../icons/coffee_d.svg), url(../icons/coffee_d.svg); }
+.hsi_coffee2_w { background-image: url(../icons/coffee2_w.svg); } .hsi_coffee2_w:hover { background-image: url(../icons/coffee2_w.svg), url(../icons/coffee2_w.svg); }
+.hsi_coffee2_d { background-image: url(../icons/coffee2_d.svg); } .hsi_coffee2_d:hover { background-image: url(../icons/coffee2_d.svg), url(../icons/coffee2_d.svg); }
+.hsi_coin_w { background-image: url(../icons/coin_w.svg); } .hsi_coin_w:hover { background-image: url(../icons/coin_w.svg), url(../icons/coin_w.svg); }
+.hsi_coin_d { background-image: url(../icons/coin_d.svg); } .hsi_coin_d:hover { background-image: url(../icons/coin_d.svg), url(../icons/coin_d.svg); }
+.hsi_coins_w { background-image: url(../icons/coins_w.svg); } .hsi_coins_w:hover { background-image: url(../icons/coins_w.svg), url(../icons/coins_w.svg); }
+.hsi_coins_d { background-image: url(../icons/coins_d.svg); } .hsi_coins_d:hover { background-image: url(../icons/coins_d.svg), url(../icons/coins_d.svg); }
+.hsi_command_w { background-image: url(../icons/command_w.svg); } .hsi_command_w:hover { background-image: url(../icons/command_w.svg), url(../icons/command_w.svg); }
+.hsi_command_d { background-image: url(../icons/command_d.svg); } .hsi_command_d:hover { background-image: url(../icons/command_d.svg), url(../icons/command_d.svg); }
+.hsi_compass_w { background-image: url(../icons/compass_w.svg); } .hsi_compass_w:hover { background-image: url(../icons/compass_w.svg), url(../icons/compass_w.svg); }
+.hsi_compass_d { background-image: url(../icons/compass_d.svg); } .hsi_compass_d:hover { background-image: url(../icons/compass_d.svg), url(../icons/compass_d.svg); }
+.hsi_compass2_w { background-image: url(../icons/compass2_w.svg); } .hsi_compass2_w:hover { background-image: url(../icons/compass2_w.svg), url(../icons/compass2_w.svg); }
+.hsi_compass2_d { background-image: url(../icons/compass2_d.svg); } .hsi_compass2_d:hover { background-image: url(../icons/compass2_d.svg), url(../icons/compass2_d.svg); }
+.hsi_computer_w { background-image: url(../icons/computer_w.svg); } .hsi_computer_w:hover { background-image: url(../icons/computer_w.svg), url(../icons/computer_w.svg); }
+.hsi_computer_d { background-image: url(../icons/computer_d.svg); } .hsi_computer_d:hover { background-image: url(../icons/computer_d.svg), url(../icons/computer_d.svg); }
+.hsi_contrast_w { background-image: url(../icons/contrast_w.svg); } .hsi_contrast_w:hover { background-image: url(../icons/contrast_w.svg), url(../icons/contrast_w.svg); }
+.hsi_contrast_d { background-image: url(../icons/contrast_d.svg); } .hsi_contrast_d:hover { background-image: url(../icons/contrast_d.svg), url(../icons/contrast_d.svg); }
+.hsi_control_w { background-image: url(../icons/control_w.svg); } .hsi_control_w:hover { background-image: url(../icons/control_w.svg), url(../icons/control_w.svg); }
+.hsi_control_d { background-image: url(../icons/control_d.svg); } .hsi_control_d:hover { background-image: url(../icons/control_d.svg), url(../icons/control_d.svg); }
+.hsi_copyright_w { background-image: url(../icons/copyright_w.svg); } .hsi_copyright_w:hover { background-image: url(../icons/copyright_w.svg), url(../icons/copyright_w.svg); }
+.hsi_copyright_d { background-image: url(../icons/copyright_d.svg); } .hsi_copyright_d:hover { background-image: url(../icons/copyright_d.svg), url(../icons/copyright_d.svg); }
+.hsi_coroflot_w { background-image: url(../icons/coroflot_w.svg); } .hsi_coroflot_w:hover { background-image: url(../icons/coroflot_w.svg), url(../icons/coroflot_w.svg); }
+.hsi_coroflot_d { background-image: url(../icons/coroflot_d.svg); } .hsi_coroflot_d:hover { background-image: url(../icons/coroflot_d.svg), url(../icons/coroflot_d.svg); }
+.hsi_cpu_w { background-image: url(../icons/cpu_w.svg); } .hsi_cpu_w:hover { background-image: url(../icons/cpu_w.svg), url(../icons/cpu_w.svg); }
+.hsi_cpu_d { background-image: url(../icons/cpu_d.svg); } .hsi_cpu_d:hover { background-image: url(../icons/cpu_d.svg), url(../icons/cpu_d.svg); }
+.hsi_creditcard_w { background-image: url(../icons/creditcard_w.svg); } .hsi_creditcard_w:hover { background-image: url(../icons/creditcard_w.svg), url(../icons/creditcard_w.svg); }
+.hsi_creditcard_d { background-image: url(../icons/creditcard_d.svg); } .hsi_creditcard_d:hover { background-image: url(../icons/creditcard_d.svg), url(../icons/creditcard_d.svg); }
+.hsi_csscode_w { background-image: url(../icons/csscode_w.svg); } .hsi_csscode_w:hover { background-image: url(../icons/csscode_w.svg), url(../icons/csscode_w.svg); }
+.hsi_csscode_d { background-image: url(../icons/csscode_d.svg); } .hsi_csscode_d:hover { background-image: url(../icons/csscode_d.svg), url(../icons/csscode_d.svg); }
+.hsi_android_w { background-image: url(../icons/androidos_w.svg); } .hsi_android_w:hover { background-image: url(../icons/androidos_w.svg), url(../icons/androidos_w.svg); }
+.hsi_android_d { background-image: url(../icons/androidos_d.svg); } .hsi_android_d:hover { background-image: url(../icons/androidos_d.svg), url(../icons/androidos_d.svg); }
+.hsi_cube_w { background-image: url(../icons/cube_w.svg); } .hsi_cube_w:hover { background-image: url(../icons/cube_w.svg), url(../icons/cube_w.svg); }
+.hsi_cube_d { background-image: url(../icons/cube_d.svg); } .hsi_cube_d:hover { background-image: url(../icons/cube_d.svg), url(../icons/cube_d.svg); }
+.hsi_cube2_w { background-image: url(../icons/cube2_w.svg); } .hsi_cube2_w:hover { background-image: url(../icons/cube2_w.svg), url(../icons/cube2_w.svg); }
+.hsi_cube2_d { background-image: url(../icons/cube2_d.svg); } .hsi_cube2_d:hover { background-image: url(../icons/cube2_d.svg), url(../icons/cube2_d.svg); }
+.hsi_cur_cent_w { background-image: url(../icons/cur_cent_w.svg); } .hsi_cur_cent_w:hover { background-image: url(../icons/cur_cent_w.svg), url(../icons/cur_cent_w.svg); }
+.hsi_cur_cent_d { background-image: url(../icons/cur_cent_d.svg); } .hsi_cur_cent_d:hover { background-image: url(../icons/cur_cent_d.svg), url(../icons/cur_cent_d.svg); }
+.hsi_cur_dollar_w { background-image: url(../icons/cur_dollar_w.svg); } .hsi_cur_dollar_w:hover { background-image: url(../icons/cur_dollar_w.svg), url(../icons/cur_dollar_w.svg); }
+.hsi_cur_dollar_d { background-image: url(../icons/cur_dollar_d.svg); } .hsi_cur_dollar_d:hover { background-image: url(../icons/cur_dollar_d.svg), url(../icons/cur_dollar_d.svg); }
+.hsi_cur_euro_w { background-image: url(../icons/cur_euro_w.svg); } .hsi_cur_euro_w:hover { background-image: url(../icons/cur_euro_w.svg), url(../icons/cur_euro_w.svg); }
+.hsi_cur_euro_d { background-image: url(../icons/cur_euro_d.svg); } .hsi_cur_euro_d:hover { background-image: url(../icons/cur_euro_d.svg), url(../icons/cur_euro_d.svg); }
+.hsi_cur_franc_w { background-image: url(../icons/cur_franc_w.svg); } .hsi_cur_franc_w:hover { background-image: url(../icons/cur_franc_w.svg), url(../icons/cur_franc_w.svg); }
+.hsi_cur_franc_d { background-image: url(../icons/cur_franc_d.svg); } .hsi_cur_franc_d:hover { background-image: url(../icons/cur_franc_d.svg), url(../icons/cur_franc_d.svg); }
+.hsi_cur_generic_w { background-image: url(../icons/cur_generic_w.svg); } .hsi_cur_generic_w:hover { background-image: url(../icons/cur_generic_w.svg), url(../icons/cur_generic_w.svg); }
+.hsi_cur_generic_d { background-image: url(../icons/cur_generic_d.svg); } .hsi_cur_generic_d:hover { background-image: url(../icons/cur_generic_d.svg), url(../icons/cur_generic_d.svg); }
+.hsi_cur_lira_w { background-image: url(../icons/cur_lira_w.svg); } .hsi_cur_lira_w:hover { background-image: url(../icons/cur_lira_w.svg), url(../icons/cur_lira_w.svg); }
+.hsi_cur_lira_d { background-image: url(../icons/cur_lira_d.svg); } .hsi_cur_lira_d:hover { background-image: url(../icons/cur_lira_d.svg), url(../icons/cur_lira_d.svg); }
+.hsi_cur_peso_w { background-image: url(../icons/cur_peso_w.svg); } .hsi_cur_peso_w:hover { background-image: url(../icons/cur_peso_w.svg), url(../icons/cur_peso_w.svg); }
+.hsi_cur_peso_d { background-image: url(../icons/cur_peso_d.svg); } .hsi_cur_peso_d:hover { background-image: url(../icons/cur_peso_d.svg), url(../icons/cur_peso_d.svg); }
+.hsi_cur_pound_w { background-image: url(../icons/cur_pound_w.svg); } .hsi_cur_pound_w:hover { background-image: url(../icons/cur_pound_w.svg), url(../icons/cur_pound_w.svg); }
+.hsi_cur_pound_d { background-image: url(../icons/cur_pound_d.svg); } .hsi_cur_pound_d:hover { background-image: url(../icons/cur_pound_d.svg), url(../icons/cur_pound_d.svg); }
+.hsi_cur_ruble_w { background-image: url(../icons/cur_ruble_w.svg); } .hsi_cur_ruble_w:hover { background-image: url(../icons/cur_ruble_w.svg), url(../icons/cur_ruble_w.svg); }
+.hsi_cur_ruble_d { background-image: url(../icons/cur_ruble_d.svg); } .hsi_cur_ruble_d:hover { background-image: url(../icons/cur_ruble_d.svg), url(../icons/cur_ruble_d.svg); }
+.hsi_cur_rupee_w { background-image: url(../icons/cur_rupee_w.svg); } .hsi_cur_rupee_w:hover { background-image: url(../icons/cur_rupee_w.svg), url(../icons/cur_rupee_w.svg); }
+.hsi_cur_rupee_d { background-image: url(../icons/cur_rupee_d.svg); } .hsi_cur_rupee_d:hover { background-image: url(../icons/cur_rupee_d.svg), url(../icons/cur_rupee_d.svg); }
+.hsi_cur_shekel_w { background-image: url(../icons/cur_shekel_w.svg); } .hsi_cur_shekel_w:hover { background-image: url(../icons/cur_shekel_w.svg), url(../icons/cur_shekel_w.svg); }
+.hsi_cur_shekel_d { background-image: url(../icons/cur_shekel_d.svg); } .hsi_cur_shekel_d:hover { background-image: url(../icons/cur_shekel_d.svg), url(../icons/cur_shekel_d.svg); }
+.hsi_cur_won_w { background-image: url(../icons/cur_won_w.svg); } .hsi_cur_won_w:hover { background-image: url(../icons/cur_won_w.svg), url(../icons/cur_won_w.svg); }
+.hsi_cur_won_d { background-image: url(../icons/cur_won_d.svg); } .hsi_cur_won_d:hover { background-image: url(../icons/cur_won_d.svg), url(../icons/cur_won_d.svg); }
+.hsi_cur_yen_w { background-image: url(../icons/cur_yen_w.svg); } .hsi_cur_yen_w:hover { background-image: url(../icons/cur_yen_w.svg), url(../icons/cur_yen_w.svg); }
+.hsi_cur_yen_d { background-image: url(../icons/cur_yen_d.svg); } .hsi_cur_yen_d:hover { background-image: url(../icons/cur_yen_d.svg), url(../icons/cur_yen_d.svg); }
+.hsi_cursor_w { background-image: url(../icons/cursor_w.svg); } .hsi_cursor_w:hover { background-image: url(../icons/cursor_w.svg), url(../icons/cursor_w.svg); }
+.hsi_cursor_d { background-image: url(../icons/cursor_d.svg); } .hsi_cursor_d:hover { background-image: url(../icons/cursor_d.svg), url(../icons/cursor_d.svg); }
+.hsi_cursordiagonal_w { background-image: url(../icons/cursordiagonal_w.svg); } .hsi_cursordiagonal_w:hover { background-image: url(../icons/cursordiagonal_w.svg), url(../icons/cursordiagonal_w.svg); }
+.hsi_cursordiagonal_d { background-image: url(../icons/cursordiagonal_d.svg); } .hsi_cursordiagonal_d:hover { background-image: url(../icons/cursordiagonal_d.svg), url(../icons/cursordiagonal_d.svg); }
+.hsi_cursordiagonal2_w { background-image: url(../icons/cursordiagonal2_w.svg); } .hsi_cursordiagonal2_w:hover { background-image: url(../icons/cursordiagonal2_w.svg), url(../icons/cursordiagonal2_w.svg); }
+.hsi_cursordiagonal2_d { background-image: url(../icons/cursordiagonal2_d.svg); } .hsi_cursordiagonal2_d:hover { background-image: url(../icons/cursordiagonal2_d.svg), url(../icons/cursordiagonal2_d.svg); }
+.hsi_cursorhorizontal_w { background-image: url(../icons/cursorhorizontal_w.svg); } .hsi_cursorhorizontal_w:hover { background-image: url(../icons/cursorhorizontal_w.svg), url(../icons/cursorhorizontal_w.svg); }
+.hsi_cursorhorizontal_d { background-image: url(../icons/cursorhorizontal_d.svg); } .hsi_cursorhorizontal_d:hover { background-image: url(../icons/cursorhorizontal_d.svg), url(../icons/cursorhorizontal_d.svg); }
+.hsi_cursormove_w { background-image: url(../icons/cursormove_w.svg); } .hsi_cursormove_w:hover { background-image: url(../icons/cursormove_w.svg), url(../icons/cursormove_w.svg); }
+.hsi_cursormove_d { background-image: url(../icons/cursormove_d.svg); } .hsi_cursormove_d:hover { background-image: url(../icons/cursormove_d.svg), url(../icons/cursormove_d.svg); }
+.hsi_cursorpointer_w { background-image: url(../icons/cursorpointer_w.svg); } .hsi_cursorpointer_w:hover { background-image: url(../icons/cursorpointer_w.svg), url(../icons/cursorpointer_w.svg); }
+.hsi_cursorpointer_d { background-image: url(../icons/cursorpointer_d.svg); } .hsi_cursorpointer_d:hover { background-image: url(../icons/cursorpointer_d.svg), url(../icons/cursorpointer_d.svg); }
+.hsi_cursorprecision_w { background-image: url(../icons/cursorprecision_w.svg); } .hsi_cursorprecision_w:hover { background-image: url(../icons/cursorprecision_w.svg), url(../icons/cursorprecision_w.svg); }
+.hsi_cursorprecision_d { background-image: url(../icons/cursorprecision_d.svg); } .hsi_cursorprecision_d:hover { background-image: url(../icons/cursorprecision_d.svg), url(../icons/cursorprecision_d.svg); }
+.hsi_cursorvertical_w { background-image: url(../icons/cursorvertical_w.svg); } .hsi_cursorvertical_w:hover { background-image: url(../icons/cursorvertical_w.svg), url(../icons/cursorvertical_w.svg); }
+.hsi_cursorvertical_d { background-image: url(../icons/cursorvertical_d.svg); } .hsi_cursorvertical_d:hover { background-image: url(../icons/cursorvertical_d.svg), url(../icons/cursorvertical_d.svg); }
+.hsi_cut_w { background-image: url(../icons/cut_w.svg); } .hsi_cut_w:hover { background-image: url(../icons/cut_w.svg), url(../icons/cut_w.svg); }
+.hsi_cut_d { background-image: url(../icons/cut_d.svg); } .hsi_cut_d:hover { background-image: url(../icons/cut_d.svg), url(../icons/cut_d.svg); }
+.hsi_danger_w { background-image: url(../icons/danger_w.svg); } .hsi_danger_w:hover { background-image: url(../icons/danger_w.svg), url(../icons/danger_w.svg); }
+.hsi_danger_d { background-image: url(../icons/danger_d.svg); } .hsi_danger_d:hover { background-image: url(../icons/danger_d.svg), url(../icons/danger_d.svg); }
+.hsi_danger2_w { background-image: url(../icons/danger2_w.svg); } .hsi_danger2_w:hover { background-image: url(../icons/danger2_w.svg), url(../icons/danger2_w.svg); }
+.hsi_danger2_d { background-image: url(../icons/danger2_d.svg); } .hsi_danger2_d:hover { background-image: url(../icons/danger2_d.svg), url(../icons/danger2_d.svg); }
+.hsi_dashboard_w { background-image: url(../icons/dashboard_w.svg); } .hsi_dashboard_w:hover { background-image: url(../icons/dashboard_w.svg), url(../icons/dashboard_w.svg); }
+.hsi_dashboard_d { background-image: url(../icons/dashboard_d.svg); } .hsi_dashboard_d:hover { background-image: url(../icons/dashboard_d.svg), url(../icons/dashboard_d.svg); }
+.hsi_database_w { background-image: url(../icons/database_w.svg); } .hsi_database_w:hover { background-image: url(../icons/database_w.svg), url(../icons/database_w.svg); }
+.hsi_database_d { background-image: url(../icons/database_d.svg); } .hsi_database_d:hover { background-image: url(../icons/database_d.svg), url(../icons/database_d.svg); }
+.hsi_databaseminus_w { background-image: url(../icons/databaseminus_w.svg); } .hsi_databaseminus_w:hover { background-image: url(../icons/databaseminus_w.svg), url(../icons/databaseminus_w.svg); }
+.hsi_databaseminus_d { background-image: url(../icons/databaseminus_d.svg); } .hsi_databaseminus_d:hover { background-image: url(../icons/databaseminus_d.svg), url(../icons/databaseminus_d.svg); }
+.hsi_databaseplus_w { background-image: url(../icons/databaseplus_w.svg); } .hsi_databaseplus_w:hover { background-image: url(../icons/databaseplus_w.svg), url(../icons/databaseplus_w.svg); }
+.hsi_databaseplus_d { background-image: url(../icons/databaseplus_d.svg); } .hsi_databaseplus_d:hover { background-image: url(../icons/databaseplus_d.svg), url(../icons/databaseplus_d.svg); }
+.hsi_databaseok_w { background-image: url(../icons/databaseok_w.svg); } .hsi_databaseok_w:hover { background-image: url(../icons/databaseok_w.svg), url(../icons/databaseok_w.svg); }
+.hsi_databaseok_d { background-image: url(../icons/databaseok_d.svg); } .hsi_databaseok_d:hover { background-image: url(../icons/databaseok_d.svg), url(../icons/databaseok_d.svg); }
+.hsi_dedent_w { background-image: url(../icons/dedent_w.svg); } .hsi_dedent_w:hover { background-image: url(../icons/dedent_w.svg), url(../icons/dedent_w.svg); }
+.hsi_dedent_d { background-image: url(../icons/dedent_d.svg); } .hsi_dedent_d:hover { background-image: url(../icons/dedent_d.svg), url(../icons/dedent_d.svg); }
+.hsi_direction_w { background-image: url(../icons/direction_w.svg); } .hsi_direction_w:hover { background-image: url(../icons/direction_w.svg), url(../icons/direction_w.svg); }
+.hsi_direction_d { background-image: url(../icons/direction_d.svg); } .hsi_direction_d:hover { background-image: url(../icons/direction_d.svg), url(../icons/direction_d.svg); }
+.hsi_direction2_w { background-image: url(../icons/direction2_w.svg); } .hsi_direction2_w:hover { background-image: url(../icons/direction2_w.svg), url(../icons/direction2_w.svg); }
+.hsi_direction2_d { background-image: url(../icons/direction2_d.svg); } .hsi_direction2_d:hover { background-image: url(../icons/direction2_d.svg), url(../icons/direction2_d.svg); }
+.hsi_directions_w { background-image: url(../icons/directions_w.svg); } .hsi_directions_w:hover { background-image: url(../icons/directions_w.svg), url(../icons/directions_w.svg); }
+.hsi_directions_d { background-image: url(../icons/directions_d.svg); } .hsi_directions_d:hover { background-image: url(../icons/directions_d.svg), url(../icons/directions_d.svg); }
+.hsi_directions2_w { background-image: url(../icons/directions2_w.svg); } .hsi_directions2_w:hover { background-image: url(../icons/directions2_w.svg), url(../icons/directions2_w.svg); }
+.hsi_directions2_d { background-image: url(../icons/directions2_d.svg); } .hsi_directions2_d:hover { background-image: url(../icons/directions2_d.svg), url(../icons/directions2_d.svg); }
+.hsi_disc_w { background-image: url(../icons/disc_w.svg); } .hsi_disc_w:hover { background-image: url(../icons/disc_w.svg), url(../icons/disc_w.svg); }
+.hsi_disc_d { background-image: url(../icons/disc_d.svg); } .hsi_disc_d:hover { background-image: url(../icons/disc_d.svg), url(../icons/disc_d.svg); }
+.hsi_disc2_w { background-image: url(../icons/disc2_w.svg); } .hsi_disc2_w:hover { background-image: url(../icons/disc2_w.svg), url(../icons/disc2_w.svg); }
+.hsi_disc2_d { background-image: url(../icons/disc2_d.svg); } .hsi_disc2_d:hover { background-image: url(../icons/disc2_d.svg), url(../icons/disc2_d.svg); }
+.hsi_downloadcloud_w { background-image: url(../icons/downloadcloud_w.svg); } .hsi_downloadcloud_w:hover { background-image: url(../icons/downloadcloud_w.svg), url(../icons/downloadcloud_w.svg); }
+.hsi_downloadcloud_d { background-image: url(../icons/downloadcloud_d.svg); } .hsi_downloadcloud_d:hover { background-image: url(../icons/downloadcloud_d.svg), url(../icons/downloadcloud_d.svg); }
+.hsi_download_w { background-image: url(../icons/download_w.svg); } .hsi_download_w:hover { background-image: url(../icons/download_w.svg), url(../icons/download_w.svg); }
+.hsi_download_d { background-image: url(../icons/download_d.svg); } .hsi_download_d:hover { background-image: url(../icons/download_d.svg), url(../icons/download_d.svg); }
+.hsi_drop_w { background-image: url(../icons/drop_w.svg); } .hsi_drop_w:hover { background-image: url(../icons/drop_w.svg), url(../icons/drop_w.svg); }
+.hsi_drop_d { background-image: url(../icons/drop_d.svg); } .hsi_drop_d:hover { background-image: url(../icons/drop_d.svg), url(../icons/drop_d.svg); }
+.hsi_drop2_w { background-image: url(../icons/drop2_w.svg); } .hsi_drop2_w:hover { background-image: url(../icons/drop2_w.svg), url(../icons/drop2_w.svg); }
+.hsi_drop2_d { background-image: url(../icons/drop2_d.svg); } .hsi_drop2_d:hover { background-image: url(../icons/drop2_d.svg), url(../icons/drop2_d.svg); }
+.hsi_eject_w { background-image: url(../icons/eject_w.svg); } .hsi_eject_w:hover { background-image: url(../icons/eject_w.svg), url(../icons/eject_w.svg); }
+.hsi_eject_d { background-image: url(../icons/eject_d.svg); } .hsi_eject_d:hover { background-image: url(../icons/eject_d.svg), url(../icons/eject_d.svg); }
+.hsi_email_w { background-image: url(../icons/email_w.svg); } .hsi_email_w:hover { background-image: url(../icons/email_w.svg), url(../icons/email_w.svg); }
+.hsi_email_d { background-image: url(../icons/email_d.svg); } .hsi_email_d:hover { background-image: url(../icons/email_d.svg), url(../icons/email_d.svg); }
+.hsi_email2_w { background-image: url(../icons/email2_w.svg); } .hsi_email2_w:hover { background-image: url(../icons/email2_w.svg), url(../icons/email2_w.svg); }
+.hsi_email2_d { background-image: url(../icons/email2_d.svg); } .hsi_email2_d:hover { background-image: url(../icons/email2_d.svg), url(../icons/email2_d.svg); }
+.hsi_email3_w { background-image: url(../icons/email3_w.svg); } .hsi_email3_w:hover { background-image: url(../icons/email3_w.svg), url(../icons/email3_w.svg); }
+.hsi_email3_d { background-image: url(../icons/email3_d.svg); } .hsi_email3_d:hover { background-image: url(../icons/email3_d.svg), url(../icons/email3_d.svg); }
+.hsi_equalizer_w { background-image: url(../icons/equalizer_w.svg); } .hsi_equalizer_w:hover { background-image: url(../icons/equalizer_w.svg), url(../icons/equalizer_w.svg); }
+.hsi_equalizer_d { background-image: url(../icons/equalizer_d.svg); } .hsi_equalizer_d:hover { background-image: url(../icons/equalizer_d.svg), url(../icons/equalizer_d.svg); }
+.hsi_equalizer2_w { background-image: url(../icons/equalizer2_w.svg); } .hsi_equalizer2_w:hover { background-image: url(../icons/equalizer2_w.svg), url(../icons/equalizer2_w.svg); }
+.hsi_equalizer2_d { background-image: url(../icons/equalizer2_d.svg); } .hsi_equalizer2_d:hover { background-image: url(../icons/equalizer2_d.svg), url(../icons/equalizer2_d.svg); }
+.hsi_error_w { background-image: url(../icons/error_w.svg); } .hsi_error_w:hover { background-image: url(../icons/error_w.svg), url(../icons/error_w.svg); }
+.hsi_error_d { background-image: url(../icons/error_d.svg); } .hsi_error_d:hover { background-image: url(../icons/error_d.svg), url(../icons/error_d.svg); }
+.hsi_error2_w { background-image: url(../icons/error2_w.svg); } .hsi_error2_w:hover { background-image: url(../icons/error2_w.svg), url(../icons/error2_w.svg); }
+.hsi_error2_d { background-image: url(../icons/error2_d.svg); } .hsi_error2_d:hover { background-image: url(../icons/error2_d.svg), url(../icons/error2_d.svg); }
+.hsi_eye_w { background-image: url(../icons/eye_w.svg); } .hsi_eye_w:hover { background-image: url(../icons/eye_w.svg), url(../icons/eye_w.svg); }
+.hsi_eye_d { background-image: url(../icons/eye_d.svg); } .hsi_eye_d:hover { background-image: url(../icons/eye_d.svg), url(../icons/eye_d.svg); }
+.hsi_favorite_w { background-image: url(../icons/favorite_w.svg); } .hsi_favorite_w:hover { background-image: url(../icons/favorite_w.svg), url(../icons/favorite_w.svg); }
+.hsi_favorite_d { background-image: url(../icons/favorite_d.svg); } .hsi_favorite_d:hover { background-image: url(../icons/favorite_d.svg), url(../icons/favorite_d.svg); }
+.hsi_fax_w { background-image: url(../icons/fax_w.svg); } .hsi_fax_w:hover { background-image: url(../icons/fax_w.svg), url(../icons/fax_w.svg); }
+.hsi_fax_d { background-image: url(../icons/fax_d.svg); } .hsi_fax_d:hover { background-image: url(../icons/fax_d.svg), url(../icons/fax_d.svg); }
+.hsi_female_w { background-image: url(../icons/female_w.svg); } .hsi_female_w:hover { background-image: url(../icons/female_w.svg), url(../icons/female_w.svg); }
+.hsi_female_d { background-image: url(../icons/female_d.svg); } .hsi_female_d:hover { background-image: url(../icons/female_d.svg), url(../icons/female_d.svg); }
+.hsi_fileremove_w { background-image: url(../icons/fileremove_w.svg); } .hsi_fileremove_w:hover { background-image: url(../icons/fileremove_w.svg), url(../icons/fileremove_w.svg); }
+.hsi_fileremove_d { background-image: url(../icons/fileremove_d.svg); } .hsi_fileremove_d:hover { background-image: url(../icons/fileremove_d.svg), url(../icons/fileremove_d.svg); }
+.hsi_filter_w { background-image: url(../icons/filter_w.svg); } .hsi_filter_w:hover { background-image: url(../icons/filter_w.svg), url(../icons/filter_w.svg); }
+.hsi_filter_d { background-image: url(../icons/filter_d.svg); } .hsi_filter_d:hover { background-image: url(../icons/filter_d.svg), url(../icons/filter_d.svg); }
+.hsi_fingerprint_w { background-image: url(../icons/fingerprint_w.svg); } .hsi_fingerprint_w:hover { background-image: url(../icons/fingerprint_w.svg), url(../icons/fingerprint_w.svg); }
+.hsi_fingerprint_d { background-image: url(../icons/fingerprint_d.svg); } .hsi_fingerprint_d:hover { background-image: url(../icons/fingerprint_d.svg), url(../icons/fingerprint_d.svg); }
+.hsi_fingerprint2_w { background-image: url(../icons/fingerprint2_w.svg); } .hsi_fingerprint2_w:hover { background-image: url(../icons/fingerprint2_w.svg), url(../icons/fingerprint2_w.svg); }
+.hsi_fingerprint2_d { background-image: url(../icons/fingerprint2_d.svg); } .hsi_fingerprint2_d:hover { background-image: url(../icons/fingerprint2_d.svg), url(../icons/fingerprint2_d.svg); }
+.hsi_firefox_w { background-image: url(../icons/firefox_w.svg); } .hsi_firefox_w:hover { background-image: url(../icons/firefox_w.svg), url(../icons/firefox_w.svg); }
+.hsi_firefox_d { background-image: url(../icons/firefox_d.svg); } .hsi_firefox_d:hover { background-image: url(../icons/firefox_d.svg), url(../icons/firefox_d.svg); }
+.hsi_firewall_w { background-image: url(../icons/firewall_w.svg); } .hsi_firewall_w:hover { background-image: url(../icons/firewall_w.svg), url(../icons/firewall_w.svg); }
+.hsi_firewall_d { background-image: url(../icons/firewall_d.svg); } .hsi_firewall_d:hover { background-image: url(../icons/firewall_d.svg), url(../icons/firewall_d.svg); }
+.hsi_flag_w { background-image: url(../icons/flag_w.svg); } .hsi_flag_w:hover { background-image: url(../icons/flag_w.svg), url(../icons/flag_w.svg); }
+.hsi_flag_d { background-image: url(../icons/flag_d.svg); } .hsi_flag_d:hover { background-image: url(../icons/flag_d.svg), url(../icons/flag_d.svg); }
+.hsi_flask_w { background-image: url(../icons/flask_w.svg); } .hsi_flask_w:hover { background-image: url(../icons/flask_w.svg), url(../icons/flask_w.svg); }
+.hsi_flask_d { background-image: url(../icons/flask_d.svg); } .hsi_flask_d:hover { background-image: url(../icons/flask_d.svg), url(../icons/flask_d.svg); }
+.hsi_flask2_w { background-image: url(../icons/flask2_w.svg); } .hsi_flask2_w:hover { background-image: url(../icons/flask2_w.svg), url(../icons/flask2_w.svg); }
+.hsi_flask2_d { background-image: url(../icons/flask2_d.svg); } .hsi_flask2_d:hover { background-image: url(../icons/flask2_d.svg), url(../icons/flask2_d.svg); }
+.hsi_folder_w { background-image: url(../icons/folder_w.svg); } .hsi_folder_w:hover { background-image: url(../icons/folder_w.svg), url(../icons/folder_w.svg); }
+.hsi_folder_d { background-image: url(../icons/folder_d.svg); } .hsi_folder_d:hover { background-image: url(../icons/folder_d.svg), url(../icons/folder_d.svg); }
+.hsi_folderremove_w { background-image: url(../icons/folderremove_w.svg); } .hsi_folderremove_w:hover { background-image: url(../icons/folderremove_w.svg), url(../icons/folderremove_w.svg); }
+.hsi_folderremove_d { background-image: url(../icons/folderremove_d.svg); } .hsi_folderremove_d:hover { background-image: url(../icons/folderremove_d.svg), url(../icons/folderremove_d.svg); }
+.hsi_font_w { background-image: url(../icons/font_w.svg); } .hsi_font_w:hover { background-image: url(../icons/font_w.svg), url(../icons/font_w.svg); }
+.hsi_font_d { background-image: url(../icons/font_d.svg); } .hsi_font_d:hover { background-image: url(../icons/font_d.svg), url(../icons/font_d.svg); }
+.hsi_fontsize_w { background-image: url(../icons/fontsize_w.svg); } .hsi_fontsize_w:hover { background-image: url(../icons/fontsize_w.svg), url(../icons/fontsize_w.svg); }
+.hsi_fontsize_d { background-image: url(../icons/fontsize_d.svg); } .hsi_fontsize_d:hover { background-image: url(../icons/fontsize_d.svg), url(../icons/fontsize_d.svg); }
+.hsi_forbidden_w { background-image: url(../icons/forbidden_w.svg); } .hsi_forbidden_w:hover { background-image: url(../icons/forbidden_w.svg), url(../icons/forbidden_w.svg); }
+.hsi_forbidden_d { background-image: url(../icons/forbidden_d.svg); } .hsi_forbidden_d:hover { background-image: url(../icons/forbidden_d.svg), url(../icons/forbidden_d.svg); }
+.hsi_forward_w { background-image: url(../icons/forward_w.svg); } .hsi_forward_w:hover { background-image: url(../icons/forward_w.svg), url(../icons/forward_w.svg); }
+.hsi_forward_d { background-image: url(../icons/forward_d.svg); } .hsi_forward_d:hover { background-image: url(../icons/forward_d.svg), url(../icons/forward_d.svg); }
+.hsi_forward30_w { background-image: url(../icons/forward30_w.svg); } .hsi_forward30_w:hover { background-image: url(../icons/forward30_w.svg), url(../icons/forward30_w.svg); }
+.hsi_forward30_d { background-image: url(../icons/forward30_d.svg); } .hsi_forward30_d:hover { background-image: url(../icons/forward30_d.svg), url(../icons/forward30_d.svg); }
+.hsi_fullscreen_w { background-image: url(../icons/fullscreen_w.svg); } .hsi_fullscreen_w:hover { background-image: url(../icons/fullscreen_w.svg), url(../icons/fullscreen_w.svg); }
+.hsi_fullscreen_d { background-image: url(../icons/fullscreen_d.svg); } .hsi_fullscreen_d:hover { background-image: url(../icons/fullscreen_d.svg), url(../icons/fullscreen_d.svg); }
+.hsi_fullscreen2_w { background-image: url(../icons/fullscreen2_w.svg); } .hsi_fullscreen2_w:hover { background-image: url(../icons/fullscreen2_w.svg), url(../icons/fullscreen2_w.svg); }
+.hsi_fullscreen2_d { background-image: url(../icons/fullscreen2_d.svg); } .hsi_fullscreen2_d:hover { background-image: url(../icons/fullscreen2_d.svg), url(../icons/fullscreen2_d.svg); }
+.hsi_fullscreen3_w { background-image: url(../icons/fullscreen3_w.svg); } .hsi_fullscreen3_w:hover { background-image: url(../icons/fullscreen3_w.svg), url(../icons/fullscreen3_w.svg); }
+.hsi_fullscreen3_d { background-image: url(../icons/fullscreen3_d.svg); } .hsi_fullscreen3_d:hover { background-image: url(../icons/fullscreen3_d.svg), url(../icons/fullscreen3_d.svg); }
+.hsi_gamepad_w { background-image: url(../icons/gamepad_w.svg); } .hsi_gamepad_w:hover { background-image: url(../icons/gamepad_w.svg), url(../icons/gamepad_w.svg); }
+.hsi_gamepad_d { background-image: url(../icons/gamepad_d.svg); } .hsi_gamepad_d:hover { background-image: url(../icons/gamepad_d.svg), url(../icons/gamepad_d.svg); }
+.hsi_gamepad2_w { background-image: url(../icons/gamepad2_w.svg); } .hsi_gamepad2_w:hover { background-image: url(../icons/gamepad2_w.svg), url(../icons/gamepad2_w.svg); }
+.hsi_gamepad2_d { background-image: url(../icons/gamepad2_d.svg); } .hsi_gamepad2_d:hover { background-image: url(../icons/gamepad2_d.svg), url(../icons/gamepad2_d.svg); }
+.hsi_gamepad3_w { background-image: url(../icons/gamepad3_w.svg); } .hsi_gamepad3_w:hover { background-image: url(../icons/gamepad3_w.svg), url(../icons/gamepad3_w.svg); }
+.hsi_gamepad3_d { background-image: url(../icons/gamepad3_d.svg); } .hsi_gamepad3_d:hover { background-image: url(../icons/gamepad3_d.svg), url(../icons/gamepad3_d.svg); }
+.hsi_gear_w { background-image: url(../icons/gear_w.svg); } .hsi_gear_w:hover { background-image: url(../icons/gear_w.svg), url(../icons/gear_w.svg); }
+.hsi_gear_d { background-image: url(../icons/gear_d.svg); } .hsi_gear_d:hover { background-image: url(../icons/gear_d.svg), url(../icons/gear_d.svg); }
+.hsi_gear2_w { background-image: url(../icons/gear2_w.svg); } .hsi_gear2_w:hover { background-image: url(../icons/gear2_w.svg), url(../icons/gear2_w.svg); }
+.hsi_gear2_d { background-image: url(../icons/gear2_d.svg); } .hsi_gear2_d:hover { background-image: url(../icons/gear2_d.svg), url(../icons/gear2_d.svg); }
+.hsi_gift_w { background-image: url(../icons/gift_w.svg); } .hsi_gift_w:hover { background-image: url(../icons/gift_w.svg), url(../icons/gift_w.svg); }
+.hsi_gift_d { background-image: url(../icons/gift_d.svg); } .hsi_gift_d:hover { background-image: url(../icons/gift_d.svg), url(../icons/gift_d.svg); }
+.hsi_globe_w { background-image: url(../icons/globe_w.svg); } .hsi_globe_w:hover { background-image: url(../icons/globe_w.svg), url(../icons/globe_w.svg); }
+.hsi_globe_d { background-image: url(../icons/globe_d.svg); } .hsi_globe_d:hover { background-image: url(../icons/globe_d.svg), url(../icons/globe_d.svg); }
+.hsi_globe2_w { background-image: url(../icons/globe2_w.svg); } .hsi_globe2_w:hover { background-image: url(../icons/globe2_w.svg), url(../icons/globe2_w.svg); }
+.hsi_globe2_d { background-image: url(../icons/globe2_d.svg); } .hsi_globe2_d:hover { background-image: url(../icons/globe2_d.svg), url(../icons/globe2_d.svg); }
+.hsi_grid_w { background-image: url(../icons/grid_w.svg); } .hsi_grid_w:hover { background-image: url(../icons/grid_w.svg), url(../icons/grid_w.svg); }
+.hsi_grid_d { background-image: url(../icons/grid_d.svg); } .hsi_grid_d:hover { background-image: url(../icons/grid_d.svg), url(../icons/grid_d.svg); }
+.hsi_hd_w { background-image: url(../icons/hd_w.svg); } .hsi_hd_w:hover { background-image: url(../icons/hd_w.svg), url(../icons/hd_w.svg); }
+.hsi_hd_d { background-image: url(../icons/hd_d.svg); } .hsi_hd_d:hover { background-image: url(../icons/hd_d.svg), url(../icons/hd_d.svg); }
+.hsi_headphones_w { background-image: url(../icons/headphones_w.svg); } .hsi_headphones_w:hover { background-image: url(../icons/headphones_w.svg), url(../icons/headphones_w.svg); }
+.hsi_headphones_d { background-image: url(../icons/headphones_d.svg); } .hsi_headphones_d:hover { background-image: url(../icons/headphones_d.svg), url(../icons/headphones_d.svg); }
+.hsi_headphones2_w { background-image: url(../icons/headphones2_w.svg); } .hsi_headphones2_w:hover { background-image: url(../icons/headphones2_w.svg), url(../icons/headphones2_w.svg); }
+.hsi_headphones2_d { background-image: url(../icons/headphones2_d.svg); } .hsi_headphones2_d:hover { background-image: url(../icons/headphones2_d.svg), url(../icons/headphones2_d.svg); }
+.hsi_help_w { background-image: url(../icons/help_w.svg); } .hsi_help_w:hover { background-image: url(../icons/help_w.svg), url(../icons/help_w.svg); }
+.hsi_help_d { background-image: url(../icons/help_d.svg); } .hsi_help_d:hover { background-image: url(../icons/help_d.svg), url(../icons/help_d.svg); }
+.hsi_help2_w { background-image: url(../icons/help2_w.svg); } .hsi_help2_w:hover { background-image: url(../icons/help2_w.svg), url(../icons/help2_w.svg); }
+.hsi_help2_d { background-image: url(../icons/help2_d.svg); } .hsi_help2_d:hover { background-image: url(../icons/help2_d.svg), url(../icons/help2_d.svg); }
+.hsi_help3_w { background-image: url(../icons/help3_w.svg); } .hsi_help3_w:hover { background-image: url(../icons/help3_w.svg), url(../icons/help3_w.svg); }
+.hsi_help3_d { background-image: url(../icons/help3_d.svg); } .hsi_help3_d:hover { background-image: url(../icons/help3_d.svg), url(../icons/help3_d.svg); }
+.hsi_hetero_w { background-image: url(../icons/hetero_w.svg); } .hsi_hetero_w:hover { background-image: url(../icons/hetero_w.svg), url(../icons/hetero_w.svg); }
+.hsi_hetero_d { background-image: url(../icons/hetero_d.svg); } .hsi_hetero_d:hover { background-image: url(../icons/hetero_d.svg), url(../icons/hetero_d.svg); }
+.hsi_home_w { background-image: url(../icons/home_w.svg); } .hsi_home_w:hover { background-image: url(../icons/home_w.svg), url(../icons/home_w.svg); }
+.hsi_home_d { background-image: url(../icons/home_d.svg); } .hsi_home_d:hover { background-image: url(../icons/home_d.svg), url(../icons/home_d.svg); }
+.hsi_home2_w { background-image: url(../icons/home2_w.svg); } .hsi_home2_w:hover { background-image: url(../icons/home2_w.svg), url(../icons/home2_w.svg); }
+.hsi_home2_d { background-image: url(../icons/home2_d.svg); } .hsi_home2_d:hover { background-image: url(../icons/home2_d.svg), url(../icons/home2_d.svg); }
+.hsi_idcard_w { background-image: url(../icons/idcard_w.svg); } .hsi_idcard_w:hover { background-image: url(../icons/idcard_w.svg), url(../icons/idcard_w.svg); }
+.hsi_idcard_d { background-image: url(../icons/idcard_d.svg); } .hsi_idcard_d:hover { background-image: url(../icons/idcard_d.svg), url(../icons/idcard_d.svg); }
+.hsi_idcard2_w { background-image: url(../icons/idcard2_w.svg); } .hsi_idcard2_w:hover { background-image: url(../icons/idcard2_w.svg), url(../icons/idcard2_w.svg); }
+.hsi_idcard2_d { background-image: url(../icons/idcard2_d.svg); } .hsi_idcard2_d:hover { background-image: url(../icons/idcard2_d.svg), url(../icons/idcard2_d.svg); }
+.hsi_ie_w { background-image: url(../icons/ie_w.svg); } .hsi_ie_w:hover { background-image: url(../icons/ie_w.svg), url(../icons/ie_w.svg); }
+.hsi_ie_d { background-image: url(../icons/ie_d.svg); } .hsi_ie_d:hover { background-image: url(../icons/ie_d.svg), url(../icons/ie_d.svg); }
+.hsi_inbox_w { background-image: url(../icons/inbox_w.svg); } .hsi_inbox_w:hover { background-image: url(../icons/inbox_w.svg), url(../icons/inbox_w.svg); }
+.hsi_inbox_d { background-image: url(../icons/inbox_d.svg); } .hsi_inbox_d:hover { background-image: url(../icons/inbox_d.svg), url(../icons/inbox_d.svg); }
+.hsi_indent_w { background-image: url(../icons/indent_w.svg); } .hsi_indent_w:hover { background-image: url(../icons/indent_w.svg), url(../icons/indent_w.svg); }
+.hsi_indent_d { background-image: url(../icons/indent_d.svg); } .hsi_indent_d:hover { background-image: url(../icons/indent_d.svg), url(../icons/indent_d.svg); }
+.hsi_infinity_w { background-image: url(../icons/infinity_w.svg); } .hsi_infinity_w:hover { background-image: url(../icons/infinity_w.svg), url(../icons/infinity_w.svg); }
+.hsi_infinity_d { background-image: url(../icons/infinity_d.svg); } .hsi_infinity_d:hover { background-image: url(../icons/infinity_d.svg), url(../icons/infinity_d.svg); }
+.hsi_info_w { background-image: url(../icons/info_w.svg); } .hsi_info_w:hover { background-image: url(../icons/info_w.svg), url(../icons/info_w.svg); }
+.hsi_info_d { background-image: url(../icons/info_d.svg); } .hsi_info_d:hover { background-image: url(../icons/info_d.svg), url(../icons/info_d.svg); }
+.hsi_info2_w { background-image: url(../icons/info2_w.svg); } .hsi_info2_w:hover { background-image: url(../icons/info2_w.svg), url(../icons/info2_w.svg); }
+.hsi_info2_d { background-image: url(../icons/info2_d.svg); } .hsi_info2_d:hover { background-image: url(../icons/info2_d.svg), url(../icons/info2_d.svg); }
+.hsi_italic_w { background-image: url(../icons/italic_w.svg); } .hsi_italic_w:hover { background-image: url(../icons/italic_w.svg), url(../icons/italic_w.svg); }
+.hsi_italic_d { background-image: url(../icons/italic_d.svg); } .hsi_italic_d:hover { background-image: url(../icons/italic_d.svg), url(../icons/italic_d.svg); }
+.hsi_jumpend_w { background-image: url(../icons/jumpend_w.svg); } .hsi_jumpend_w:hover { background-image: url(../icons/jumpend_w.svg), url(../icons/jumpend_w.svg); }
+.hsi_jumpend_d { background-image: url(../icons/jumpend_d.svg); } .hsi_jumpend_d:hover { background-image: url(../icons/jumpend_d.svg), url(../icons/jumpend_d.svg); }
+.hsi_key_w { background-image: url(../icons/key_w.svg); } .hsi_key_w:hover { background-image: url(../icons/key_w.svg), url(../icons/key_w.svg); }
+.hsi_key_d { background-image: url(../icons/key_d.svg); } .hsi_key_d:hover { background-image: url(../icons/key_d.svg), url(../icons/key_d.svg); }
+.hsi_keyboard_w { background-image: url(../icons/keyboard_w.svg); } .hsi_keyboard_w:hover { background-image: url(../icons/keyboard_w.svg), url(../icons/keyboard_w.svg); }
+.hsi_keyboard_d { background-image: url(../icons/keyboard_d.svg); } .hsi_keyboard_d:hover { background-image: url(../icons/keyboard_d.svg), url(../icons/keyboard_d.svg); }
+.hsi_laptop_w { background-image: url(../icons/laptop_w.svg); } .hsi_laptop_w:hover { background-image: url(../icons/laptop_w.svg), url(../icons/laptop_w.svg); }
+.hsi_laptop_d { background-image: url(../icons/laptop_d.svg); } .hsi_laptop_d:hover { background-image: url(../icons/laptop_d.svg), url(../icons/laptop_d.svg); }
+.hsi_laptop2_w { background-image: url(../icons/laptop2_w.svg); } .hsi_laptop2_w:hover { background-image: url(../icons/laptop2_w.svg), url(../icons/laptop2_w.svg); }
+.hsi_laptop2_d { background-image: url(../icons/laptop2_d.svg); } .hsi_laptop2_d:hover { background-image: url(../icons/laptop2_d.svg), url(../icons/laptop2_d.svg); }
+.hsi_layer_w { background-image: url(../icons/layer_w.svg); } .hsi_layer_w:hover { background-image: url(../icons/layer_w.svg), url(../icons/layer_w.svg); }
+.hsi_layer_d { background-image: url(../icons/layer_d.svg); } .hsi_layer_d:hover { background-image: url(../icons/layer_d.svg), url(../icons/layer_d.svg); }
+.hsi_lifebuoy_w { background-image: url(../icons/lifebuoy_w.svg); } .hsi_lifebuoy_w:hover { background-image: url(../icons/lifebuoy_w.svg), url(../icons/lifebuoy_w.svg); }
+.hsi_lifebuoy_d { background-image: url(../icons/lifebuoy_d.svg); } .hsi_lifebuoy_d:hover { background-image: url(../icons/lifebuoy_d.svg), url(../icons/lifebuoy_d.svg); }
+.hsi_lightbulb_w { background-image: url(../icons/lightbulb_w.svg); } .hsi_lightbulb_w:hover { background-image: url(../icons/lightbulb_w.svg), url(../icons/lightbulb_w.svg); }
+.hsi_lightbulb_d { background-image: url(../icons/lightbulb_d.svg); } .hsi_lightbulb_d:hover { background-image: url(../icons/lightbulb_d.svg), url(../icons/lightbulb_d.svg); }
+.hsi_lightbulb2_w { background-image: url(../icons/lightbulb2_w.svg); } .hsi_lightbulb2_w:hover { background-image: url(../icons/lightbulb2_w.svg), url(../icons/lightbulb2_w.svg); }
+.hsi_lightbulb2_d { background-image: url(../icons/lightbulb2_d.svg); } .hsi_lightbulb2_d:hover { background-image: url(../icons/lightbulb2_d.svg), url(../icons/lightbulb2_d.svg); }
+.hsi_lightbulb3_w { background-image: url(../icons/lightbulb3_w.svg); } .hsi_lightbulb3_w:hover { background-image: url(../icons/lightbulb3_w.svg), url(../icons/lightbulb3_w.svg); }
+.hsi_lightbulb3_d { background-image: url(../icons/lightbulb3_d.svg); } .hsi_lightbulb3_d:hover { background-image: url(../icons/lightbulb3_d.svg), url(../icons/lightbulb3_d.svg); }
+.hsi_link_w { background-image: url(../icons/link_w.svg); } .hsi_link_w:hover { background-image: url(../icons/link_w.svg), url(../icons/link_w.svg); }
+.hsi_link_d { background-image: url(../icons/link_d.svg); } .hsi_link_d:hover { background-image: url(../icons/link_d.svg), url(../icons/link_d.svg); }
+.hsi_link2_w { background-image: url(../icons/link2_w.svg); } .hsi_link2_w:hover { background-image: url(../icons/link2_w.svg), url(../icons/link2_w.svg); }
+.hsi_link2_d { background-image: url(../icons/link2_d.svg); } .hsi_link2_d:hover { background-image: url(../icons/link2_d.svg), url(../icons/link2_d.svg); }
+.hsi_linux_w { background-image: url(../icons/linux_w.svg); } .hsi_linux_w:hover { background-image: url(../icons/linux_w.svg), url(../icons/linux_w.svg); }
+.hsi_linux_d { background-image: url(../icons/linux_d.svg); } .hsi_linux_d:hover { background-image: url(../icons/linux_d.svg), url(../icons/linux_d.svg); }
+.hsi_list_w { background-image: url(../icons/list_w.svg); } .hsi_list_w:hover { background-image: url(../icons/list_w.svg), url(../icons/list_w.svg); }
+.hsi_list_d { background-image: url(../icons/list_d.svg); } .hsi_list_d:hover { background-image: url(../icons/list_d.svg), url(../icons/list_d.svg); }
+.hsi_location_w { background-image: url(../icons/location_w.svg); } .hsi_location_w:hover { background-image: url(../icons/location_w.svg), url(../icons/location_w.svg); }
+.hsi_location_d { background-image: url(../icons/location_d.svg); } .hsi_location_d:hover { background-image: url(../icons/location_d.svg), url(../icons/location_d.svg); }
+.hsi_location2_w { background-image: url(../icons/location2_w.svg); } .hsi_location2_w:hover { background-image: url(../icons/location2_w.svg), url(../icons/location2_w.svg); }
+.hsi_location2_d { background-image: url(../icons/location2_d.svg); } .hsi_location2_d:hover { background-image: url(../icons/location2_d.svg), url(../icons/location2_d.svg); }
+.hsi_lock_w { background-image: url(../icons/lock_w.svg); } .hsi_lock_w:hover { background-image: url(../icons/lock_w.svg), url(../icons/lock_w.svg); }
+.hsi_lock_d { background-image: url(../icons/lock_d.svg); } .hsi_lock_d:hover { background-image: url(../icons/lock_d.svg), url(../icons/lock_d.svg); }
+.hsi_lockopen_w { background-image: url(../icons/lockopen_w.svg); } .hsi_lockopen_w:hover { background-image: url(../icons/lockopen_w.svg), url(../icons/lockopen_w.svg); }
+.hsi_lockopen_d { background-image: url(../icons/lockopen_d.svg); } .hsi_lockopen_d:hover { background-image: url(../icons/lockopen_d.svg), url(../icons/lockopen_d.svg); }
+.hsi_login_w { background-image: url(../icons/login_w.svg); } .hsi_login_w:hover { background-image: url(../icons/login_w.svg), url(../icons/login_w.svg); }
+.hsi_login_d { background-image: url(../icons/login_d.svg); } .hsi_login_d:hover { background-image: url(../icons/login_d.svg), url(../icons/login_d.svg); }
+.hsi_logout_w { background-image: url(../icons/logout_w.svg); } .hsi_logout_w:hover { background-image: url(../icons/logout_w.svg), url(../icons/logout_w.svg); }
+.hsi_logout_d { background-image: url(../icons/logout_d.svg); } .hsi_logout_d:hover { background-image: url(../icons/logout_d.svg), url(../icons/logout_d.svg); }
+.hsi_loud_w { background-image: url(../icons/loud_w.svg); } .hsi_loud_w:hover { background-image: url(../icons/loud_w.svg), url(../icons/loud_w.svg); }
+.hsi_loud_d { background-image: url(../icons/loud_d.svg); } .hsi_loud_d:hover { background-image: url(../icons/loud_d.svg), url(../icons/loud_d.svg); }
+.hsi_magic_w { background-image: url(../icons/magic_w.svg); } .hsi_magic_w:hover { background-image: url(../icons/magic_w.svg), url(../icons/magic_w.svg); }
+.hsi_magic_d { background-image: url(../icons/magic_d.svg); } .hsi_magic_d:hover { background-image: url(../icons/magic_d.svg), url(../icons/magic_d.svg); }
+.hsi_magnet_w { background-image: url(../icons/magnet_w.svg); } .hsi_magnet_w:hover { background-image: url(../icons/magnet_w.svg), url(../icons/magnet_w.svg); }
+.hsi_magnet_d { background-image: url(../icons/magnet_d.svg); } .hsi_magnet_d:hover { background-image: url(../icons/magnet_d.svg), url(../icons/magnet_d.svg); }
+.hsi_magnifier_w { background-image: url(../icons/magnifier_w.svg); } .hsi_magnifier_w:hover { background-image: url(../icons/magnifier_w.svg), url(../icons/magnifier_w.svg); }
+.hsi_magnifier_d { background-image: url(../icons/magnifier_d.svg); } .hsi_magnifier_d:hover { background-image: url(../icons/magnifier_d.svg), url(../icons/magnifier_d.svg); }
+.hsi_magnifierminus_w { background-image: url(../icons/magnifierminus_w.svg); } .hsi_magnifierminus_w:hover { background-image: url(../icons/magnifierminus_w.svg), url(../icons/magnifierminus_w.svg); }
+.hsi_magnifierminus_d { background-image: url(../icons/magnifierminus_d.svg); } .hsi_magnifierminus_d:hover { background-image: url(../icons/magnifierminus_d.svg), url(../icons/magnifierminus_d.svg); }
+.hsi_magnifierplus_w { background-image: url(../icons/magnifierplus_w.svg); } .hsi_magnifierplus_w:hover { background-image: url(../icons/magnifierplus_w.svg), url(../icons/magnifierplus_w.svg); }
+.hsi_magnifierplus_d { background-image: url(../icons/magnifierplus_d.svg); } .hsi_magnifierplus_d:hover { background-image: url(../icons/magnifierplus_d.svg), url(../icons/magnifierplus_d.svg); }
+.hsi_male_w { background-image: url(../icons/male_w.svg); } .hsi_male_w:hover { background-image: url(../icons/male_w.svg), url(../icons/male_w.svg); }
+.hsi_male_d { background-image: url(../icons/male_d.svg); } .hsi_male_d:hover { background-image: url(../icons/male_d.svg), url(../icons/male_d.svg); }
+.hsi_map_w { background-image: url(../icons/map_w.svg); } .hsi_map_w:hover { background-image: url(../icons/map_w.svg), url(../icons/map_w.svg); }
+.hsi_map_d { background-image: url(../icons/map_d.svg); } .hsi_map_d:hover { background-image: url(../icons/map_d.svg), url(../icons/map_d.svg); }
+.hsi_mapcross_w { background-image: url(../icons/mapcross_w.svg); } .hsi_mapcross_w:hover { background-image: url(../icons/mapcross_w.svg), url(../icons/mapcross_w.svg); }
+.hsi_mapcross_d { background-image: url(../icons/mapcross_d.svg); } .hsi_mapcross_d:hover { background-image: url(../icons/mapcross_d.svg), url(../icons/mapcross_d.svg); }
+.hsi_mapplace_w { background-image: url(../icons/mapplace_w.svg); } .hsi_mapplace_w:hover { background-image: url(../icons/mapplace_w.svg), url(../icons/mapplace_w.svg); }
+.hsi_mapplace_d { background-image: url(../icons/mapplace_d.svg); } .hsi_mapplace_d:hover { background-image: url(../icons/mapplace_d.svg), url(../icons/mapplace_d.svg); }
+.hsi_megaphone_w { background-image: url(../icons/megaphone_w.svg); } .hsi_megaphone_w:hover { background-image: url(../icons/megaphone_w.svg), url(../icons/megaphone_w.svg); }
+.hsi_megaphone_d { background-image: url(../icons/megaphone_d.svg); } .hsi_megaphone_d:hover { background-image: url(../icons/megaphone_d.svg), url(../icons/megaphone_d.svg); }
+.hsi_menubars_w { background-image: url(../icons/menubars_w.svg); } .hsi_menubars_w:hover { background-image: url(../icons/menubars_w.svg), url(../icons/menubars_w.svg); }
+.hsi_menubars_d { background-image: url(../icons/menubars_d.svg); } .hsi_menubars_d:hover { background-image: url(../icons/menubars_d.svg), url(../icons/menubars_d.svg); }
+.hsi_menudots_w { background-image: url(../icons/menudots_w.svg); } .hsi_menudots_w:hover { background-image: url(../icons/menudots_w.svg), url(../icons/menudots_w.svg); }
+.hsi_menudots_d { background-image: url(../icons/menudots_d.svg); } .hsi_menudots_d:hover { background-image: url(../icons/menudots_d.svg), url(../icons/menudots_d.svg); }
+.hsi_menudown_w { background-image: url(../icons/menudown_w.svg); } .hsi_menudown_w:hover { background-image: url(../icons/menudown_w.svg), url(../icons/menudown_w.svg); }
+.hsi_menudown_d { background-image: url(../icons/menudown_d.svg); } .hsi_menudown_d:hover { background-image: url(../icons/menudown_d.svg), url(../icons/menudown_d.svg); }
+.hsi_mic_w { background-image: url(../icons/mic_w.svg); } .hsi_mic_w:hover { background-image: url(../icons/mic_w.svg), url(../icons/mic_w.svg); }
+.hsi_mic_d { background-image: url(../icons/mic_d.svg); } .hsi_mic_d:hover { background-image: url(../icons/mic_d.svg), url(../icons/mic_d.svg); }
+.hsi_minus_w { background-image: url(../icons/minus_w.svg); } .hsi_minus_w:hover { background-image: url(../icons/minus_w.svg), url(../icons/minus_w.svg); }
+.hsi_minus_d { background-image: url(../icons/minus_d.svg); } .hsi_minus_d:hover { background-image: url(../icons/minus_d.svg), url(../icons/minus_d.svg); }
+.hsi_mobile_w { background-image: url(../icons/mobile_w.svg); } .hsi_mobile_w:hover { background-image: url(../icons/mobile_w.svg), url(../icons/mobile_w.svg); }
+.hsi_mobile_d { background-image: url(../icons/mobile_d.svg); } .hsi_mobile_d:hover { background-image: url(../icons/mobile_d.svg), url(../icons/mobile_d.svg); }
+.hsi_mobile2_w { background-image: url(../icons/mobile2_w.svg); } .hsi_mobile2_w:hover { background-image: url(../icons/mobile2_w.svg), url(../icons/mobile2_w.svg); }
+.hsi_mobile2_d { background-image: url(../icons/mobile2_d.svg); } .hsi_mobile2_d:hover { background-image: url(../icons/mobile2_d.svg), url(../icons/mobile2_d.svg); }
+.hsi_mobile3_w { background-image: url(../icons/mobile3_w.svg); } .hsi_mobile3_w:hover { background-image: url(../icons/mobile3_w.svg), url(../icons/mobile3_w.svg); }
+.hsi_mobile3_d { background-image: url(../icons/mobile3_d.svg); } .hsi_mobile3_d:hover { background-image: url(../icons/mobile3_d.svg), url(../icons/mobile3_d.svg); }
+.hsi_mobile4_w { background-image: url(../icons/mobile4_w.svg); } .hsi_mobile4_w:hover { background-image: url(../icons/mobile4_w.svg), url(../icons/mobile4_w.svg); }
+.hsi_mobile4_d { background-image: url(../icons/mobile4_d.svg); } .hsi_mobile4_d:hover { background-image: url(../icons/mobile4_d.svg), url(../icons/mobile4_d.svg); }
+.hsi_monitoring_w { background-image: url(../icons/monitoring_w.svg); } .hsi_monitoring_w:hover { background-image: url(../icons/monitoring_w.svg), url(../icons/monitoring_w.svg); }
+.hsi_monitoring_d { background-image: url(../icons/monitoring_d.svg); } .hsi_monitoring_d:hover { background-image: url(../icons/monitoring_d.svg), url(../icons/monitoring_d.svg); }
+.hsi_mouse_w { background-image: url(../icons/mouse_w.svg); } .hsi_mouse_w:hover { background-image: url(../icons/mouse_w.svg), url(../icons/mouse_w.svg); }
+.hsi_mouse_d { background-image: url(../icons/mouse_d.svg); } .hsi_mouse_d:hover { background-image: url(../icons/mouse_d.svg), url(../icons/mouse_d.svg); }
+.hsi_mute_w { background-image: url(../icons/mute_w.svg); } .hsi_mute_w:hover { background-image: url(../icons/mute_w.svg), url(../icons/mute_w.svg); }
+.hsi_mute_d { background-image: url(../icons/mute_d.svg); } .hsi_mute_d:hover { background-image: url(../icons/mute_d.svg), url(../icons/mute_d.svg); }
+.hsi_nav_w { background-image: url(../icons/nav_w.svg); } .hsi_nav_w:hover { background-image: url(../icons/nav_w.svg), url(../icons/nav_w.svg); }
+.hsi_nav_d { background-image: url(../icons/nav_d.svg); } .hsi_nav_d:hover { background-image: url(../icons/nav_d.svg), url(../icons/nav_d.svg); }
+.hsi_network_w { background-image: url(../icons/network_w.svg); } .hsi_network_w:hover { background-image: url(../icons/network_w.svg), url(../icons/network_w.svg); }
+.hsi_network_d { background-image: url(../icons/network_d.svg); } .hsi_network_d:hover { background-image: url(../icons/network_d.svg), url(../icons/network_d.svg); }
+.hsi_newspaper_w { background-image: url(../icons/newspaper_w.svg); } .hsi_newspaper_w:hover { background-image: url(../icons/newspaper_w.svg), url(../icons/newspaper_w.svg); }
+.hsi_newspaper_d { background-image: url(../icons/newspaper_d.svg); } .hsi_newspaper_d:hover { background-image: url(../icons/newspaper_d.svg), url(../icons/newspaper_d.svg); }
+.hsi_nexttrak_w { background-image: url(../icons/nexttrak_w.svg); } .hsi_nexttrak_w:hover { background-image: url(../icons/nexttrak_w.svg), url(../icons/nexttrak_w.svg); }
+.hsi_nexttrak_d { background-image: url(../icons/nexttrak_d.svg); } .hsi_nexttrak_d:hover { background-image: url(../icons/nexttrak_d.svg), url(../icons/nexttrak_d.svg); }
+.hsi_note_w { background-image: url(../icons/note_w.svg); } .hsi_note_w:hover { background-image: url(../icons/note_w.svg), url(../icons/note_w.svg); }
+.hsi_note_d { background-image: url(../icons/note_d.svg); } .hsi_note_d:hover { background-image: url(../icons/note_d.svg), url(../icons/note_d.svg); }
+.hsi_notesign_w { background-image: url(../icons/notesign_w.svg); } .hsi_notesign_w:hover { background-image: url(../icons/notesign_w.svg), url(../icons/notesign_w.svg); }
+.hsi_notesign_d { background-image: url(../icons/notesign_d.svg); } .hsi_notesign_d:hover { background-image: url(../icons/notesign_d.svg), url(../icons/notesign_d.svg); }
+.hsi_notesign2_w { background-image: url(../icons/notesign2_w.svg); } .hsi_notesign2_w:hover { background-image: url(../icons/notesign2_w.svg), url(../icons/notesign2_w.svg); }
+.hsi_notesign2_d { background-image: url(../icons/notesign2_d.svg); } .hsi_notesign2_d:hover { background-image: url(../icons/notesign2_d.svg), url(../icons/notesign2_d.svg); }
+.hsi_numberedlist_w { background-image: url(../icons/numberedlist_w.svg); } .hsi_numberedlist_w:hover { background-image: url(../icons/numberedlist_w.svg), url(../icons/numberedlist_w.svg); }
+.hsi_numberedlist_d { background-image: url(../icons/numberedlist_d.svg); } .hsi_numberedlist_d:hover { background-image: url(../icons/numberedlist_d.svg), url(../icons/numberedlist_d.svg); }
+.hsi_opera_w { background-image: url(../icons/opera_w.svg); } .hsi_opera_w:hover { background-image: url(../icons/opera_w.svg), url(../icons/opera_w.svg); }
+.hsi_opera_d { background-image: url(../icons/opera_d.svg); } .hsi_opera_d:hover { background-image: url(../icons/opera_d.svg), url(../icons/opera_d.svg); }
+.hsi_outbox_w { background-image: url(../icons/outbox_w.svg); } .hsi_outbox_w:hover { background-image: url(../icons/outbox_w.svg), url(../icons/outbox_w.svg); }
+.hsi_outbox_d { background-image: url(../icons/outbox_d.svg); } .hsi_outbox_d:hover { background-image: url(../icons/outbox_d.svg), url(../icons/outbox_d.svg); }
+.hsi_paintbrush_w { background-image: url(../icons/paintbrush_w.svg); } .hsi_paintbrush_w:hover { background-image: url(../icons/paintbrush_w.svg), url(../icons/paintbrush_w.svg); }
+.hsi_paintbrush_d { background-image: url(../icons/paintbrush_d.svg); } .hsi_paintbrush_d:hover { background-image: url(../icons/paintbrush_d.svg), url(../icons/paintbrush_d.svg); }
+.hsi_paintbrush2_w { background-image: url(../icons/paintbrush2_w.svg); } .hsi_paintbrush2_w:hover { background-image: url(../icons/paintbrush2_w.svg), url(../icons/paintbrush2_w.svg); }
+.hsi_paintbrush2_d { background-image: url(../icons/paintbrush2_d.svg); } .hsi_paintbrush2_d:hover { background-image: url(../icons/paintbrush2_d.svg), url(../icons/paintbrush2_d.svg); }
+.hsi_paintbrush3_w { background-image: url(../icons/paintbrush3_w.svg); } .hsi_paintbrush3_w:hover { background-image: url(../icons/paintbrush3_w.svg), url(../icons/paintbrush3_w.svg); }
+.hsi_paintbrush3_d { background-image: url(../icons/paintbrush3_d.svg); } .hsi_paintbrush3_d:hover { background-image: url(../icons/paintbrush3_d.svg), url(../icons/paintbrush3_d.svg); }
+.hsi_paperclip_w { background-image: url(../icons/paperclip_w.svg); } .hsi_paperclip_w:hover { background-image: url(../icons/paperclip_w.svg), url(../icons/paperclip_w.svg); }
+.hsi_paperclip_d { background-image: url(../icons/paperclip_d.svg); } .hsi_paperclip_d:hover { background-image: url(../icons/paperclip_d.svg), url(../icons/paperclip_d.svg); }
+.hsi_paperclip2_w { background-image: url(../icons/paperclip2_w.svg); } .hsi_paperclip2_w:hover { background-image: url(../icons/paperclip2_w.svg), url(../icons/paperclip2_w.svg); }
+.hsi_paperclip2_d { background-image: url(../icons/paperclip2_d.svg); } .hsi_paperclip2_d:hover { background-image: url(../icons/paperclip2_d.svg), url(../icons/paperclip2_d.svg); }
+.hsi_paperclip3_w { background-image: url(../icons/paperclip3_w.svg); } .hsi_paperclip3_w:hover { background-image: url(../icons/paperclip3_w.svg), url(../icons/paperclip3_w.svg); }
+.hsi_paperclip3_d { background-image: url(../icons/paperclip3_d.svg); } .hsi_paperclip3_d:hover { background-image: url(../icons/paperclip3_d.svg), url(../icons/paperclip3_d.svg); }
+.hsi_paperclip4_w { background-image: url(../icons/paperclip4_w.svg); } .hsi_paperclip4_w:hover { background-image: url(../icons/paperclip4_w.svg), url(../icons/paperclip4_w.svg); }
+.hsi_paperclip4_d { background-image: url(../icons/paperclip4_d.svg); } .hsi_paperclip4_d:hover { background-image: url(../icons/paperclip4_d.svg), url(../icons/paperclip4_d.svg); }
+.hsi_paperclip5_w { background-image: url(../icons/paperclip5_w.svg); } .hsi_paperclip5_w:hover { background-image: url(../icons/paperclip5_w.svg), url(../icons/paperclip5_w.svg); }
+.hsi_paperclip5_d { background-image: url(../icons/paperclip5_d.svg); } .hsi_paperclip5_d:hover { background-image: url(../icons/paperclip5_d.svg), url(../icons/paperclip5_d.svg); }
+.hsi_paperplane_w { background-image: url(../icons/paperplane_w.svg); } .hsi_paperplane_w:hover { background-image: url(../icons/paperplane_w.svg), url(../icons/paperplane_w.svg); }
+.hsi_paperplane_d { background-image: url(../icons/paperplane_d.svg); } .hsi_paperplane_d:hover { background-image: url(../icons/paperplane_d.svg), url(../icons/paperplane_d.svg); }
+.hsi_password_w { background-image: url(../icons/password_w.svg); } .hsi_password_w:hover { background-image: url(../icons/password_w.svg), url(../icons/password_w.svg); }
+.hsi_password_d { background-image: url(../icons/password_d.svg); } .hsi_password_d:hover { background-image: url(../icons/password_d.svg), url(../icons/password_d.svg); }
+.hsi_pause_w { background-image: url(../icons/pause_w.svg); } .hsi_pause_w:hover { background-image: url(../icons/pause_w.svg), url(../icons/pause_w.svg); }
+.hsi_pause_d { background-image: url(../icons/pause_d.svg); } .hsi_pause_d:hover { background-image: url(../icons/pause_d.svg), url(../icons/pause_d.svg); }
+.hsi_paypal_w { background-image: url(../icons/paypal_w.svg); } .hsi_paypal_w:hover { background-image: url(../icons/paypal_w.svg), url(../icons/paypal_w.svg); }
+.hsi_paypal_d { background-image: url(../icons/paypal_d.svg); } .hsi_paypal_d:hover { background-image: url(../icons/paypal_d.svg), url(../icons/paypal_d.svg); }
+.hsi_pen_w { background-image: url(../icons/pen_w.svg); } .hsi_pen_w:hover { background-image: url(../icons/pen_w.svg), url(../icons/pen_w.svg); }
+.hsi_pen_d { background-image: url(../icons/pen_d.svg); } .hsi_pen_d:hover { background-image: url(../icons/pen_d.svg), url(../icons/pen_d.svg); }
+.hsi_pencil_w { background-image: url(../icons/pencil_w.svg); } .hsi_pencil_w:hover { background-image: url(../icons/pencil_w.svg), url(../icons/pencil_w.svg); }
+.hsi_pencil_d { background-image: url(../icons/pencil_d.svg); } .hsi_pencil_d:hover { background-image: url(../icons/pencil_d.svg), url(../icons/pencil_d.svg); }
+.hsi_phone_w { background-image: url(../icons/phone_w.svg); } .hsi_phone_w:hover { background-image: url(../icons/phone_w.svg), url(../icons/phone_w.svg); }
+.hsi_phone_d { background-image: url(../icons/phone_d.svg); } .hsi_phone_d:hover { background-image: url(../icons/phone_d.svg), url(../icons/phone_d.svg); }
+.hsi_phone2_w { background-image: url(../icons/phone2_w.svg); } .hsi_phone2_w:hover { background-image: url(../icons/phone2_w.svg), url(../icons/phone2_w.svg); }
+.hsi_phone2_d { background-image: url(../icons/phone2_d.svg); } .hsi_phone2_d:hover { background-image: url(../icons/phone2_d.svg), url(../icons/phone2_d.svg); }
+.hsi_photocam_w { background-image: url(../icons/photocam_w.svg); } .hsi_photocam_w:hover { background-image: url(../icons/photocam_w.svg), url(../icons/photocam_w.svg); }
+.hsi_photocam_d { background-image: url(../icons/photocam_d.svg); } .hsi_photocam_d:hover { background-image: url(../icons/photocam_d.svg), url(../icons/photocam_d.svg); }
+.hsi_picture_w { background-image: url(../icons/picture_w.svg); } .hsi_picture_w:hover { background-image: url(../icons/picture_w.svg), url(../icons/picture_w.svg); }
+.hsi_picture_d { background-image: url(../icons/picture_d.svg); } .hsi_picture_d:hover { background-image: url(../icons/picture_d.svg), url(../icons/picture_d.svg); }
+.hsi_picture2_w { background-image: url(../icons/picture2_w.svg); } .hsi_picture2_w:hover { background-image: url(../icons/picture2_w.svg), url(../icons/picture2_w.svg); }
+.hsi_picture2_d { background-image: url(../icons/picture2_d.svg); } .hsi_picture2_d:hover { background-image: url(../icons/picture2_d.svg), url(../icons/picture2_d.svg); }
+.hsi_pictureadd_w { background-image: url(../icons/pictureadd_w.svg); } .hsi_pictureadd_w:hover { background-image: url(../icons/pictureadd_w.svg), url(../icons/pictureadd_w.svg); }
+.hsi_pictureadd_d { background-image: url(../icons/pictureadd_d.svg); } .hsi_pictureadd_d:hover { background-image: url(../icons/pictureadd_d.svg), url(../icons/pictureadd_d.svg); }
+.hsi_pictureattachment_w { background-image: url(../icons/pictureattachment_w.svg); } .hsi_pictureattachment_w:hover { background-image: url(../icons/pictureattachment_w.svg), url(../icons/pictureattachment_w.svg); }
+.hsi_pictureattachment_d { background-image: url(../icons/pictureattachment_d.svg); } .hsi_pictureattachment_d:hover { background-image: url(../icons/pictureattachment_d.svg), url(../icons/pictureattachment_d.svg); }
+.hsi_pictureedit_w { background-image: url(../icons/pictureedit_w.svg); } .hsi_pictureedit_w:hover { background-image: url(../icons/pictureedit_w.svg), url(../icons/pictureedit_w.svg); }
+.hsi_pictureedit_d { background-image: url(../icons/pictureedit_d.svg); } .hsi_pictureedit_d:hover { background-image: url(../icons/pictureedit_d.svg), url(../icons/pictureedit_d.svg); }
+.hsi_picturemulti_w { background-image: url(../icons/picturemulti_w.svg); } .hsi_picturemulti_w:hover { background-image: url(../icons/picturemulti_w.svg), url(../icons/picturemulti_w.svg); }
+.hsi_picturemulti_d { background-image: url(../icons/picturemulti_d.svg); } .hsi_picturemulti_d:hover { background-image: url(../icons/picturemulti_d.svg), url(../icons/picturemulti_d.svg); }
+.hsi_pictureremove_w { background-image: url(../icons/pictureremove_w.svg); } .hsi_pictureremove_w:hover { background-image: url(../icons/pictureremove_w.svg), url(../icons/pictureremove_w.svg); }
+.hsi_pictureremove_d { background-image: url(../icons/pictureremove_d.svg); } .hsi_pictureremove_d:hover { background-image: url(../icons/pictureremove_d.svg), url(../icons/pictureremove_d.svg); }
+.hsi_piechart_w { background-image: url(../icons/piechart_w.svg); } .hsi_piechart_w:hover { background-image: url(../icons/piechart_w.svg), url(../icons/piechart_w.svg); }
+.hsi_piechart_d { background-image: url(../icons/piechart_d.svg); } .hsi_piechart_d:hover { background-image: url(../icons/piechart_d.svg), url(../icons/piechart_d.svg); }
+.hsi_pilcrow_w { background-image: url(../icons/pilcrow_w.svg); } .hsi_pilcrow_w:hover { background-image: url(../icons/pilcrow_w.svg), url(../icons/pilcrow_w.svg); }
+.hsi_pilcrow_d { background-image: url(../icons/pilcrow_d.svg); } .hsi_pilcrow_d:hover { background-image: url(../icons/pilcrow_d.svg), url(../icons/pilcrow_d.svg); }
+.hsi_pin_w { background-image: url(../icons/pin_w.svg); } .hsi_pin_w:hover { background-image: url(../icons/pin_w.svg), url(../icons/pin_w.svg); }
+.hsi_pin_d { background-image: url(../icons/pin_d.svg); } .hsi_pin_d:hover { background-image: url(../icons/pin_d.svg), url(../icons/pin_d.svg); }
+.hsi_pin2_w { background-image: url(../icons/pin2_w.svg); } .hsi_pin2_w:hover { background-image: url(../icons/pin2_w.svg), url(../icons/pin2_w.svg); }
+.hsi_pin2_d { background-image: url(../icons/pin2_d.svg); } .hsi_pin2_d:hover { background-image: url(../icons/pin2_d.svg), url(../icons/pin2_d.svg); }
+.hsi_pinmap_w { background-image: url(../icons/pinmap_w.svg); } .hsi_pinmap_w:hover { background-image: url(../icons/pinmap_w.svg), url(../icons/pinmap_w.svg); }
+.hsi_pinmap_d { background-image: url(../icons/pinmap_d.svg); } .hsi_pinmap_d:hover { background-image: url(../icons/pinmap_d.svg), url(../icons/pinmap_d.svg); }
+.hsi_plus_w { background-image: url(../icons/plus_w.svg); } .hsi_plus_w:hover { background-image: url(../icons/plus_w.svg), url(../icons/plus_w.svg); }
+.hsi_plus_d { background-image: url(../icons/plus_d.svg); } .hsi_plus_d:hover { background-image: url(../icons/plus_d.svg), url(../icons/plus_d.svg); }
+.hsi_power_w { background-image: url(../icons/power_w.svg); } .hsi_power_w:hover { background-image: url(../icons/power_w.svg), url(../icons/power_w.svg); }
+.hsi_power_d { background-image: url(../icons/power_d.svg); } .hsi_power_d:hover { background-image: url(../icons/power_d.svg), url(../icons/power_d.svg); }
+.hsi_printer_w { background-image: url(../icons/printer_w.svg); } .hsi_printer_w:hover { background-image: url(../icons/printer_w.svg), url(../icons/printer_w.svg); }
+.hsi_printer_d { background-image: url(../icons/printer_d.svg); } .hsi_printer_d:hover { background-image: url(../icons/printer_d.svg), url(../icons/printer_d.svg); }
+.hsi_qr_w { background-image: url(../icons/qr_w.svg); } .hsi_qr_w:hover { background-image: url(../icons/qr_w.svg), url(../icons/qr_w.svg); }
+.hsi_qr_d { background-image: url(../icons/qr_d.svg); } .hsi_qr_d:hover { background-image: url(../icons/qr_d.svg), url(../icons/qr_d.svg); }
+.hsi_quote_w { background-image: url(../icons/quote_w.svg); } .hsi_quote_w:hover { background-image: url(../icons/quote_w.svg), url(../icons/quote_w.svg); }
+.hsi_quote_d { background-image: url(../icons/quote_d.svg); } .hsi_quote_d:hover { background-image: url(../icons/quote_d.svg), url(../icons/quote_d.svg); }
+.hsi_quote2_w { background-image: url(../icons/quote2_w.svg); } .hsi_quote2_w:hover { background-image: url(../icons/quote2_w.svg), url(../icons/quote2_w.svg); }
+.hsi_quote2_d { background-image: url(../icons/quote2_d.svg); } .hsi_quote2_d:hover { background-image: url(../icons/quote2_d.svg), url(../icons/quote2_d.svg); }
+.hsi_radiotower_w { background-image: url(../icons/radiotower_w.svg); } .hsi_radiotower_w:hover { background-image: url(../icons/radiotower_w.svg), url(../icons/radiotower_w.svg); }
+.hsi_radiotower_d { background-image: url(../icons/radiotower_d.svg); } .hsi_radiotower_d:hover { background-image: url(../icons/radiotower_d.svg), url(../icons/radiotower_d.svg); }
+.hsi_redo_w { background-image: url(../icons/redo_w.svg); } .hsi_redo_w:hover { background-image: url(../icons/redo_w.svg), url(../icons/redo_w.svg); }
+.hsi_redo_d { background-image: url(../icons/redo_d.svg); } .hsi_redo_d:hover { background-image: url(../icons/redo_d.svg), url(../icons/redo_d.svg); }
+.hsi_refresh_w { background-image: url(../icons/refresh_w.svg); } .hsi_refresh_w:hover { background-image: url(../icons/refresh_w.svg), url(../icons/refresh_w.svg); }
+.hsi_refresh_d { background-image: url(../icons/refresh_d.svg); } .hsi_refresh_d:hover { background-image: url(../icons/refresh_d.svg), url(../icons/refresh_d.svg); }
+.hsi_refresh2_w { background-image: url(../icons/refresh2_w.svg); } .hsi_refresh2_w:hover { background-image: url(../icons/refresh2_w.svg), url(../icons/refresh2_w.svg); }
+.hsi_refresh2_d { background-image: url(../icons/refresh2_d.svg); } .hsi_refresh2_d:hover { background-image: url(../icons/refresh2_d.svg), url(../icons/refresh2_d.svg); }
+.hsi_repeat_w { background-image: url(../icons/repeat_w.svg); } .hsi_repeat_w:hover { background-image: url(../icons/repeat_w.svg), url(../icons/repeat_w.svg); }
+.hsi_repeat_d { background-image: url(../icons/repeat_d.svg); } .hsi_repeat_d:hover { background-image: url(../icons/repeat_d.svg), url(../icons/repeat_d.svg); }
+.hsi_rewind30_w { background-image: url(../icons/rewind30_w.svg); } .hsi_rewind30_w:hover { background-image: url(../icons/rewind30_w.svg), url(../icons/rewind30_w.svg); }
+.hsi_rewind30_d { background-image: url(../icons/rewind30_d.svg); } .hsi_rewind30_d:hover { background-image: url(../icons/rewind30_d.svg), url(../icons/rewind30_d.svg); }
+.hsi_safari_w { background-image: url(../icons/safari_w.svg); } .hsi_safari_w:hover { background-image: url(../icons/safari_w.svg), url(../icons/safari_w.svg); }
+.hsi_safari_d { background-image: url(../icons/safari_d.svg); } .hsi_safari_d:hover { background-image: url(../icons/safari_d.svg), url(../icons/safari_d.svg); }
+.hsi_safe_w { background-image: url(../icons/safe_w.svg); } .hsi_safe_w:hover { background-image: url(../icons/safe_w.svg), url(../icons/safe_w.svg); }
+.hsi_safe_d { background-image: url(../icons/safe_d.svg); } .hsi_safe_d:hover { background-image: url(../icons/safe_d.svg), url(../icons/safe_d.svg); }
+.hsi_save_w { background-image: url(../icons/save_w.svg); } .hsi_save_w:hover { background-image: url(../icons/save_w.svg), url(../icons/save_w.svg); }
+.hsi_save_d { background-image: url(../icons/save_d.svg); } .hsi_save_d:hover { background-image: url(../icons/save_d.svg), url(../icons/save_d.svg); }
+.hsi_script_w { background-image: url(../icons/script_w.svg); } .hsi_script_w:hover { background-image: url(../icons/script_w.svg), url(../icons/script_w.svg); }
+.hsi_script_d { background-image: url(../icons/script_d.svg); } .hsi_script_d:hover { background-image: url(../icons/script_d.svg), url(../icons/script_d.svg); }
+.hsi_share_w { background-image: url(../icons/share_w.svg); } .hsi_share_w:hover { background-image: url(../icons/share_w.svg), url(../icons/share_w.svg); }
+.hsi_share_d { background-image: url(../icons/share_d.svg); } .hsi_share_d:hover { background-image: url(../icons/share_d.svg), url(../icons/share_d.svg); }
+.hsi_shield_w { background-image: url(../icons/shield_w.svg); } .hsi_shield_w:hover { background-image: url(../icons/shield_w.svg), url(../icons/shield_w.svg); }
+.hsi_shield_d { background-image: url(../icons/shield_d.svg); } .hsi_shield_d:hover { background-image: url(../icons/shield_d.svg), url(../icons/shield_d.svg); }
+.hsi_shield2_w { background-image: url(../icons/shield2_w.svg); } .hsi_shield2_w:hover { background-image: url(../icons/shield2_w.svg), url(../icons/shield2_w.svg); }
+.hsi_shield2_d { background-image: url(../icons/shield2_d.svg); } .hsi_shield2_d:hover { background-image: url(../icons/shield2_d.svg), url(../icons/shield2_d.svg); }
+.hsi_shippingbox_w { background-image: url(../icons/shippingbox_w.svg); } .hsi_shippingbox_w:hover { background-image: url(../icons/shippingbox_w.svg), url(../icons/shippingbox_w.svg); }
+.hsi_shippingbox_d { background-image: url(../icons/shippingbox_d.svg); } .hsi_shippingbox_d:hover { background-image: url(../icons/shippingbox_d.svg), url(../icons/shippingbox_d.svg); }
+.hsi_shop_w { background-image: url(../icons/shop_w.svg); } .hsi_shop_w:hover { background-image: url(../icons/shop_w.svg), url(../icons/shop_w.svg); }
+.hsi_shop_d { background-image: url(../icons/shop_d.svg); } .hsi_shop_d:hover { background-image: url(../icons/shop_d.svg), url(../icons/shop_d.svg); }
+.hsi_shopingbag_w { background-image: url(../icons/shopingbag_w.svg); } .hsi_shopingbag_w:hover { background-image: url(../icons/shopingbag_w.svg), url(../icons/shopingbag_w.svg); }
+.hsi_shopingbag_d { background-image: url(../icons/shopingbag_d.svg); } .hsi_shopingbag_d:hover { background-image: url(../icons/shopingbag_d.svg), url(../icons/shopingbag_d.svg); }
+.hsi_sitemap_w { background-image: url(../icons/sitemap_w.svg); } .hsi_sitemap_w:hover { background-image: url(../icons/sitemap_w.svg), url(../icons/sitemap_w.svg); }
+.hsi_sitemap_d { background-image: url(../icons/sitemap_d.svg); } .hsi_sitemap_d:hover { background-image: url(../icons/sitemap_d.svg), url(../icons/sitemap_d.svg); }
+.hsi_smartphone_w { background-image: url(../icons/smartphone_w.svg); } .hsi_smartphone_w:hover { background-image: url(../icons/smartphone_w.svg), url(../icons/smartphone_w.svg); }
+.hsi_smartphone_d { background-image: url(../icons/smartphone_d.svg); } .hsi_smartphone_d:hover { background-image: url(../icons/smartphone_d.svg), url(../icons/smartphone_d.svg); }
+.hsi_smartphone2_w { background-image: url(../icons/smartphone2_w.svg); } .hsi_smartphone2_w:hover { background-image: url(../icons/smartphone2_w.svg), url(../icons/smartphone2_w.svg); }
+.hsi_smartphone2_d { background-image: url(../icons/smartphone2_d.svg); } .hsi_smartphone2_d:hover { background-image: url(../icons/smartphone2_d.svg), url(../icons/smartphone2_d.svg); }
+.hsi_smartphone3_w { background-image: url(../icons/smartphone3_w.svg); } .hsi_smartphone3_w:hover { background-image: url(../icons/smartphone3_w.svg), url(../icons/smartphone3_w.svg); }
+.hsi_smartphone3_d { background-image: url(../icons/smartphone3_d.svg); } .hsi_smartphone3_d:hover { background-image: url(../icons/smartphone3_d.svg), url(../icons/smartphone3_d.svg); }
+.hsi_smiley_w { background-image: url(../icons/smiley_w.svg); } .hsi_smiley_w:hover { background-image: url(../icons/smiley_w.svg), url(../icons/smiley_w.svg); }
+.hsi_smiley_d { background-image: url(../icons/smiley_d.svg); } .hsi_smiley_d:hover { background-image: url(../icons/smiley_d.svg), url(../icons/smiley_d.svg); }
+.hsi_smiley2_w { background-image: url(../icons/smiley2_w.svg); } .hsi_smiley2_w:hover { background-image: url(../icons/smiley2_w.svg), url(../icons/smiley2_w.svg); }
+.hsi_smiley2_d { background-image: url(../icons/smiley2_d.svg); } .hsi_smiley2_d:hover { background-image: url(../icons/smiley2_d.svg), url(../icons/smiley2_d.svg); }
+.hsi_smileysad_w { background-image: url(../icons/smileysad_w.svg); } .hsi_smileysad_w:hover { background-image: url(../icons/smileysad_w.svg), url(../icons/smileysad_w.svg); }
+.hsi_smileysad_d { background-image: url(../icons/smileysad_d.svg); } .hsi_smileysad_d:hover { background-image: url(../icons/smileysad_d.svg), url(../icons/smileysad_d.svg); }
+.hsi_smileysad2_w { background-image: url(../icons/smileysad2_w.svg); } .hsi_smileysad2_w:hover { background-image: url(../icons/smileysad2_w.svg), url(../icons/smileysad2_w.svg); }
+.hsi_smileysad2_d { background-image: url(../icons/smileysad2_d.svg); } .hsi_smileysad2_d:hover { background-image: url(../icons/smileysad2_d.svg), url(../icons/smileysad2_d.svg); }
+.hsi_sms_w { background-image: url(../icons/sms_w.svg); } .hsi_sms_w:hover { background-image: url(../icons/sms_w.svg), url(../icons/sms_w.svg); }
+.hsi_sms_d { background-image: url(../icons/sms_d.svg); } .hsi_sms_d:hover { background-image: url(../icons/sms_d.svg), url(../icons/sms_d.svg); }
+.hsi_snowflake_w { background-image: url(../icons/snowflake_w.svg); } .hsi_snowflake_w:hover { background-image: url(../icons/snowflake_w.svg), url(../icons/snowflake_w.svg); }
+.hsi_snowflake_d { background-image: url(../icons/snowflake_d.svg); } .hsi_snowflake_d:hover { background-image: url(../icons/snowflake_d.svg), url(../icons/snowflake_d.svg); }
+.hsi_soc_blogger_w { background-image: url(../icons/soc_blogger_w.svg); } .hsi_soc_blogger_w:hover { background-image: url(../icons/soc_blogger_w.svg), url(../icons/soc_blogger_w.svg); }
+.hsi_soc_blogger_d { background-image: url(../icons/soc_blogger_d.svg); } .hsi_soc_blogger_d:hover { background-image: url(../icons/soc_blogger_d.svg), url(../icons/soc_blogger_d.svg); }
+.hsi_soc_cargo_w { background-image: url(../icons/soc_cargo_w.svg); } .hsi_soc_cargo_w:hover { background-image: url(../icons/soc_cargo_w.svg), url(../icons/soc_cargo_w.svg); }
+.hsi_soc_cargo_d { background-image: url(../icons/soc_cargo_d.svg); } .hsi_soc_cargo_d:hover { background-image: url(../icons/soc_cargo_d.svg), url(../icons/soc_cargo_d.svg); }
+.hsi_soc_delicious_w { background-image: url(../icons/soc_delicious_w.svg); } .hsi_soc_delicious_w:hover { background-image: url(../icons/soc_delicious_w.svg), url(../icons/soc_delicious_w.svg); }
+.hsi_soc_delicious_d { background-image: url(../icons/soc_delicious_d.svg); } .hsi_soc_delicious_d:hover { background-image: url(../icons/soc_delicious_d.svg), url(../icons/soc_delicious_d.svg); }
+.hsi_soc_deviantart_w { background-image: url(../icons/soc_deviantart_w.svg); } .hsi_soc_deviantart_w:hover { background-image: url(../icons/soc_deviantart_w.svg), url(../icons/soc_deviantart_w.svg); }
+.hsi_soc_deviantart_d { background-image: url(../icons/soc_deviantart_d.svg); } .hsi_soc_deviantart_d:hover { background-image: url(../icons/soc_deviantart_d.svg), url(../icons/soc_deviantart_d.svg); }
+.hsi_soc_dribble_w { background-image: url(../icons/soc_dribble_w.svg); } .hsi_soc_dribble_w:hover { background-image: url(../icons/soc_dribble_w.svg), url(../icons/soc_dribble_w.svg); }
+.hsi_soc_dribble_d { background-image: url(../icons/soc_dribble_d.svg); } .hsi_soc_dribble_d:hover { background-image: url(../icons/soc_dribble_d.svg), url(../icons/soc_dribble_d.svg); }
+.hsi_soc_facebook_w { background-image: url(../icons/soc_facebook_w.svg); } .hsi_soc_facebook_w:hover { background-image: url(../icons/soc_facebook_w.svg), url(../icons/soc_facebook_w.svg); }
+.hsi_soc_facebook_d { background-image: url(../icons/soc_facebook_d.svg); } .hsi_soc_facebook_d:hover { background-image: url(../icons/soc_facebook_d.svg), url(../icons/soc_facebook_d.svg); }
+.hsi_soc_facebooklike_w { background-image: url(../icons/soc_facebooklike_w.svg); } .hsi_soc_facebooklike_w:hover { background-image: url(../icons/soc_facebooklike_w.svg), url(../icons/soc_facebooklike_w.svg); }
+.hsi_soc_facebooklike_d { background-image: url(../icons/soc_facebooklike_d.svg); } .hsi_soc_facebooklike_d:hover { background-image: url(../icons/soc_facebooklike_d.svg), url(../icons/soc_facebooklike_d.svg); }
+.hsi_soc_feedburner_w { background-image: url(../icons/soc_feedburner_w.svg); } .hsi_soc_feedburner_w:hover { background-image: url(../icons/soc_feedburner_w.svg), url(../icons/soc_feedburner_w.svg); }
+.hsi_soc_feedburner_d { background-image: url(../icons/soc_feedburner_d.svg); } .hsi_soc_feedburner_d:hover { background-image: url(../icons/soc_feedburner_d.svg), url(../icons/soc_feedburner_d.svg); }
+.hsi_soc_flickr_w { background-image: url(../icons/soc_flickr_w.svg); } .hsi_soc_flickr_w:hover { background-image: url(../icons/soc_flickr_w.svg), url(../icons/soc_flickr_w.svg); }
+.hsi_soc_flickr_d { background-image: url(../icons/soc_flickr_d.svg); } .hsi_soc_flickr_d:hover { background-image: url(../icons/soc_flickr_d.svg), url(../icons/soc_flickr_d.svg); }
+.hsi_soc_forrst_w { background-image: url(../icons/soc_forrst_w.svg); } .hsi_soc_forrst_w:hover { background-image: url(../icons/soc_forrst_w.svg), url(../icons/soc_forrst_w.svg); }
+.hsi_soc_forrst_d { background-image: url(../icons/soc_forrst_d.svg); } .hsi_soc_forrst_d:hover { background-image: url(../icons/soc_forrst_d.svg), url(../icons/soc_forrst_d.svg); }
+.hsi_soc_github_w { background-image: url(../icons/soc_github_w.svg); } .hsi_soc_github_w:hover { background-image: url(../icons/soc_github_w.svg), url(../icons/soc_github_w.svg); }
+.hsi_soc_github_d { background-image: url(../icons/soc_github_d.svg); } .hsi_soc_github_d:hover { background-image: url(../icons/soc_github_d.svg), url(../icons/soc_github_d.svg); }
+.hsi_soc_googleplus_w { background-image: url(../icons/soc_googleplus_w.svg); } .hsi_soc_googleplus_w:hover { background-image: url(../icons/soc_googleplus_w.svg), url(../icons/soc_googleplus_w.svg); }
+.hsi_soc_googleplus_d { background-image: url(../icons/soc_googleplus_d.svg); } .hsi_soc_googleplus_d:hover { background-image: url(../icons/soc_googleplus_d.svg), url(../icons/soc_googleplus_d.svg); }
+.hsi_soc_icq_w { background-image: url(../icons/soc_icq_w.svg); } .hsi_soc_icq_w:hover { background-image: url(../icons/soc_icq_w.svg), url(../icons/soc_icq_w.svg); }
+.hsi_soc_icq_d { background-image: url(../icons/soc_icq_d.svg); } .hsi_soc_icq_d:hover { background-image: url(../icons/soc_icq_d.svg), url(../icons/soc_icq_d.svg); }
+.hsi_soc_in_w { background-image: url(../icons/soc_in_w.svg); } .hsi_soc_in_w:hover { background-image: url(../icons/soc_in_w.svg), url(../icons/soc_in_w.svg); }
+.hsi_soc_in_d { background-image: url(../icons/soc_in_d.svg); } .hsi_soc_in_d:hover { background-image: url(../icons/soc_in_d.svg), url(../icons/soc_in_d.svg); }
+.hsi_soc_insta_w { background-image: url(../icons/soc_insta_w.svg); } .hsi_soc_insta_w:hover { background-image: url(../icons/soc_insta_w.svg), url(../icons/soc_insta_w.svg); }
+.hsi_soc_insta_d { background-image: url(../icons/soc_insta_d.svg); } .hsi_soc_insta_d:hover { background-image: url(../icons/soc_insta_d.svg), url(../icons/soc_insta_d.svg); }
+.hsi_soc_lastfm_w { background-image: url(../icons/soc_lastfm_w.svg); } .hsi_soc_lastfm_w:hover { background-image: url(../icons/soc_lastfm_w.svg), url(../icons/soc_lastfm_w.svg); }
+.hsi_soc_lastfm_d { background-image: url(../icons/soc_lastfm_d.svg); } .hsi_soc_lastfm_d:hover { background-image: url(../icons/soc_lastfm_d.svg), url(../icons/soc_lastfm_d.svg); }
+.hsi_soc_livejournal_w { background-image: url(../icons/soc_livejournal_w.svg); } .hsi_soc_livejournal_w:hover { background-image: url(../icons/soc_livejournal_w.svg), url(../icons/soc_livejournal_w.svg); }
+.hsi_soc_livejournal_d { background-image: url(../icons/soc_livejournal_d.svg); } .hsi_soc_livejournal_d:hover { background-image: url(../icons/soc_livejournal_d.svg), url(../icons/soc_livejournal_d.svg); }
+.hsi_soc_myspace_w { background-image: url(../icons/soc_myspace_w.svg); } .hsi_soc_myspace_w:hover { background-image: url(../icons/soc_myspace_w.svg), url(../icons/soc_myspace_w.svg); }
+.hsi_soc_myspace_d { background-image: url(../icons/soc_myspace_d.svg); } .hsi_soc_myspace_d:hover { background-image: url(../icons/soc_myspace_d.svg), url(../icons/soc_myspace_d.svg); }
+.hsi_soc_pinterest_w { background-image: url(../icons/soc_pinterest_w.svg); } .hsi_soc_pinterest_w:hover { background-image: url(../icons/soc_pinterest_w.svg), url(../icons/soc_pinterest_w.svg); }
+.hsi_soc_pinterest_d { background-image: url(../icons/soc_pinterest_d.svg); } .hsi_soc_pinterest_d:hover { background-image: url(../icons/soc_pinterest_d.svg), url(../icons/soc_pinterest_d.svg); }
+.hsi_soc_retweet_w { background-image: url(../icons/soc_retweet_w.svg); } .hsi_soc_retweet_w:hover { background-image: url(../icons/soc_retweet_w.svg), url(../icons/soc_retweet_w.svg); }
+.hsi_soc_retweet_d { background-image: url(../icons/soc_retweet_d.svg); } .hsi_soc_retweet_d:hover { background-image: url(../icons/soc_retweet_d.svg), url(../icons/soc_retweet_d.svg); }
+.hsi_soc_rss_w { background-image: url(../icons/soc_rss_w.svg); } .hsi_soc_rss_w:hover { background-image: url(../icons/soc_rss_w.svg), url(../icons/soc_rss_w.svg); }
+.hsi_soc_rss_d { background-image: url(../icons/soc_rss_d.svg); } .hsi_soc_rss_d:hover { background-image: url(../icons/soc_rss_d.svg), url(../icons/soc_rss_d.svg); }
+.hsi_soc_skype_w { background-image: url(../icons/soc_skype_w.svg); } .hsi_soc_skype_w:hover { background-image: url(../icons/soc_skype_w.svg), url(../icons/soc_skype_w.svg); }
+.hsi_soc_skype_d { background-image: url(../icons/soc_skype_d.svg); } .hsi_soc_skype_d:hover { background-image: url(../icons/soc_skype_d.svg), url(../icons/soc_skype_d.svg); }
+.hsi_soc_soundcloud_w { background-image: url(../icons/soc_soundcloud_w.svg); } .hsi_soc_soundcloud_w:hover { background-image: url(../icons/soc_soundcloud_w.svg), url(../icons/soc_soundcloud_w.svg); }
+.hsi_soc_soundcloud_d { background-image: url(../icons/soc_soundcloud_d.svg); } .hsi_soc_soundcloud_d:hover { background-image: url(../icons/soc_soundcloud_d.svg), url(../icons/soc_soundcloud_d.svg); }
+.hsi_soc_stackoverflow_w { background-image: url(../icons/soc_stackoverflow_w.svg); } .hsi_soc_stackoverflow_w:hover { background-image: url(../icons/soc_stackoverflow_w.svg), url(../icons/soc_stackoverflow_w.svg); }
+.hsi_soc_stackoverflow_d { background-image: url(../icons/soc_stackoverflow_d.svg); } .hsi_soc_stackoverflow_d:hover { background-image: url(../icons/soc_stackoverflow_d.svg), url(../icons/soc_stackoverflow_d.svg); }
+.hsi_soc_steam_w { background-image: url(../icons/soc_steam_w.svg); } .hsi_soc_steam_w:hover { background-image: url(../icons/soc_steam_w.svg), url(../icons/soc_steam_w.svg); }
+.hsi_soc_steam_d { background-image: url(../icons/soc_steam_d.svg); } .hsi_soc_steam_d:hover { background-image: url(../icons/soc_steam_d.svg), url(../icons/soc_steam_d.svg); }
+.hsi_soc_stumbleupon_w { background-image: url(../icons/soc_stumbleupon_w.svg); } .hsi_soc_stumbleupon_w:hover { background-image: url(../icons/soc_stumbleupon_w.svg), url(../icons/soc_stumbleupon_w.svg); }
+.hsi_soc_stumbleupon_d { background-image: url(../icons/soc_stumbleupon_d.svg); } .hsi_soc_stumbleupon_d:hover { background-image: url(../icons/soc_stumbleupon_d.svg), url(../icons/soc_stumbleupon_d.svg); }
+.hsi_soc_tumblr_w { background-image: url(../icons/soc_tumblr_w.svg); } .hsi_soc_tumblr_w:hover { background-image: url(../icons/soc_tumblr_w.svg), url(../icons/soc_tumblr_w.svg); }
+.hsi_soc_tumblr_d { background-image: url(../icons/soc_tumblr_d.svg); } .hsi_soc_tumblr_d:hover { background-image: url(../icons/soc_tumblr_d.svg), url(../icons/soc_tumblr_d.svg); }
+.hsi_soc_twitter_w { background-image: url(../icons/soc_twitter_w.svg); } .hsi_soc_twitter_w:hover { background-image: url(../icons/soc_twitter_w.svg), url(../icons/soc_twitter_w.svg); }
+.hsi_soc_twitter_d { background-image: url(../icons/soc_twitter_d.svg); } .hsi_soc_twitter_d:hover { background-image: url(../icons/soc_twitter_d.svg), url(../icons/soc_twitter_d.svg); }
+.hsi_soc_vimeo_w { background-image: url(../icons/soc_vimeo_w.svg); } .hsi_soc_vimeo_w:hover { background-image: url(../icons/soc_vimeo_w.svg), url(../icons/soc_vimeo_w.svg); }
+.hsi_soc_vimeo_d { background-image: url(../icons/soc_vimeo_d.svg); } .hsi_soc_vimeo_d:hover { background-image: url(../icons/soc_vimeo_d.svg), url(../icons/soc_vimeo_d.svg); }
+.hsi_soc_vk_w { background-image: url(../icons/soc_vk_w.svg); } .hsi_soc_vk_w:hover { background-image: url(../icons/soc_vk_w.svg), url(../icons/soc_vk_w.svg); }
+.hsi_soc_vk_d { background-image: url(../icons/soc_vk_d.svg); } .hsi_soc_vk_d:hover { background-image: url(../icons/soc_vk_d.svg), url(../icons/soc_vk_d.svg); }
+.hsi_soc_wp_w { background-image: url(../icons/soc_wp_w.svg); } .hsi_soc_wp_w:hover { background-image: url(../icons/soc_wp_w.svg), url(../icons/soc_wp_w.svg); }
+.hsi_soc_wp_d { background-image: url(../icons/soc_wp_d.svg); } .hsi_soc_wp_d:hover { background-image: url(../icons/soc_wp_d.svg), url(../icons/soc_wp_d.svg); }
+.hsi_soc_xing_w { background-image: url(../icons/soc_xing_w.svg); } .hsi_soc_xing_w:hover { background-image: url(../icons/soc_xing_w.svg), url(../icons/soc_xing_w.svg); }
+.hsi_soc_xing_d { background-image: url(../icons/soc_xing_d.svg); } .hsi_soc_xing_d:hover { background-image: url(../icons/soc_xing_d.svg), url(../icons/soc_xing_d.svg); }
+.hsi_soc_youtube_w { background-image: url(../icons/soc_youtube_w.svg); } .hsi_soc_youtube_w:hover { background-image: url(../icons/soc_youtube_w.svg), url(../icons/soc_youtube_w.svg); }
+.hsi_soc_youtube_d { background-image: url(../icons/soc_youtube_d.svg); } .hsi_soc_youtube_d:hover { background-image: url(../icons/soc_youtube_d.svg), url(../icons/soc_youtube_d.svg); }
+.hsi_soc_youtube2_w { background-image: url(../icons/soc_youtube2_w.svg); } .hsi_soc_youtube2_w:hover { background-image: url(../icons/soc_youtube2_w.svg), url(../icons/soc_youtube2_w.svg); }
+.hsi_soc_youtube2_d { background-image: url(../icons/soc_youtube2_d.svg); } .hsi_soc_youtube2_d:hover { background-image: url(../icons/soc_youtube2_d.svg), url(../icons/soc_youtube2_d.svg); }
+.hsi_sort_w { background-image: url(../icons/sort_w.svg); } .hsi_sort_w:hover { background-image: url(../icons/sort_w.svg), url(../icons/sort_w.svg); }
+.hsi_sort_d { background-image: url(../icons/sort_d.svg); } .hsi_sort_d:hover { background-image: url(../icons/sort_d.svg), url(../icons/sort_d.svg); }
+.hsi_sort2_w { background-image: url(../icons/sort2_w.svg); } .hsi_sort2_w:hover { background-image: url(../icons/sort2_w.svg), url(../icons/sort2_w.svg); }
+.hsi_sort2_d { background-image: url(../icons/sort2_d.svg); } .hsi_sort2_d:hover { background-image: url(../icons/sort2_d.svg), url(../icons/sort2_d.svg); }
+.hsi_sort3_w { background-image: url(../icons/sort3_w.svg); } .hsi_sort3_w:hover { background-image: url(../icons/sort3_w.svg), url(../icons/sort3_w.svg); }
+.hsi_sort3_d { background-image: url(../icons/sort3_d.svg); } .hsi_sort3_d:hover { background-image: url(../icons/sort3_d.svg), url(../icons/sort3_d.svg); }
+.hsi_sort4_w { background-image: url(../icons/sort4_w.svg); } .hsi_sort4_w:hover { background-image: url(../icons/sort4_w.svg), url(../icons/sort4_w.svg); }
+.hsi_sort4_d { background-image: url(../icons/sort4_d.svg); } .hsi_sort4_d:hover { background-image: url(../icons/sort4_d.svg), url(../icons/sort4_d.svg); }
+.hsi_sort5_w { background-image: url(../icons/sort5_w.svg); } .hsi_sort5_w:hover { background-image: url(../icons/sort5_w.svg), url(../icons/sort5_w.svg); }
+.hsi_sort5_d { background-image: url(../icons/sort5_d.svg); } .hsi_sort5_d:hover { background-image: url(../icons/sort5_d.svg), url(../icons/sort5_d.svg); }
+.hsi_sort6_w { background-image: url(../icons/sort6_w.svg); } .hsi_sort6_w:hover { background-image: url(../icons/sort6_w.svg), url(../icons/sort6_w.svg); }
+.hsi_sort6_d { background-image: url(../icons/sort6_d.svg); } .hsi_sort6_d:hover { background-image: url(../icons/sort6_d.svg), url(../icons/sort6_d.svg); }
+.hsi_sort7_w { background-image: url(../icons/sort7_w.svg); } .hsi_sort7_w:hover { background-image: url(../icons/sort7_w.svg), url(../icons/sort7_w.svg); }
+.hsi_sort7_d { background-image: url(../icons/sort7_d.svg); } .hsi_sort7_d:hover { background-image: url(../icons/sort7_d.svg), url(../icons/sort7_d.svg); }
+.hsi_sort8_w { background-image: url(../icons/sort8_w.svg); } .hsi_sort8_w:hover { background-image: url(../icons/sort8_w.svg), url(../icons/sort8_w.svg); }
+.hsi_sort8_d { background-image: url(../icons/sort8_d.svg); } .hsi_sort8_d:hover { background-image: url(../icons/sort8_d.svg), url(../icons/sort8_d.svg); }
+.hsi_sort9_w { background-image: url(../icons/sort9_w.svg); } .hsi_sort9_w:hover { background-image: url(../icons/sort9_w.svg), url(../icons/sort9_w.svg); }
+.hsi_sort9_d { background-image: url(../icons/sort9_d.svg); } .hsi_sort9_d:hover { background-image: url(../icons/sort9_d.svg), url(../icons/sort9_d.svg); }
+.hsi_sort10_w { background-image: url(../icons/sort10_w.svg); } .hsi_sort10_w:hover { background-image: url(../icons/sort10_w.svg), url(../icons/sort10_w.svg); }
+.hsi_sort10_d { background-image: url(../icons/sort10_d.svg); } .hsi_sort10_d:hover { background-image: url(../icons/sort10_d.svg), url(../icons/sort10_d.svg); }
+.hsi_sort11_w { background-image: url(../icons/sort11_w.svg); } .hsi_sort11_w:hover { background-image: url(../icons/sort11_w.svg), url(../icons/sort11_w.svg); }
+.hsi_sort11_d { background-image: url(../icons/sort11_d.svg); } .hsi_sort11_d:hover { background-image: url(../icons/sort11_d.svg), url(../icons/sort11_d.svg); }
+.hsi_sort12_w { background-image: url(../icons/sort12_w.svg); } .hsi_sort12_w:hover { background-image: url(../icons/sort12_w.svg), url(../icons/sort12_w.svg); }
+.hsi_sort12_d { background-image: url(../icons/sort12_d.svg); } .hsi_sort12_d:hover { background-image: url(../icons/sort12_d.svg), url(../icons/sort12_d.svg); }
+.hsi_sort13_w { background-image: url(../icons/sort13_w.svg); } .hsi_sort13_w:hover { background-image: url(../icons/sort13_w.svg), url(../icons/sort13_w.svg); }
+.hsi_sort13_d { background-image: url(../icons/sort13_d.svg); } .hsi_sort13_d:hover { background-image: url(../icons/sort13_d.svg), url(../icons/sort13_d.svg); }
+.hsi_soundwave_w { background-image: url(../icons/soundwave_w.svg); } .hsi_soundwave_w:hover { background-image: url(../icons/soundwave_w.svg), url(../icons/soundwave_w.svg); }
+.hsi_soundwave_d { background-image: url(../icons/soundwave_d.svg); } .hsi_soundwave_d:hover { background-image: url(../icons/soundwave_d.svg), url(../icons/soundwave_d.svg); }
+.hsi_soundwave2_w { background-image: url(../icons/soundwave2_w.svg); } .hsi_soundwave2_w:hover { background-image: url(../icons/soundwave2_w.svg), url(../icons/soundwave2_w.svg); }
+.hsi_soundwave2_d { background-image: url(../icons/soundwave2_d.svg); } .hsi_soundwave2_d:hover { background-image: url(../icons/soundwave2_d.svg), url(../icons/soundwave2_d.svg); }
+.hsi_soundwave3_w { background-image: url(../icons/soundwave3_w.svg); } .hsi_soundwave3_w:hover { background-image: url(../icons/soundwave3_w.svg), url(../icons/soundwave3_w.svg); }
+.hsi_soundwave3_d { background-image: url(../icons/soundwave3_d.svg); } .hsi_soundwave3_d:hover { background-image: url(../icons/soundwave3_d.svg), url(../icons/soundwave3_d.svg); }
+.hsi_speaker_w { background-image: url(../icons/speaker_w.svg); } .hsi_speaker_w:hover { background-image: url(../icons/speaker_w.svg), url(../icons/speaker_w.svg); }
+.hsi_speaker_d { background-image: url(../icons/speaker_d.svg); } .hsi_speaker_d:hover { background-image: url(../icons/speaker_d.svg), url(../icons/speaker_d.svg); }
+.hsi_speakerminus_w { background-image: url(../icons/speakerminus_w.svg); } .hsi_speakerminus_w:hover { background-image: url(../icons/speakerminus_w.svg), url(../icons/speakerminus_w.svg); }
+.hsi_speakerminus_d { background-image: url(../icons/speakerminus_d.svg); } .hsi_speakerminus_d:hover { background-image: url(../icons/speakerminus_d.svg), url(../icons/speakerminus_d.svg); }
+.hsi_speakerplus_w { background-image: url(../icons/speakerplus_w.svg); } .hsi_speakerplus_w:hover { background-image: url(../icons/speakerplus_w.svg), url(../icons/speakerplus_w.svg); }
+.hsi_speakerplus_d { background-image: url(../icons/speakerplus_d.svg); } .hsi_speakerplus_d:hover { background-image: url(../icons/speakerplus_d.svg), url(../icons/speakerplus_d.svg); }
+.hsi_speechbubble_w { background-image: url(../icons/speechbubble_w.svg); } .hsi_speechbubble_w:hover { background-image: url(../icons/speechbubble_w.svg), url(../icons/speechbubble_w.svg); }
+.hsi_speechbubble_d { background-image: url(../icons/speechbubble_d.svg); } .hsi_speechbubble_d:hover { background-image: url(../icons/speechbubble_d.svg), url(../icons/speechbubble_d.svg); }
+.hsi_speechbubble2_w { background-image: url(../icons/speechbubble2_w.svg); } .hsi_speechbubble2_w:hover { background-image: url(../icons/speechbubble2_w.svg), url(../icons/speechbubble2_w.svg); }
+.hsi_speechbubble2_d { background-image: url(../icons/speechbubble2_d.svg); } .hsi_speechbubble2_d:hover { background-image: url(../icons/speechbubble2_d.svg), url(../icons/speechbubble2_d.svg); }
+.hsi_squaredashed_w { background-image: url(../icons/squaredashed_w.svg); } .hsi_squaredashed_w:hover { background-image: url(../icons/squaredashed_w.svg), url(../icons/squaredashed_w.svg); }
+.hsi_squaredashed_d { background-image: url(../icons/squaredashed_d.svg); } .hsi_squaredashed_d:hover { background-image: url(../icons/squaredashed_d.svg), url(../icons/squaredashed_d.svg); }
+.hsi_star_w { background-image: url(../icons/star_w.svg); } .hsi_star_w:hover { background-image: url(../icons/star_w.svg), url(../icons/star_w.svg); }
+.hsi_star_d { background-image: url(../icons/star_d.svg); } .hsi_star_d:hover { background-image: url(../icons/star_d.svg), url(../icons/star_d.svg); }
+.hsi_stop_w { background-image: url(../icons/stop_w.svg); } .hsi_stop_w:hover { background-image: url(../icons/stop_w.svg), url(../icons/stop_w.svg); }
+.hsi_stop_d { background-image: url(../icons/stop_d.svg); } .hsi_stop_d:hover { background-image: url(../icons/stop_d.svg), url(../icons/stop_d.svg); }
+.hsi_stop2_w { background-image: url(../icons/stop2_w.svg); } .hsi_stop2_w:hover { background-image: url(../icons/stop2_w.svg), url(../icons/stop2_w.svg); }
+.hsi_stop2_d { background-image: url(../icons/stop2_d.svg); } .hsi_stop2_d:hover { background-image: url(../icons/stop2_d.svg), url(../icons/stop2_d.svg); }
+.hsi_stopplay_w { background-image: url(../icons/stopplay_w.svg); } .hsi_stopplay_w:hover { background-image: url(../icons/stopplay_w.svg), url(../icons/stopplay_w.svg); }
+.hsi_stopplay_d { background-image: url(../icons/stopplay_d.svg); } .hsi_stopplay_d:hover { background-image: url(../icons/stopplay_d.svg), url(../icons/stopplay_d.svg); }
+.hsi_strikethrough_w { background-image: url(../icons/strikethrough_w.svg); } .hsi_strikethrough_w:hover { background-image: url(../icons/strikethrough_w.svg), url(../icons/strikethrough_w.svg); }
+.hsi_strikethrough_d { background-image: url(../icons/strikethrough_d.svg); } .hsi_strikethrough_d:hover { background-image: url(../icons/strikethrough_d.svg), url(../icons/strikethrough_d.svg); }
+.hsi_switch_w { background-image: url(../icons/switch_w.svg); } .hsi_switch_w:hover { background-image: url(../icons/switch_w.svg), url(../icons/switch_w.svg); }
+.hsi_switch_d { background-image: url(../icons/switch_d.svg); } .hsi_switch_d:hover { background-image: url(../icons/switch_d.svg), url(../icons/switch_d.svg); }
+.hsi_table_w { background-image: url(../icons/table_w.svg); } .hsi_table_w:hover { background-image: url(../icons/table_w.svg), url(../icons/table_w.svg); }
+.hsi_table_d { background-image: url(../icons/table_d.svg); } .hsi_table_d:hover { background-image: url(../icons/table_d.svg), url(../icons/table_d.svg); }
+.hsi_tablet_w { background-image: url(../icons/tablet_w.svg); } .hsi_tablet_w:hover { background-image: url(../icons/tablet_w.svg), url(../icons/tablet_w.svg); }
+.hsi_tablet_d { background-image: url(../icons/tablet_d.svg); } .hsi_tablet_d:hover { background-image: url(../icons/tablet_d.svg), url(../icons/tablet_d.svg); }
+.hsi_tablet2_w { background-image: url(../icons/tablet2_w.svg); } .hsi_tablet2_w:hover { background-image: url(../icons/tablet2_w.svg), url(../icons/tablet2_w.svg); }
+.hsi_tablet2_d { background-image: url(../icons/tablet2_d.svg); } .hsi_tablet2_d:hover { background-image: url(../icons/tablet2_d.svg), url(../icons/tablet2_d.svg); }
+.hsi_tablet3_w { background-image: url(../icons/tablet3_w.svg); } .hsi_tablet3_w:hover { background-image: url(../icons/tablet3_w.svg), url(../icons/tablet3_w.svg); }
+.hsi_tablet3_d { background-image: url(../icons/tablet3_d.svg); } .hsi_tablet3_d:hover { background-image: url(../icons/tablet3_d.svg), url(../icons/tablet3_d.svg); }
+.hsi_tag_w { background-image: url(../icons/tag_w.svg); } .hsi_tag_w:hover { background-image: url(../icons/tag_w.svg), url(../icons/tag_w.svg); }
+.hsi_tag_d { background-image: url(../icons/tag_d.svg); } .hsi_tag_d:hover { background-image: url(../icons/tag_d.svg), url(../icons/tag_d.svg); }
+.hsi_tagbarcode_w { background-image: url(../icons/tagbarcode_w.svg); } .hsi_tagbarcode_w:hover { background-image: url(../icons/tagbarcode_w.svg), url(../icons/tagbarcode_w.svg); }
+.hsi_tagbarcode_d { background-image: url(../icons/tagbarcode_d.svg); } .hsi_tagbarcode_d:hover { background-image: url(../icons/tagbarcode_d.svg), url(../icons/tagbarcode_d.svg); }
+.hsi_target_w { background-image: url(../icons/target_w.svg); } .hsi_target_w:hover { background-image: url(../icons/target_w.svg), url(../icons/target_w.svg); }
+.hsi_target_d { background-image: url(../icons/target_d.svg); } .hsi_target_d:hover { background-image: url(../icons/target_d.svg), url(../icons/target_d.svg); }
+.hsi_target2_w { background-image: url(../icons/target2_w.svg); } .hsi_target2_w:hover { background-image: url(../icons/target2_w.svg), url(../icons/target2_w.svg); }
+.hsi_target2_d { background-image: url(../icons/target2_d.svg); } .hsi_target2_d:hover { background-image: url(../icons/target2_d.svg), url(../icons/target2_d.svg); }
+.hsi_target3_w { background-image: url(../icons/target3_w.svg); } .hsi_target3_w:hover { background-image: url(../icons/target3_w.svg), url(../icons/target3_w.svg); }
+.hsi_target3_d { background-image: url(../icons/target3_d.svg); } .hsi_target3_d:hover { background-image: url(../icons/target3_d.svg), url(../icons/target3_d.svg); }
+.hsi_target4_w { background-image: url(../icons/target4_w.svg); } .hsi_target4_w:hover { background-image: url(../icons/target4_w.svg), url(../icons/target4_w.svg); }
+.hsi_target4_d { background-image: url(../icons/target4_d.svg); } .hsi_target4_d:hover { background-image: url(../icons/target4_d.svg), url(../icons/target4_d.svg); }
+.hsi_textbold_w { background-image: url(../icons/textbold_w.svg); } .hsi_textbold_w:hover { background-image: url(../icons/textbold_w.svg), url(../icons/textbold_w.svg); }
+.hsi_textbold_d { background-image: url(../icons/textbold_d.svg); } .hsi_textbold_d:hover { background-image: url(../icons/textbold_d.svg), url(../icons/textbold_d.svg); }
+.hsi_thumb_w { background-image: url(../icons/thumb_w.svg); } .hsi_thumb_w:hover { background-image: url(../icons/thumb_w.svg), url(../icons/thumb_w.svg); }
+.hsi_thumb_d { background-image: url(../icons/thumb_d.svg); } .hsi_thumb_d:hover { background-image: url(../icons/thumb_d.svg), url(../icons/thumb_d.svg); }
+.hsi_thumb2_w { background-image: url(../icons/thumb2_w.svg); } .hsi_thumb2_w:hover { background-image: url(../icons/thumb2_w.svg), url(../icons/thumb2_w.svg); }
+.hsi_thumb2_d { background-image: url(../icons/thumb2_d.svg); } .hsi_thumb2_d:hover { background-image: url(../icons/thumb2_d.svg), url(../icons/thumb2_d.svg); }
+.hsi_time_w { background-image: url(../icons/time_w.svg); } .hsi_time_w:hover { background-image: url(../icons/time_w.svg), url(../icons/time_w.svg); }
+.hsi_time_d { background-image: url(../icons/time_d.svg); } .hsi_time_d:hover { background-image: url(../icons/time_d.svg), url(../icons/time_d.svg); }
+.hsi_time2_w { background-image: url(../icons/time2_w.svg); } .hsi_time2_w:hover { background-image: url(../icons/time2_w.svg), url(../icons/time2_w.svg); }
+.hsi_time2_d { background-image: url(../icons/time2_d.svg); } .hsi_time2_d:hover { background-image: url(../icons/time2_d.svg), url(../icons/time2_d.svg); }
+.hsi_time3_w { background-image: url(../icons/time3_w.svg); } .hsi_time3_w:hover { background-image: url(../icons/time3_w.svg), url(../icons/time3_w.svg); }
+.hsi_time3_d { background-image: url(../icons/time3_d.svg); } .hsi_time3_d:hover { background-image: url(../icons/time3_d.svg), url(../icons/time3_d.svg); }
+.hsi_timer_w { background-image: url(../icons/timer_w.svg); } .hsi_timer_w:hover { background-image: url(../icons/timer_w.svg), url(../icons/timer_w.svg); }
+.hsi_timer_d { background-image: url(../icons/timer_d.svg); } .hsi_timer_d:hover { background-image: url(../icons/timer_d.svg), url(../icons/timer_d.svg); }
+.hsi_tools_w { background-image: url(../icons/tools_w.svg); } .hsi_tools_w:hover { background-image: url(../icons/tools_w.svg), url(../icons/tools_w.svg); }
+.hsi_tools_d { background-image: url(../icons/tools_d.svg); } .hsi_tools_d:hover { background-image: url(../icons/tools_d.svg), url(../icons/tools_d.svg); }
+.hsi_tools2_w { background-image: url(../icons/tools2_w.svg); } .hsi_tools2_w:hover { background-image: url(../icons/tools2_w.svg), url(../icons/tools2_w.svg); }
+.hsi_tools2_d { background-image: url(../icons/tools2_d.svg); } .hsi_tools2_d:hover { background-image: url(../icons/tools2_d.svg), url(../icons/tools2_d.svg); }
+.hsi_trademark_w { background-image: url(../icons/trademark_w.svg); } .hsi_trademark_w:hover { background-image: url(../icons/trademark_w.svg), url(../icons/trademark_w.svg); }
+.hsi_trademark_d { background-image: url(../icons/trademark_d.svg); } .hsi_trademark_d:hover { background-image: url(../icons/trademark_d.svg), url(../icons/trademark_d.svg); }
+.hsi_trademark2_w { background-image: url(../icons/trademark2_w.svg); } .hsi_trademark2_w:hover { background-image: url(../icons/trademark2_w.svg), url(../icons/trademark2_w.svg); }
+.hsi_trademark2_d { background-image: url(../icons/trademark2_d.svg); } .hsi_trademark2_d:hover { background-image: url(../icons/trademark2_d.svg), url(../icons/trademark2_d.svg); }
+.hsi_trash_w { background-image: url(../icons/trash_w.svg); } .hsi_trash_w:hover { background-image: url(../icons/trash_w.svg), url(../icons/trash_w.svg); }
+.hsi_trash_d { background-image: url(../icons/trash_d.svg); } .hsi_trash_d:hover { background-image: url(../icons/trash_d.svg), url(../icons/trash_d.svg); }
+.hsi_trashx_w { background-image: url(../icons/trashx_w.svg); } .hsi_trashx_w:hover { background-image: url(../icons/trashx_w.svg), url(../icons/trashx_w.svg); }
+.hsi_trashx_d { background-image: url(../icons/trashx_d.svg); } .hsi_trashx_d:hover { background-image: url(../icons/trashx_d.svg), url(../icons/trashx_d.svg); }
+.hsi_trophy_w { background-image: url(../icons/trophy_w.svg); } .hsi_trophy_w:hover { background-image: url(../icons/trophy_w.svg), url(../icons/trophy_w.svg); }
+.hsi_trophy_d { background-image: url(../icons/trophy_d.svg); } .hsi_trophy_d:hover { background-image: url(../icons/trophy_d.svg), url(../icons/trophy_d.svg); }
+.hsi_trophy2_w { background-image: url(../icons/trophy2_w.svg); } .hsi_trophy2_w:hover { background-image: url(../icons/trophy2_w.svg), url(../icons/trophy2_w.svg); }
+.hsi_trophy2_d { background-image: url(../icons/trophy2_d.svg); } .hsi_trophy2_d:hover { background-image: url(../icons/trophy2_d.svg), url(../icons/trophy2_d.svg); }
+.hsi_tv_w { background-image: url(../icons/tv_w.svg); } .hsi_tv_w:hover { background-image: url(../icons/tv_w.svg), url(../icons/tv_w.svg); }
+.hsi_tv_d { background-image: url(../icons/tv_d.svg); } .hsi_tv_d:hover { background-image: url(../icons/tv_d.svg), url(../icons/tv_d.svg); }
+.hsi_umbrella_w { background-image: url(../icons/umbrella_w.svg); } .hsi_umbrella_w:hover { background-image: url(../icons/umbrella_w.svg), url(../icons/umbrella_w.svg); }
+.hsi_umbrella_d { background-image: url(../icons/umbrella_d.svg); } .hsi_umbrella_d:hover { background-image: url(../icons/umbrella_d.svg), url(../icons/umbrella_d.svg); }
+.hsi_umbrella2_w { background-image: url(../icons/umbrella2_w.svg); } .hsi_umbrella2_w:hover { background-image: url(../icons/umbrella2_w.svg), url(../icons/umbrella2_w.svg); }
+.hsi_umbrella2_d { background-image: url(../icons/umbrella2_d.svg); } .hsi_umbrella2_d:hover { background-image: url(../icons/umbrella2_d.svg), url(../icons/umbrella2_d.svg); }
+.hsi_underline_w { background-image: url(../icons/underline_w.svg); } .hsi_underline_w:hover { background-image: url(../icons/underline_w.svg), url(../icons/underline_w.svg); }
+.hsi_underline_d { background-image: url(../icons/underline_d.svg); } .hsi_underline_d:hover { background-image: url(../icons/underline_d.svg), url(../icons/underline_d.svg); }
+.hsi_undo_w { background-image: url(../icons/undo_w.svg); } .hsi_undo_w:hover { background-image: url(../icons/undo_w.svg), url(../icons/undo_w.svg); }
+.hsi_undo_d { background-image: url(../icons/undo_d.svg); } .hsi_undo_d:hover { background-image: url(../icons/undo_d.svg), url(../icons/undo_d.svg); }
+.hsi_upload_w { background-image: url(../icons/upload_w.svg); } .hsi_upload_w:hover { background-image: url(../icons/upload_w.svg), url(../icons/upload_w.svg); }
+.hsi_upload_d { background-image: url(../icons/upload_d.svg); } .hsi_upload_d:hover { background-image: url(../icons/upload_d.svg), url(../icons/upload_d.svg); }
+.hsi_uploadcloud_w { background-image: url(../icons/uploadcloud_w.svg); } .hsi_uploadcloud_w:hover { background-image: url(../icons/uploadcloud_w.svg), url(../icons/uploadcloud_w.svg); }
+.hsi_uploadcloud_d { background-image: url(../icons/uploadcloud_d.svg); } .hsi_uploadcloud_d:hover { background-image: url(../icons/uploadcloud_d.svg), url(../icons/uploadcloud_d.svg); }
+.hsi_video_w { background-image: url(../icons/video_w.svg); } .hsi_video_w:hover { background-image: url(../icons/video_w.svg), url(../icons/video_w.svg); }
+.hsi_video_d { background-image: url(../icons/video_d.svg); } .hsi_video_d:hover { background-image: url(../icons/video_d.svg), url(../icons/video_d.svg); }
+.hsi_videoadd_w { background-image: url(../icons/videoadd_w.svg); } .hsi_videoadd_w:hover { background-image: url(../icons/videoadd_w.svg), url(../icons/videoadd_w.svg); }
+.hsi_videoadd_d { background-image: url(../icons/videoadd_d.svg); } .hsi_videoadd_d:hover { background-image: url(../icons/videoadd_d.svg), url(../icons/videoadd_d.svg); }
+.hsi_videoremove_w { background-image: url(../icons/videoremove_w.svg); } .hsi_videoremove_w:hover { background-image: url(../icons/videoremove_w.svg), url(../icons/videoremove_w.svg); }
+.hsi_videoremove_d { background-image: url(../icons/videoremove_d.svg); } .hsi_videoremove_d:hover { background-image: url(../icons/videoremove_d.svg), url(../icons/videoremove_d.svg); }
+.hsi_virus_w { background-image: url(../icons/virus_w.svg); } .hsi_virus_w:hover { background-image: url(../icons/virus_w.svg), url(../icons/virus_w.svg); }
+.hsi_virus_d { background-image: url(../icons/virus_d.svg); } .hsi_virus_d:hover { background-image: url(../icons/virus_d.svg), url(../icons/virus_d.svg); }
+.hsi_volume_w { background-image: url(../icons/volume_w.svg); } .hsi_volume_w:hover { background-image: url(../icons/volume_w.svg), url(../icons/volume_w.svg); }
+.hsi_volume_d { background-image: url(../icons/volume_d.svg); } .hsi_volume_d:hover { background-image: url(../icons/volume_d.svg), url(../icons/volume_d.svg); }
+.hsi_volumeminus_w { background-image: url(../icons/volumeminus_w.svg); } .hsi_volumeminus_w:hover { background-image: url(../icons/volumeminus_w.svg), url(../icons/volumeminus_w.svg); }
+.hsi_volumeminus_d { background-image: url(../icons/volumeminus_d.svg); } .hsi_volumeminus_d:hover { background-image: url(../icons/volumeminus_d.svg), url(../icons/volumeminus_d.svg); }
+.hsi_volumeplus_w { background-image: url(../icons/volumeplus_w.svg); } .hsi_volumeplus_w:hover { background-image: url(../icons/volumeplus_w.svg), url(../icons/volumeplus_w.svg); }
+.hsi_volumeplus_d { background-image: url(../icons/volumeplus_d.svg); } .hsi_volumeplus_d:hover { background-image: url(../icons/volumeplus_d.svg), url(../icons/volumeplus_d.svg); }
+.hsi_warning_w { background-image: url(../icons/warning_w.svg); } .hsi_warning_w:hover { background-image: url(../icons/warning_w.svg), url(../icons/warning_w.svg); }
+.hsi_warning_d { background-image: url(../icons/warning_d.svg); } .hsi_warning_d:hover { background-image: url(../icons/warning_d.svg), url(../icons/warning_d.svg); }
+.hsi_webcam_w { background-image: url(../icons/webcam_w.svg); } .hsi_webcam_w:hover { background-image: url(../icons/webcam_w.svg), url(../icons/webcam_w.svg); }
+.hsi_webcam_d { background-image: url(../icons/webcam_d.svg); } .hsi_webcam_d:hover { background-image: url(../icons/webcam_d.svg), url(../icons/webcam_d.svg); }
+.hsi_window_w { background-image: url(../icons/window_w.svg); } .hsi_window_w:hover { background-image: url(../icons/window_w.svg), url(../icons/window_w.svg); }
+.hsi_window_d { background-image: url(../icons/window_d.svg); } .hsi_window_d:hover { background-image: url(../icons/window_d.svg), url(../icons/window_d.svg); }
+.hsi_window2_w { background-image: url(../icons/window2_w.svg); } .hsi_window2_w:hover { background-image: url(../icons/window2_w.svg), url(../icons/window2_w.svg); }
+.hsi_window2_d { background-image: url(../icons/window2_d.svg); } .hsi_window2_d:hover { background-image: url(../icons/window2_d.svg), url(../icons/window2_d.svg); }
+.hsi_windowsos_w { background-image: url(../icons/windowsos_w.svg); } .hsi_windowsos_w:hover { background-image: url(../icons/windowsos_w.svg), url(../icons/windowsos_w.svg); }
+.hsi_windowsos_d { background-image: url(../icons/windowsos_d.svg); } .hsi_windowsos_d:hover { background-image: url(../icons/windowsos_d.svg), url(../icons/windowsos_d.svg); }
+.hsi_wireless_w { background-image: url(../icons/wireless_w.svg); } .hsi_wireless_w:hover { background-image: url(../icons/wireless_w.svg), url(../icons/wireless_w.svg); }
+.hsi_wireless_d { background-image: url(../icons/wireless_d.svg); } .hsi_wireless_d:hover { background-image: url(../icons/wireless_d.svg), url(../icons/wireless_d.svg); }
+.hsi_wireless2_w { background-image: url(../icons/wireless2_w.svg); } .hsi_wireless2_w:hover { background-image: url(../icons/wireless2_w.svg), url(../icons/wireless2_w.svg); }
+.hsi_wireless2_d { background-image: url(../icons/wireless2_d.svg); } .hsi_wireless2_d:hover { background-image: url(../icons/wireless2_d.svg), url(../icons/wireless2_d.svg); }
+.hsi_wrench_w { background-image: url(../icons/wrench_w.svg); } .hsi_wrench_w:hover { background-image: url(../icons/wrench_w.svg), url(../icons/wrench_w.svg); }
+.hsi_wrench_d { background-image: url(../icons/wrench_d.svg); } .hsi_wrench_d:hover { background-image: url(../icons/wrench_d.svg), url(../icons/wrench_d.svg); }
+.hsi_xmark_w { background-image: url(../icons/xmark_w.svg); } .hsi_xmark_w:hover { background-image: url(../icons/xmark_w.svg), url(../icons/xmark_w.svg); }
+.hsi_xmark_d { background-image: url(../icons/xmark_d.svg); } .hsi_xmark_d:hover { background-image: url(../icons/xmark_d.svg), url(../icons/xmark_d.svg); }
+.hsi_zip_w { background-image: url(../icons/zip_w.svg); } .hsi_zip_w:hover { background-image: url(../icons/zip_w.svg), url(../icons/zip_w.svg); }
+.hsi_zip_d { background-image: url(../icons/zip_d.svg); } .hsi_zip_d:hover { background-image: url(../icons/zip_d.svg), url(../icons/zip_d.svg); }
